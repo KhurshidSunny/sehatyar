@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Build / Next.js
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs and coverage
+*.log
+npm-debug.log*
+coverage/
+.turbo/
+
+# ML artifacts (regenerate locally)
+*.pkl
+*.joblib
+experiments/.cache/
+
+# Uploads / temp OCR
+tmp/
+temp/
+uploads/
+*.tmp
+
+# Local audio working copies (commit only approved public audio under public/ or data/)
+.audio-raw/
