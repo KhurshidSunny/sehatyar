@@ -14,9 +14,9 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-Repository foundation: README, license, and project plan. FAQ UI, medicine OCR, NLP evaluation, and PWA offline support will be added next.
+Monorepo layout is in place for the web app, API, curated content, and offline experiments. Application scaffolding and seed content come next.
 
-## Planned stack
+## Stack
 
 | Layer | Technology |
 |---|---|
@@ -27,7 +27,7 @@ Repository foundation: README, license, and project plan. FAQ UI, medicine OCR, 
 | NLP experiments | scikit-learn (+ small neural baseline) |
 | Hosting | Netlify/Vercel (web) + Render/Railway (API) |
 
-## Planned layout
+## Repository layout
 
 ```
 sehatyar/
@@ -35,18 +35,23 @@ sehatyar/
   LICENSE
   .gitignore
   docs/
+    PROJECT_PLAN.md
   apps/
-    web/
-    api/
+    web/          # PWA frontend
+    api/          # FastAPI backend
   data/
-    faqs/
-    medicines/
-  experiments/
+    faqs/         # curated FAQ seed data
+    medicines/    # curated medicine catalog
+  experiments/    # offline NLP / evaluation work
 ```
 
 ## Documentation
 
 - [Project plan](docs/PROJECT_PLAN.md) — scope, features, stack, safety rules
+- [Web app](apps/web/README.md)
+- [API](apps/api/README.md)
+- [Content data](data/README.md)
+- [Experiments](experiments/README.md)
 
 ## Safety
 
