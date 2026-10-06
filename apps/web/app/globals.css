@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4faf7;
+  --foreground: #12231c;
+  --brand: #0f766e;
+  --brand-dark: #0b5a54;
+  --surface: #ffffff;
+  --muted: #3f5a4f;
+  --border: #c9ddd4;
+  --disclaimer-bg: #fff7ed;
+  --disclaimer-border: #fdba74;
+  --disclaimer-text: #7c2d12;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-disclaimer-bg: var(--disclaimer-bg);
+  --color-disclaimer-border: var(--disclaimer-border);
+  --color-disclaimer-text: var(--disclaimer-text);
+  --font-sans: var(--font-pashto);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-pashto), "Segoe UI", Tahoma, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}

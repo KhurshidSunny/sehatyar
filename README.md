@@ -14,7 +14,7 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-Monorepo layout is in place for the web app, API, curated content, and offline experiments. Application scaffolding and seed content come next.
+Monorepo layout, FastAPI health check, and Next.js web scaffolding are in place. Seed FAQ/medicine content and wired screens come next.
 
 ## Stack
 
