@@ -41,10 +41,6 @@ export default function Home() {
             What is this medicine? (soon)
           </span>
         </button>
-
-        <p className="mt-2 text-center text-sm text-muted">
-          Placeholder home screen — FAQ and medicine flows come in later commits.
-        </p>
       </main>
 
       <aside

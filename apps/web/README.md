@@ -29,7 +29,6 @@ npm run lint
 
 ## Notes
 
-- UI targets low-literacy use: large tap targets, short Pashto copy, audio playback later.
-- Home route is a placeholder with two entry points and a permanent non-prescribing disclaimer.
-- Offline caching of top FAQs and audio is part of the product design (later commits).
-- API base URL wiring comes when FAQ/medicine screens are connected.
+- UI targets low-literacy use: large tap targets and short Pashto copy.
+- The home screen has two entry points (health questions, medicine lookup) and a permanent disclaimer that the app does not diagnose or prescribe.
+- Layout is right-to-left (`lang="ps"`, `dir="rtl"`) with Noto Naskh Arabic for Pashto text.
