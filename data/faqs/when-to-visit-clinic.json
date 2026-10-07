@@ -1,0 +1,121 @@
+[
+  {
+    "id": "when-to-visit-clinic-01",
+    "category": "when-to-visit-clinic",
+    "questionPs": "کومې نښې بیړنی حالت ښيي؟",
+    "questionEn": "Which signs mean an emergency?",
+    "answerPs": "سمدستي روغتون ته ولاړ شئ یا مرسته وغواړئ که: د ساه اخیستلو سخته ستونزه، د سینې سخت درد، بې هوښي، تشنج، ډېره وینه بهېدل، د بدن د یوې خوا ناڅاپه کمزوري یا د خبرو ستونزه، یا سخته سوځېدنه وي.",
+    "paraphrasesPs": [
+      "کله سمدستي روغتون ته ولاړ شو؟",
+      "بیړنۍ نښې کومې دي؟",
+      "څه وخت امبولانس ته زنګ ووهو؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "emergency",
+    "source": { "title": "WHO/ICRC Basic Emergency Care: approach to the acutely ill and injured", "url": null },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "when-to-visit-clinic-02",
+    "category": "when-to-visit-clinic",
+    "questionPs": "ټوخی څو ورځې دوام وکړي نو ډاکټر ته ولاړ شم؟",
+    "questionEn": "How long can a cough last before I see a doctor?",
+    "answerPs": "که ټوخی له دوو اونیو زیات دوام وکړي، په ځانګړي ډول له تبې، د شپې خولو، د وزن کمېدو یا په بلغم کې له وینې سره، کلینیک ته ولاړ شئ او د نري رنځ ټیسټ وکړئ. نري رنځ د درملنې وړ دی.",
+    "paraphrasesPs": [
+      "اوږد ټوخی لرم، څه وکړم؟",
+      "د نري رنځ نښې کومې دي؟",
+      "په بلغم کې وینه ده، خطر لري؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "clinic",
+    "source": { "title": "WHO fact sheet: Tuberculosis", "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "when-to-visit-clinic-03",
+    "category": "when-to-visit-clinic",
+    "questionPs": "د سینې درد کله خطرناک دی؟",
+    "questionEn": "When is chest pain dangerous?",
+    "answerPs": "که د سینې درد سخت وي، لاس، غاړې یا ژامې ته خپور شي، یا له خولو، زړه بدوالي یا ساه لنډۍ سره وي، دا د زړه حمله کېدای شي. سمدستي روغتون ته ولاړ شئ او یوازې مه ځئ.",
+    "paraphrasesPs": [
+      "سینه مې درد کوي، څه وکړم؟",
+      "د زړه حملې نښې کومې دي؟",
+      "د سینې درد او ساه لنډي لرم، خطر لري؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "emergency",
+    "source": { "title": "WHO fact sheet: Cardiovascular diseases (CVDs)", "url": "https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "when-to-visit-clinic-04",
+    "category": "when-to-visit-clinic",
+    "questionPs": "سر درد کله د اندېښنې وړ دی؟",
+    "questionEn": "When is a headache a cause for concern?",
+    "answerPs": "که سر درد ناڅاپه او ډېر سخت وي، له ټپ وروسته پیل شي، له تبې او د غاړې شخوالي سره وي، یا له کمزورۍ، د لید ستونزې یا ګډوډۍ سره وي، سمدستي روغتون ته ولاړ شئ. که سر درد بیا بیا راځي، کلینیک ته ولاړ شئ.",
+    "paraphrasesPs": [
+      "سخت سر درد لرم، څه وکړم؟",
+      "د سر درد خطرناکې نښې کومې دي؟",
+      "سر درد مې بیا بیا راځي، ډاکټر ته ولاړ شم؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "emergency",
+    "source": { "title": "WHO fact sheet: Headache disorders", "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "when-to-visit-clinic-05",
+    "category": "when-to-visit-clinic",
+    "questionPs": "د سوځېدنې لومړنۍ مرسته څه ده؟",
+    "questionEn": "What is first aid for a burn?",
+    "answerPs": "سوځېدلی ځای سمدستي شل دقیقې د سړو، خو نه یخو، بهېدونکو اوبو لاندې ونیسئ. ګوتمۍ او تنګ شیان لرې کړئ. پر سوځېدلي ځای غوړي، مسکه، د غاښو پیسټ یا نور کورني شیان مه لګوئ. لویې سوځېدنې، د مخ یا لاسونو سوځېدنې او د ماشومانو سوځېدنې روغتون ته یوسئ.",
+    "paraphrasesPs": [
+      "لاس مې وسوځېد، څه وکړم؟",
+      "پر سوځېدنه څه ولګوم؟",
+      "ماشوم وسوځېد، روغتون ته یې یوسم؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "clinic",
+    "source": { "title": "WHO fact sheet: Burns", "url": "https://www.who.int/news-room/fact-sheets/detail/burns" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "when-to-visit-clinic-06",
+    "category": "when-to-visit-clinic",
+    "questionPs": "سپي وچیچلم، څه وکړم؟",
+    "questionEn": "What should I do after a dog bite?",
+    "answerPs": "ټپ سمدستي پنځلس دقیقې په صابون او ډېرو اوبو ومینځئ. بیا ژر تر ژره کلینیک ته ولاړ شئ ترڅو د لېوني سپي (ریبیز) د واکسین په اړه پرېکړه وشي. ریبیز د نښو له پیل وروسته تقریباً تل وژونکی دی، نو ځنډ مه کوئ.",
+    "paraphrasesPs": [
+      "د سپي چیچلو وروسته څه وکړم؟",
+      "د لېوني سپي واکسین څه وخت واخلم؟",
+      "پیشو وچیچلم، خطر لري؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "emergency",
+    "source": { "title": "WHO fact sheet: Rabies", "url": "https://www.who.int/news-room/fact-sheets/detail/rabies" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "when-to-visit-clinic-07",
+    "category": "when-to-visit-clinic",
+    "questionPs": "کله په کور کې پاتې شم او کله کلینیک ته ولاړ شم؟",
+    "questionEn": "When can I rest at home and when should I go to a clinic?",
+    "answerPs": "لږ زکام، لږ ټوخی یا لږ سر درد اکثراً په استراحت او مایعاتو ښه کیږي. که نښې له څو ورځو وروسته ښې نه شي یا بدې شي، یا تاسو ماشوم، زوړ، امیندواره یا اوږدمهاله ناروغ یاست، کلینیک ته ولاړ شئ. که شک لرئ، له روغتیايي کارکوونکي وپوښتئ.",
+    "paraphrasesPs": [
+      "زکام لرم، ډاکټر ته ولاړ شم؟",
+      "کومې ناروغۍ په کور کې ښې کیږي؟",
+      "څه وخت کلینیک ته تګ اړین دی؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO/ICRC Basic Emergency Care: approach to the acutely ill and injured", "url": null },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  }
+]

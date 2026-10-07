@@ -1,0 +1,121 @@
+[
+  {
+    "id": "child-care-01",
+    "category": "child-care",
+    "questionPs": "ماشوم ته یوازې د مور شیدې تر کومه عمره ورکړو؟",
+    "questionEn": "Until what age should a baby have only breast milk?",
+    "answerPs": "د ژوند په لومړیو شپږو میاشتو کې ماشوم ته یوازې د مور شیدې ورکړئ؛ اوبه هم اړینې نه دي. د زېږون وروسته په لومړي ساعت کې شیدې ورکول پیل کړئ. له شپږو میاشتو وروسته نور خواړه پیل کړئ او د مور شیدې تر دوو کلونو یا زیات وخت پورې دوام ورکړئ.",
+    "paraphrasesPs": [
+      "ماشوم ته څو میاشتې یوازې شیدې ورکړم؟",
+      "ماشوم ته اوبه کله ورکړم؟",
+      "د مور شیدې تر کله پورې ورکړو؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Infant and young child feeding", "url": "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "child-care-02",
+    "category": "child-care",
+    "questionPs": "ماشوم ته نور خواړه کله او څنګه پیل کړو؟",
+    "questionEn": "When and how should we start other foods for a baby?",
+    "answerPs": "کله چې ماشوم شپږ میاشتنی شي، نرم او میده خواړه لکه کچالو، ورېژې، دال، هګۍ او میوه پیل کړئ. لږ لږ پیل کړئ او ورو ورو یې زیات کړئ. خواړه پاک چمتو کړئ او له ورکولو مخکې خپل لاسونه ومینځئ. د مور شیدې هم دوام ورکړئ.",
+    "paraphrasesPs": [
+      "ماشوم ته ډوډۍ کله پیل کړم؟",
+      "شپږ میاشتني ماشوم ته څه خواړه ورکړم؟",
+      "د ماشوم لومړني خواړه کوم دي؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Infant and young child feeding", "url": "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "child-care-03",
+    "category": "child-care",
+    "questionPs": "د ماشوم د خوارځواکۍ نښې کومې دي؟",
+    "questionEn": "What are the signs of malnutrition in a child?",
+    "answerPs": "که ماشوم ډېر نری وي، وزن یې نه زیاتیږي، پښې یا مخ یې پړسېدلي وي، ډېر ستړی او بې حاله وي، یا د ویښتو رنګ یې بدل شوی وي، ښايي خوارځواکي ولري. ماشوم کلینیک ته یوسئ ترڅو وزن او قد یې اندازه شي. پړسېدلې پښې خطرناکه نښه ده.",
+    "paraphrasesPs": [
+      "ماشوم مې ډېر نری دی، څه وکړم؟",
+      "خوارځواکي څنګه پېژنو؟",
+      "د ماشوم وزن نه زیاتیږي، ولې؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "clinic",
+    "source": { "title": "WHO fact sheet: Malnutrition", "url": "https://www.who.int/news-room/fact-sheets/detail/malnutrition" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "child-care-04",
+    "category": "child-care",
+    "questionPs": "په نوي زېږېدلي ماشوم کې کومې نښې خطرناکې دي؟",
+    "questionEn": "What are the danger signs in a newborn baby?",
+    "answerPs": "نوی زېږېدلی ماشوم سمدستي روغتون ته یوسئ که: شیدې نه رودي، تشنج ولري، ساه یې چټکه یا سخته وي، ډېر سوړ یا ډېر ګرم وي، ټول بدن یې ژېړ شوی وي، یا د نوم شاوخوا سور او زوه لرونکی وي.",
+    "paraphrasesPs": [
+      "نوی زېږېدلی ماشوم شیدې نه رودي، څه وکړم؟",
+      "د نوي ماشوم خطرناکې نښې کومې دي؟",
+      "د نوي ماشوم بدن ژېړ دی، خطر لري؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "emergency",
+    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "child-care-05",
+    "category": "child-care",
+    "questionPs": "کله باید لاسونه په صابون ومینځو؟",
+    "questionEn": "When should we wash our hands with soap?",
+    "answerPs": "له تشناب وروسته، د ماشوم له پاکولو وروسته، د خوړو له پخولو مخکې، او د خوړو له خوړلو یا ماشوم ته د خوړو له ورکولو مخکې لاسونه په صابون او اوبو ومینځئ. لاس مینځل اسهال او د ساه ناروغۍ کموي.",
+    "paraphrasesPs": [
+      "لاسونه څه وخت ومینځم؟",
+      "لاس مینځل ولې مهم دي؟",
+      "د ماشوم لپاره پاکوالی څنګه وساتم؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Diarrhoeal disease", "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "child-care-06",
+    "category": "child-care",
+    "questionPs": "ماشوم ټوخی لري او ساه یې چټکه ده، څه وکړم؟",
+    "questionEn": "My child has a cough and fast breathing. What should I do?",
+    "answerPs": "چټکه یا سخته ساه، یا دا چې د ساه اخیستلو پر وخت د سینې لاندې برخه ننوځي، د سینه بغل (نمونیا) نښه کېدای شي. ماشوم سمدستي کلینیک یا روغتون ته یوسئ. پخپله ماشوم ته درمل مه ورکوئ.",
+    "paraphrasesPs": [
+      "ماشوم مې سخته ساه اخلي، څه وکړم؟",
+      "د سینه بغل نښې کومې دي؟",
+      "ماشوم ټوخی او تبه لري، خطر لري؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "emergency",
+    "source": { "title": "WHO fact sheet: Pneumonia in children", "url": "https://www.who.int/news-room/fact-sheets/detail/pneumonia" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "child-care-07",
+    "category": "child-care",
+    "questionPs": "د ماشوم د وزن او ودې څارنه ولې مهمه ده؟",
+    "questionEn": "Why is it important to track a child's weight and growth?",
+    "answerPs": "منظم وزن کول ښيي چې ماشوم ښه وده کوي که نه. ماشوم د واکسین او معاینې لپاره کلینیک ته یوسئ او وزن یې ولیکئ. که د ماشوم وزن څو میاشتې نه وي زیات شوی، له روغتیايي کارکوونکي سره خبرې وکړئ.",
+    "paraphrasesPs": [
+      "د ماشوم وزن څو ځله وکړم؟",
+      "ماشوم مې ښه وده کوي که نه؟",
+      "د ماشوم وده څنګه وڅارم؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Malnutrition", "url": "https://www.who.int/news-room/fact-sheets/detail/malnutrition" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  }
+]

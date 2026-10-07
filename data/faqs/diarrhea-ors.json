@@ -1,0 +1,121 @@
+[
+  {
+    "id": "diarrhea-ors-01",
+    "category": "diarrhea-ors",
+    "questionPs": "ORS (او آر اس) څه شی دی؟",
+    "questionEn": "What is ORS?",
+    "answerPs": "ORS د مالګې او بورې یو ځانګړی پوډر دی چې په اوبو کې حل کیږي. د اسهال پر وخت بدن اوبه او مالګې له لاسه ورکوي؛ ORS دا بېرته پوره کوي او د اوبو د کمښت مخه نیسي. ORS په ډېرو کلینیکونو او درملتونونو کې پیدا کیږي.",
+    "paraphrasesPs": [
+      "او آر اس څه ته وايي؟",
+      "ORS د څه لپاره دی؟",
+      "د اسهال پوډر څه دی؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Diarrhoeal disease", "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "diarrhea-ors-02",
+    "category": "diarrhea-ors",
+    "questionPs": "ORS څنګه جوړ کړم؟",
+    "questionEn": "How do I prepare ORS?",
+    "answerPs": "لومړی خپل لاسونه ومینځئ. یو پاکټ ORS په هغه اندازه پاکو یا جوش کړو او سړو شوو اوبو کې حل کړئ چې پر پاکټ لیکل شوې ده. اوبه له لیکل شوې اندازې کمې یا زیاتې مه کوئ. جوړ شوی ORS په یوه ورځ کې وکاروئ او پاتې یې توی کړئ.",
+    "paraphrasesPs": [
+      "او آر اس په څومره اوبو کې حل کړم؟",
+      "د ORS جوړولو طریقه څه ده؟",
+      "ORS څنګه چمتو کوو؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Diarrhoeal disease", "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "diarrhea-ors-03",
+    "category": "diarrhea-ors",
+    "questionPs": "اسهال لرونکي ماشوم ته شیدې او خواړه ورکړو؟",
+    "questionEn": "Should we keep feeding a child who has diarrhea?",
+    "answerPs": "هو. د مور شیدې او عادي خواړه مه بندوئ. ماشوم ته له معمول څخه زیات مایعات ورکړئ. ډېر خوږ څښاکونه لکه سافټ ډرینک مه ورکوئ، ځکه اسهال ډېروي.",
+    "paraphrasesPs": [
+      "په اسهال کې ماشوم ته ډوډۍ ورکړم؟",
+      "اسهال لرونکی ماشوم شیدې وخوري؟",
+      "د اسهال پر وخت څه خواړه ښه دي؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Diarrhoeal disease", "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "diarrhea-ors-04",
+    "category": "diarrhea-ors",
+    "questionPs": "د بدن د اوبو د کمښت نښې کومې دي؟",
+    "questionEn": "What are the signs of dehydration?",
+    "answerPs": "خوله او ژبه وچه وي، ډېره تنده وي، متیازې لږې یا تیارې وي، سترګې ننوتلې وي، او ماشوم بې آرامه یا ډېر سست وي. که د خېټې پوستکی ونیول شي او ورو بېرته خپل حالت ته راشي، د اوبو کمښت شدید دی. په دې حالت کې سمدستي کلینیک ته ولاړ شئ.",
+    "paraphrasesPs": [
+      "ډیهایډریشن څنګه پېژنم؟",
+      "د ماشوم په بدن کې اوبه کمې شوې، څنګه پوه شم؟",
+      "د اوبو کمښت نښې څه دي؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "clinic",
+    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "diarrhea-ors-05",
+    "category": "diarrhea-ors",
+    "questionPs": "اسهال کله خطرناک دی؟",
+    "questionEn": "When is diarrhea dangerous?",
+    "answerPs": "سمدستي روغتون ته ولاړ شئ که: په اسهالو کې وینه وي، ماشوم هر څه چې څښي کانګې یې کوي، ډېر سست یا بې هوښه وي، لوړه تبه ولري، یا د اوبو د کمښت نښې ولري. که اسهال له دریو ورځو زیات دوام وکړي، کلینیک ته ولاړ شئ.",
+    "paraphrasesPs": [
+      "په اسهالو کې وینه ده، څه وکړم؟",
+      "اسهال څه وخت روغتون ته وړل غواړي؟",
+      "د اسهال خطرناکې نښې کومې دي؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "emergency",
+    "source": { "title": "WHO fact sheet: Diarrhoeal disease", "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "diarrhea-ors-06",
+    "category": "diarrhea-ors",
+    "questionPs": "د اسهال مخه څنګه ونیسو؟",
+    "questionEn": "How can we prevent diarrhea?",
+    "answerPs": "پاکې یا جوش کړې اوبه وڅښئ، لاسونه په صابون ومینځئ، خواړه پاک او پوښلي وساتئ، تشناب وکاروئ، او ماشوم ته شپږ میاشتې یوازې د مور شیدې ورکړئ. د روټا ویروس واکسین هم د ماشومانو اسهال کموي.",
+    "paraphrasesPs": [
+      "اسهال څنګه ونه شي؟",
+      "د اسهال د مخنیوي لارې کومې دي؟",
+      "ماشوم له اسهال څخه څنګه وساتم؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Diarrhoeal disease", "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "diarrhea-ors-07",
+    "category": "diarrhea-ors",
+    "questionPs": "که ORS نه وي، څه وکړم؟",
+    "questionEn": "What should I do if ORS is not available?",
+    "answerPs": "ماشوم ته د مور شیدې، پاکې اوبه، شوروا، د ورېژو اوبه یا شلومبې ورکړئ. هر څومره ژر چې کېدای شي ORS پیدا کړئ یا کلینیک ته ولاړ شئ. ډېر خوږ څښاکونه او بوره لرونکي جوسونه مه ورکوئ.",
+    "paraphrasesPs": [
+      "او آر اس نه لرم، څه ورکړم؟",
+      "د ORS پر ځای څه وکاروم؟",
+      "په کور کې د اسهال لپاره څه وڅښو؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Diarrhoeal disease", "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  }
+]

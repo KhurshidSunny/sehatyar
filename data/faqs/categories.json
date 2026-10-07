@@ -1,0 +1,8 @@
+[
+  { "id": "fever", "namePs": "تبه", "nameEn": "Fever", "order": 1 },
+  { "id": "child-care", "namePs": "د ماشوم پاملرنه", "nameEn": "Child care", "order": 2 },
+  { "id": "diarrhea-ors", "namePs": "اسهال او ORS", "nameEn": "Diarrhea and ORS", "order": 3 },
+  { "id": "pregnancy", "namePs": "امیندواري", "nameEn": "Pregnancy", "order": 4 },
+  { "id": "vaccines", "namePs": "واکسین", "nameEn": "Vaccines", "order": 5 },
+  { "id": "when-to-visit-clinic", "namePs": "کله کلینیک ته ولاړ شو", "nameEn": "When to visit a clinic", "order": 6 }
+]

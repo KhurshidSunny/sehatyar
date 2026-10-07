@@ -14,7 +14,7 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-Monorepo layout, FastAPI health check, and Next.js web scaffolding are in place. Seed FAQ/medicine content and wired screens come next.
+Monorepo layout, FastAPI health check, Next.js web scaffolding, and draft FAQ seed data (42 Pashto FAQs across 6 categories) are in place. The medicine catalog and wired screens are not built yet.
 
 ## Stack
 

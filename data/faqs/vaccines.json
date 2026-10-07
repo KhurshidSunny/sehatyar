@@ -1,0 +1,121 @@
+[
+  {
+    "id": "vaccines-01",
+    "category": "vaccines",
+    "questionPs": "واکسین څه کوي؟",
+    "questionEn": "What do vaccines do?",
+    "answerPs": "واکسین بدن ته زده کوي چې د ځینو خطرناکو ناروغیو لکه شري، پولیو، نري رنځ او ټیټانوس پر وړاندې مبارزه وکړي. واکسین شوي ماشومان لږ ناروغه کیږي. واکسین هم ماشوم ساتي او هم ټولنه.",
+    "paraphrasesPs": [
+      "واکسین ولې ورکوو؟",
+      "د واکسین ګټه څه ده؟",
+      "واکسین زموږ بدن ته څه کوي؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Immunization coverage", "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "vaccines-02",
+    "category": "vaccines",
+    "questionPs": "ماشوم ته لومړی واکسین کله ورکول کیږي؟",
+    "questionEn": "When does a baby get the first vaccines?",
+    "answerPs": "د زېږون پر وخت یا لږ وروسته ماشوم ته د نري رنځ (BCG)، پولیو او هیپاټایټس B لومړني واکسینونه ورکول کیږي. بیا په ټاکلو میاشتو کې نور واکسینونه راځي. د واکسین مهالوېش او کارت له خپل کلینیک څخه واخلئ.",
+    "paraphrasesPs": [
+      "نوي زېږېدلي ماشوم ته کوم واکسین ورکوي؟",
+      "د ماشوم واکسین کله پیل کیږي؟",
+      "د واکسین مهالوېش چېرته پیدا کړم؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Immunization coverage", "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "vaccines-03",
+    "category": "vaccines",
+    "questionPs": "که د ماشوم یو واکسین پاتې شو، څه وکړم؟",
+    "questionEn": "What should I do if my child missed a vaccine?",
+    "answerPs": "اندېښنه مه کوئ؛ اکثراً له سره پیل ته اړتیا نشته. هر څومره ژر چې کېدای شي ماشوم کلینیک ته یوسئ او د واکسین کارت ورسره واخلئ. روغتیايي کارکوونکی به پاتې واکسینونه ورکړي.",
+    "paraphrasesPs": [
+      "د ماشوم د واکسین نوبت تېر شو، څه وکړم؟",
+      "واکسین مو هېر شو، اوس یې ورکړو؟",
+      "ناوخته واکسین ګټه لري؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Immunization coverage", "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "vaccines-04",
+    "category": "vaccines",
+    "questionPs": "له واکسین وروسته تبه یا درد عادي دی؟",
+    "questionEn": "Is fever or pain after a vaccine normal?",
+    "answerPs": "هو، لږه تبه، د پیچکارۍ پر ځای درد یا سوروالی، او لږه ژړا عادي دي او معمولاً په یوه یا دوو ورځو کې ښه کیږي. ماشوم ته شیدې او مایعات ورکړئ. که لوړه تبه، تشنج، د ساه ستونزه یا د مخ پړسوب پیدا شي، سمدستي کلینیک ته ولاړ شئ.",
+    "paraphrasesPs": [
+      "له واکسین وروسته ماشوم تبه لري، څه وکړم؟",
+      "د واکسین اړخیزې اغېزې کومې دي؟",
+      "د پیچکارۍ ځای سور شوی، عادي دی؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Immunization coverage", "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "vaccines-05",
+    "category": "vaccines",
+    "questionPs": "آیا واکسینونه خوندي دي؟",
+    "questionEn": "Are vaccines safe?",
+    "answerPs": "هو. واکسینونه له کارونې مخکې ډېر ازمویل کیږي او په ټوله نړۍ کې میلیونونو ماشومانو ته ورکول کیږي. جدي اړخیزې اغېزې ډېرې لږې دي. د ناروغۍ خطر د واکسین له خطر څخه ډېر لوی دی.",
+    "paraphrasesPs": [
+      "واکسین ضرر لري؟",
+      "واکسین ماشوم ته زیان رسوي؟",
+      "واکسین باوري دي که نه؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Immunization coverage", "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "vaccines-06",
+    "category": "vaccines",
+    "questionPs": "شري څومره خطرناکه ده؟",
+    "questionEn": "How dangerous is measles?",
+    "answerPs": "شري ډېره ساري ناروغي ده او کولی شي سینه بغل، اسهال، ړوندوالی او مړینه رامنځته کړي. نښې یې تبه، ټوخی، سرې سترګې او په بدن سرې دانې دي. د شري واکسین دواړه دوزه ماشوم خوندي ساتي. که ماشوم دا نښې ولري، کلینیک ته یې یوسئ.",
+    "paraphrasesPs": [
+      "د شري نښې کومې دي؟",
+      "ماشوم مې سرې دانې او تبه لري، شري ده؟",
+      "د شري واکسین ولې مهم دی؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "clinic",
+    "source": { "title": "WHO fact sheet: Measles", "url": "https://www.who.int/news-room/fact-sheets/detail/measles" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "vaccines-07",
+    "category": "vaccines",
+    "questionPs": "پولیو قطرې ولې څو ځله ورکول کیږي؟",
+    "questionEn": "Why are polio drops given several times?",
+    "answerPs": "پولیو کولی شي د ماشوم لاسونه او پښې د تل لپاره شل کړي او درملنه نه لري؛ یوازې واکسین یې مخه نیسي. د بشپړ خوندیتوب لپاره ماشوم ته څو ځله پولیو قطرې اړینې دي، نو ماشوم هر کمپاین او د کلینیک هر نوبت ته ورسوئ.",
+    "paraphrasesPs": [
+      "پولیو قطرې بیا بیا ولې ورکوي؟",
+      "ماشوم مې مخکې پولیو قطرې اخیستې، بیا یې ورکړم؟",
+      "پولیو څه ناروغي ده؟"
+    ],
+    "audioUrl": null,
+    "dangerLevel": "info",
+    "source": { "title": "WHO fact sheet: Poliomyelitis", "url": "https://www.who.int/news-room/fact-sheets/detail/poliomyelitis" },
+    "lastReviewed": "2026-10-07",
+    "reviewStatus": "draft"
+  }
+]
