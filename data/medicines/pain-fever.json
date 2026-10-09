@@ -1,0 +1,120 @@
+[
+  {
+    "id": "med-paracetamol",
+    "category": "pain-fever",
+    "names": [
+      "Paracetamol",
+      "Acetaminophen",
+      "Panadol",
+      "پیراسیټامول",
+      "اسیټامینوفین",
+      "پینادول"
+    ],
+    "usesPs": "دا درمل معمولاً د سر درد، بدن درد او تبې د کمولو لپاره کارول کیږي. دا تشخیص نه کوي او دوز یې ستاسو لپاره په خپله مه ټاکئ — له ډاکټر یا درملپلورونکي څخه وپوښتئ.",
+    "warningsPs": "له سپارښتنې زیات مه یې خورئ؛ ډېر مقدار ځیګر ته زیان رسوي. که مخکې ځیګر ناروغي لرئ، یا نور درمل چې پیراسیټامول لري خورئ، مخکې مشوره وکړئ. ماشومانو او امیندوارو ته دوز پرته له روغتیايي مشورې مه ورکوئ. که سخت الرجي، ساه تنګي یا پوستکی سور شي، سمدستي کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — paracetamol monograph (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-ibuprofen",
+    "category": "pain-fever",
+    "names": [
+      "Ibuprofen",
+      "Brufen",
+      "Advil",
+      "ایبوپروفین",
+      "بروفین"
+    ],
+    "usesPs": "دا درمل معمولاً د درد، التهاب او تبې د کمولو لپاره کارول کیږي. د ځان لپاره دوز مه ټاکئ؛ له ډاکټر یا درملپلورونکي څخه وپوښتئ.",
+    "warningsPs": "په خالي معده یې مه خورئ که معده مو حساسه وي. که د معدې زخم، وینې تویېدل، پښتورګي ناروغي، یا د زړه ستونزه لرئ، مخکې مشوره وکړئ. له اسپرین یا نورو ورته درملو سره پرته له مشورې یوځای مه یې خورئ. امیندواري او کوچني ماشومان ځانګړې پاملرنه غواړي.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — ibuprofen monograph (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-aspirin",
+    "category": "pain-fever",
+    "names": [
+      "Aspirin",
+      "Acetylsalicylic acid",
+      "ASA",
+      "اسپرین",
+      "اسیټیل سالیسیلیک اسید"
+    ],
+    "usesPs": "دا درمل په ځینو حالتونو کې د درد او تبې لپاره کارول کیږي، او په ځینو ناروغانو کې د زړه د ساتنې لپاره د ډاکټر په سپارښتنه ورکول کیږي. په خپله مه پیل کوئ.",
+    "warningsPs": "ماشومانو او تنکیو ځوانانو ته د ویروسي ناروغۍ پر مهال معمولاً نه ورکول کیږي (د ری سندرم خطر). که د وینې تویېدل، معدې زخم، یا د وینې نری کوونکي درمل خورئ، مخکې مشوره وکړئ. اسپرین الرجي یا ساه تنګي کې سمدستي کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — acetylsalicylic acid (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-diclofenac",
+    "category": "pain-fever",
+    "names": [
+      "Diclofenac",
+      "Voltaren",
+      "ډایکlofenیک",
+      "وولټارین"
+    ],
+    "usesPs": "دا درمل معمولاً د عضلاتو او بندونو د درد او التهاب د کمولو لپاره کارول کیږي. دوز او موده یې له ډاکټر یا درملپلورونکي څخه وپوښتئ.",
+    "warningsPs": "اوږدمهاله یا لوړ دوز پرته له مشورې مه کاروئ. د معدې، ځیګر، پښتورګو یا زړه ستونزې کې خطر زیاتیږي. که وینه په استفراغ یا پاخانه کې ووینئ، سمدستي کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — diclofenac (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-mefenamic-acid",
+    "category": "pain-fever",
+    "names": [
+      "Mefenamic acid",
+      "Ponstan",
+      "میفینامیک اسید",
+      "پونسټان"
+    ],
+    "usesPs": "دا درمل معمولاً د درد، په تېره د میاشتني درد، د کمولو لپاره کارول کیږي. دوز مه ټاکئ؛ مشوره وکړئ.",
+    "warningsPs": "د معدې زخم، وینې تویېدل، یا پښتورګي ناروغۍ کې پرته له ډاکټر مه یې خورئ. که سختې معدې درد، تورې پاخانې یا الرجي راشي، کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for mefenamic acid (general OTC/prescription label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-naproxen",
+    "category": "pain-fever",
+    "names": [
+      "Naproxen",
+      "Naprosyn",
+      "نپروکسین",
+      "نیپروسن"
+    ],
+    "usesPs": "دا درمل معمولاً د درد او التهاب د کمولو لپاره کارول کیږي. د ځان تشخیص او دوز مه کوئ.",
+    "warningsPs": "د معدې، زړه او پښتورګو خطرونه لري که ناسم وکارول شي. له نورو درد درملو سره پرته له مشورې یوځای مه یې خورئ. امیندواري کې مخکې مشوره اړینه ده.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for naproxen (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]

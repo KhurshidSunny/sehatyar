@@ -1,0 +1,61 @@
+[
+  {
+    "id": "med-ors",
+    "category": "rehydration",
+    "names": [
+      "ORS",
+      "Oral Rehydration Salts",
+      "Oral Rehydration Solution",
+      "او آر ایس",
+      "د خولې له لارې بیا اوبه کول",
+      "نمک اوبه"
+    ],
+    "usesPs": "ORS د اسهال پر مهال د بدن د اوبو او مالګو د بیرته ډکولو لپاره کارول کیږي. پاکو اوبو سره یې د کڅوړې د لارښود له مخې جوړ کړئ. که نه پوهیږئ، له روغتیايي کارکوونکي څخه وپوښتئ.",
+    "warningsPs": "ناپاکه اوبه مه کاروئ. که ماشوم ډېر ويده وي، سترګې یې ډوبې وي، ادرار یې بند وي، وینه په اسهال کې وي، یا اوبه نه شي څښلی، سمدستي کلینیک ته یې یوسئ. ORS د درملو پر ځای تشخیص نه دی.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO / UNICEF Oral Rehydration Salts guidance (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-zinc-sulfate",
+    "category": "rehydration",
+    "names": [
+      "Zinc sulfate",
+      "Zinc tablets",
+      "زینک",
+      "زینک سلفيټ"
+    ],
+    "usesPs": "زینک په ځینو لارښودونو کې د ماشومانو د اسهال د مودې د کمولو لپاره د ORS سره وړاندیز کیږي. دوز او ورځې یې له ډاکټر یا روغتیايي کارکوونکي څخه وپوښتئ.",
+    "warningsPs": "په خپله دوز مه زیاتوئ. که کانګې یا سختې معدې درد راشي، کار ولوځوئ او مشوره وکړئ. دا د خطرناکو نښو پر مهال د کلینیک ځای نه نیسي.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO diarrhea treatment guidance — zinc supplementation (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-electrolyte-solution",
+    "category": "rehydration",
+    "names": [
+      "Electrolyte solution",
+      "Pedialyte",
+      "الیکټرولایټ محلول",
+      "د ماشومانو د اوبو محلول"
+    ],
+    "usesPs": "دا محلولونه معمولاً د کانګو یا اسهال وروسته د اوبو او مالګو د بیرته ډکولو لپاره کارول کیږي. د عمر سره سم مقدار له روغتیايي مشورې سره وټاکئ.",
+    "warningsPs": "شکرې مشروبات (لکه سودا) د سخت اسهال لپاره بدیل نه دي. که وچه خوله، بې حالۍ یا بې هوشي وي، سمدستي کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO rehydration principles for diarrhea (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]

@@ -1,0 +1,133 @@
+[
+  {
+    "id": "med-albendazole",
+    "category": "other-common",
+    "names": [
+      "Albendazole",
+      "Zentel",
+      "البینډازول",
+      "زینټیل"
+    ],
+    "usesPs": "دا درمل معمولاً د چینجي او ځینو نورو پرازیتي عفونتونو لپاره د ډاکټر یا روغتیايي پروګرام په سپارښتنه کارول کیږي.",
+    "warningsPs": "امیندواري کې مخکې مشوره وکړئ. دوز او تکرار په خپله مه اټکل کوئ. که سختې معدې درد یا الرجي راشي، کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — albendazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-mebendazole",
+    "category": "other-common",
+    "names": [
+      "Mebendazole",
+      "Vermox",
+      "میبینډازول",
+      "ویرموکس"
+    ],
+    "usesPs": "دا درمل معمولاً د چینجي درملنې لپاره د روغتیايي لارښود سره کارول کیږي.",
+    "warningsPs": "ماشومانو ته پرته له عمر او وزن سره سمې مشورې مه ورکوئ. امیندواري کې مخکې وپوښتئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — mebendazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-metformin",
+    "category": "other-common",
+    "names": [
+      "Metformin",
+      "Glucophage",
+      "میټفورمین",
+      "ګلوکوفاژ"
+    ],
+    "usesPs": "دا درمل د شوګر (ډایبېټیز ډول ۲) د کنټرول لپاره د ډاکټر په تشخیص او دوامداره څارنې سره کارول کیږي.",
+    "warningsPs": "په خپله مه پیل کوئ او مه دروئ. که سختې کانګې، ساه تنګي، یا غیرعادي ستړیا راشي، سمدستي کلینیک ته ولاړ شئ. دوز بدلول یوازې د ډاکټر کار دی.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — metformin (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-amlodipine",
+    "category": "other-common",
+    "names": [
+      "Amlodipine",
+      "Norvasc",
+      "املوډیپین",
+      "نورواسک"
+    ],
+    "usesPs": "دا درمل معمولاً د لوړ فشار د کنټرول لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "warningsPs": "په خپله مه پیل کوئ او ناڅاپه مه پرېږدئ. که سینه درد، سختې پړسوب، یا بې هوشي راشي، کلینیک ته ولاړ شئ. فشار په منظم ډول وڅارئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — amlodipine (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-atorvastatin",
+    "category": "other-common",
+    "names": [
+      "Atorvastatin",
+      "Lipitor",
+      "اټورواسټاټین",
+      "لیپیټور"
+    ],
+    "usesPs": "دا درمل معمولاً د وینې د غوړو (کولیسټرول) د کنټرول لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "warningsPs": "په خپله مه پیل کوئ. که عضلاتو سخت درد، تور ادرار، یا ژېړ پوستکی راشي، سمدستي کلینیک ته ولاړ شئ. د ځیګر ازموینې ممکن اړینې وي.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — atorvastatin (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-oral-contraceptive",
+    "category": "other-common",
+    "names": [
+      "Oral contraceptive pill",
+      "Birth control pill",
+      "د حمل ضد ګولۍ",
+      "خوراکي ضد حمل"
+    ],
+    "usesPs": "دا ګولۍ د حمل د مخنیوي لپاره د روغتیايي مشورې سره کارول کیږي. ډول او د کارولو لار یې له کلینیک څخه زده کړئ.",
+    "warningsPs": "که سینې درد، یوې خوا فلج، سخت سر درد، یا پښې پړسوب راشي، سمدستي کلینیک ته ولاړ شئ. سګریټ او ځینې ناروغۍ خطر زیاتوي — مخکې مشوره اړینه ده. دا د جنسي لېږدونکو ناروغیو مخنیوی نه کوي.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO family planning guidance — combined oral contraceptives (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-insulin",
+    "category": "other-common",
+    "names": [
+      "Insulin",
+      "انسولین"
+    ],
+    "usesPs": "انسولین د شوګر د کنټرول لپاره د ډاکټر په تشخیص او روزنې سره کارول کیږي. ډولونه یې سره توپیر لري.",
+    "warningsPs": "په خپله دوز مه بدلوه. که لړزېدل، خوله خوږېدل، ګډوډي یا بې هوشي راشي، سمدستي مرسته وغواړئ (ښایي وینه ډېره ټیټه وي). د ساتنې او ستنې پاکوالی زده کړئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — insulin (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]

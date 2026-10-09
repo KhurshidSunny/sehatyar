@@ -1,0 +1,93 @@
+[
+  {
+    "id": "med-povidone-iodine",
+    "category": "topical",
+    "names": [
+      "Povidone-iodine",
+      "Betadine",
+      "پوویدون آیوډین",
+      "بیټاډین"
+    ],
+    "usesPs": "دا محلول معمولاً د پوستکي د پاکولو او د سطحي زخمونو د پاک ساتلو لپاره کارول کیږي.",
+    "warningsPs": "سترګو، خولې یا ژورو زخمونو ته پرته له لارښود مه یې اچوئ. که آیوډین الرجي لرئ، مه یې کاروئ. ژور یا ککړ زخم کلینیک ته وښایاست.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — povidone iodine (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-clotrimazole",
+    "category": "topical",
+    "names": [
+      "Clotrimazole cream",
+      "Canesten",
+      "کلوټریمازول",
+      "کینسټن"
+    ],
+    "usesPs": "دا کریم معمولاً د پوستکي د فنګس عفونتونو (لکه د پښو فنګس) د نښو لپاره کارول کیږي. تشخیص په خپله مه قطعی کوئ.",
+    "warningsPs": "که سیمه ډېره سور، پړسوب یا وینه‌داره شي، کلینیک ته ولاړ شئ. سترګو ته مه یې اچوئ. امیندواري کې مخکې مشوره وکړئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — clotrimazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-hydrocortisone-cream",
+    "category": "topical",
+    "names": [
+      "Hydrocortisone cream",
+      "هایډروکورټیزون کریم"
+    ],
+    "usesPs": "دا کریم معمولاً د سپک خارښ او سوروالي د لنډمهاله کمولو لپاره کارول کیږي.",
+    "warningsPs": "په مخ، سترګو یا خلاص زخم باندې پرته له مشورې مه یې اچوئ. اوږد مهال مه کاروئ. که عفونت شکمن وي، کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for topical hydrocortisone (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-tetracycline-eye-ointment",
+    "category": "topical",
+    "names": [
+      "Tetracycline eye ointment",
+      "ټیټراسایکلین د سترګو مرهم"
+    ],
+    "usesPs": "دا مرهم په ځینو لارښودونو کې د سترګو د عفونت د مخنیوي یا درملنې لپاره د روغتیايي کارکوونکي په سپارښتنه کارول کیږي.",
+    "warningsPs": "په خپله د سترګو درد یا لید کمښت مه درملئ — کلینیک ته ولاړ شئ. لیبل او پاکوالی مراعات کړئ. که الرجي راشي، کار ولوځوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — tetracycline eye ointment (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-hydrogen-peroxide",
+    "category": "topical",
+    "names": [
+      "Hydrogen peroxide",
+      "H2O2",
+      "هایډروجن پیروکسایډ",
+      "آکسیجن اوبه"
+    ],
+    "usesPs": "ځینې خلک یې د سطحي خړ زخمونو د پاکولو لپاره کاروي. تل لیبل ولولئ او له درملپلورونکي څخه وپوښتئ.",
+    "warningsPs": "څښل یې خطرناک دي. ژورو زخمونو ته پرته له لارښود مه اچوئ. که زخم ژور، ککړ یا د حیوان چیچل وي، کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "General first-aid antiseptic labeling (non-prescribing reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]

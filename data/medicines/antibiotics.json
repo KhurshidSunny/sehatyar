@@ -1,0 +1,116 @@
+[
+  {
+    "id": "med-amoxicillin",
+    "category": "antibiotics",
+    "names": [
+      "Amoxicillin",
+      "Amoxil",
+      "اموکسی سیلین",
+      "اموکسیل"
+    ],
+    "usesPs": "دا یو انټي بیوټیک دی چې د ډاکټر په تشخیص سره د ځینو باکټریایي عفونتونو لپاره ورکول کیږي. په خپله یې د تبې یا ټوخي لپاره مه پیل کوئ.",
+    "warningsPs": "که پینی سیلین الرجي لرئ، مه یې خورئ. کورس نیمګړی مه پرېږدئ پرته له ډاکټر سپارښتنې. بې ځایه کارول مقاومت زیاتوي. که سخت خارښ، پړسوب یا ساه تنګي راشي، سمدستي کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — amoxicillin (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-azithromycin",
+    "category": "antibiotics",
+    "names": [
+      "Azithromycin",
+      "Zithromax",
+      "ازیترومایسین",
+      "زیترومیکس"
+    ],
+    "usesPs": "دا انټي بیوټیک د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي. د نښو په اساس په خپله مه یې خورئ.",
+    "warningsPs": "د زړه ځینې ناروغۍ یا نورو درملو سره تعامل کوي. که مخکې د زړه یا ځیګر ستونزه لرئ، مخکې ووایاست. الرجي یا سخت اسهال کې کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — azithromycin (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-metronidazole",
+    "category": "antibiotics",
+    "names": [
+      "Metronidazole",
+      "Flagyl",
+      "میټرونیډازول",
+      "فلاګیل"
+    ],
+    "usesPs": "دا درمل د ځینو عفونتونو (لکه ځینې معدې او کولمو عفونتونه) لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "warningsPs": "د درملو پر مهال الکول مه څښئ. امیندواري او شیدې ورکولو کې مخکې مشوره وکړئ. په خپله کورس مه اټکل کوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — metronidazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-ciprofloxacin",
+    "category": "antibiotics",
+    "names": [
+      "Ciprofloxacin",
+      "Cipro",
+      "سیپروفلوکساسین",
+      "سیپرو"
+    ],
+    "usesPs": "دا انټي بیوټیک د ځینو باکټریایي عفونتونو لپاره د ډاکټر په تشخیص کارول کیږي. د عادي زکام لپاره مناسب نه دی.",
+    "warningsPs": "ماشومان او ځوانان ځینې وختونه ځانګړې خطرونه لري؛ پرته له ډاکټر مه ورکوئ. د لمر حساسیت، تاندون درد، یا الرجي کې سمدستي مشوره وکړئ. بې ځایه کارول مه کوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — ciprofloxacin (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-cotrimoxazole",
+    "category": "antibiotics",
+    "names": [
+      "Co-trimoxazole",
+      "Trimethoprim-sulfamethoxazole",
+      "Bactrim",
+      "Septrin",
+      "کوټرایموکسازول",
+      "سیپټرین"
+    ],
+    "usesPs": "دا ترکیبی انټي بیوټیک د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "warningsPs": "که سلفـا درملو ته الرجي لرئ، مه یې خورئ. که پوستکی خارښ، تبه، یا ساه ستونزه راشي، سمدستي کلینیک ته ولاړ شئ. په خپله تشخیص مه کوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — co-trimoxazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-doxycycline",
+    "category": "antibiotics",
+    "names": [
+      "Doxycycline",
+      "ډوکسی سایکلین"
+    ],
+    "usesPs": "دا انټي بیوټیک د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي. په خپله مه پیل کوئ.",
+    "warningsPs": "امیندواري او کوچني ماشومان کې معمولاً ځانګړې محدودیتونه لري. د لمر سره پوستکی حساس کیدی شي. له شیدو او انټي اسید سره د وخت په اړه مشوره وکړئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — doxycycline (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]

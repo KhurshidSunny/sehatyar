@@ -1,0 +1,100 @@
+[
+  {
+    "id": "med-multivitamin",
+    "category": "vitamins-minerals",
+    "names": [
+      "Multivitamin",
+      "Vitamin tablets",
+      "ملټي ویټامین",
+      "ویټامین ګولۍ"
+    ],
+    "usesPs": "ملټي ویټامینونه معمولاً د ورځني ویټامین او منرال د بشپړولو لپاره کارول کیږي. دا د ناروغۍ درملنه نه ده.",
+    "warningsPs": "له سپارښتنې زیات مه یې خورئ. که امیندواره یاست یا نوري درمل خورئ، مخکې مشوره وکړئ. د ماشومانو ډولونه له لویانو جلا دي.",
+    "audioUrl": null,
+    "source": {
+      "title": "General nutrition supplement labeling practices (non-prescribing reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-ferrous-sulfate",
+    "category": "vitamins-minerals",
+    "names": [
+      "Ferrous sulfate",
+      "Iron tablets",
+      "FeSO4",
+      "اوسپنه",
+      "فیرس سلفيټ",
+      "آیرون ګولۍ"
+    ],
+    "usesPs": "د اوسپنې ګولۍ معمولاً د اوسپنې کمښت د بشپړولو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "warningsPs": "ماشومانو ته په ناڅاپي خوړلو سره خطرناک زهر کیدی شي — له ماشومانو لرې وساتئ. قبضیت یا تورې پاخانې عامې دي؛ که سخت درد یا وینه ووینئ، کلینیک ته ولاړ شئ. دوز په خپله مه زیاتوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — ferrous salt (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-folic-acid",
+    "category": "vitamins-minerals",
+    "names": [
+      "Folic acid",
+      "Folate",
+      "Vitamin B9",
+      "فولیک اسید",
+      "فولیټ"
+    ],
+    "usesPs": "فولیک اسید معمولاً د امیندواری دمخه او پر مهال، او د ځینو کمښتونو لپاره د ډاکټر په لارښود کارول کیږي.",
+    "warningsPs": "دا د نورو ویټامینونو پر ځای تشخیص نه دی. که قبضیت یا نورې نښې دوام وکړي، کلینیک ته ولاړ شئ. دوز له مشورې سره سم وساتئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO antenatal care guidance — folic acid (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-vitamin-d",
+    "category": "vitamins-minerals",
+    "names": [
+      "Vitamin D",
+      "Cholecalciferol",
+      "ویټامین ډي",
+      "کولیکلسیفیرول"
+    ],
+    "usesPs": "ویټامین ډي معمولاً د هډوکو روغتیا او د ویټامین ډي کمښت د بشپړولو لپاره کارول کیږي. ازموینه او دوز له ډاکټر سره سم کړئ.",
+    "warningsPs": "ډېر لوړ دوز زیانمن کیدی شي. له نورو کلسیم یا ویټامین ډي محصولاتو سره پرته له مشورې یوځای مه یې زیاتوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "General vitamin D supplement labeling (non-prescribing reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-calcium",
+    "category": "vitamins-minerals",
+    "names": [
+      "Calcium carbonate",
+      "Calcium tablets",
+      "کلسیم",
+      "کلسیم کاربونیټ"
+    ],
+    "usesPs": "کلسیم معمولاً د هډوکو د پیاوړتیا او د کلسیم کمښت د بشپړولو لپاره کارول کیږي.",
+    "warningsPs": "له ځینو درملو (لکه انټي بیوټیک یا اوسپنه) سره د وخت په اړه مشوره وکړئ. که پښتورګي ډبرې لرئ، مخکې ووایاست. دوز په خپله مه زیاتوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "General calcium supplement labeling (non-prescribing reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]

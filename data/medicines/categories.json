@@ -1,0 +1,10 @@
+[
+  { "id": "pain-fever", "namePs": "درد او تبه", "nameEn": "Pain and fever", "order": 1 },
+  { "id": "rehydration", "namePs": "بیا اوبه کول", "nameEn": "Rehydration", "order": 2 },
+  { "id": "antibiotics", "namePs": "انټي بیوټیک", "nameEn": "Antibiotics", "order": 3 },
+  { "id": "allergy-respiratory", "namePs": "الرجي او ساه", "nameEn": "Allergy and breathing", "order": 4 },
+  { "id": "stomach", "namePs": "معده او هاضمه", "nameEn": "Stomach and digestion", "order": 5 },
+  { "id": "vitamins-minerals", "namePs": "ویټامین او منرال", "nameEn": "Vitamins and minerals", "order": 6 },
+  { "id": "topical", "namePs": "پر پوستکي او سترګو", "nameEn": "Skin and eye", "order": 7 },
+  { "id": "other-common", "namePs": "نور عام کورني درمل", "nameEn": "Other common household medicines", "order": 8 }
+]

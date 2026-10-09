@@ -1,0 +1,98 @@
+[
+  {
+    "id": "med-cetirizine",
+    "category": "allergy-respiratory",
+    "names": [
+      "Cetirizine",
+      "Zyrtec",
+      "سیټیریزین",
+      "زرټیک"
+    ],
+    "usesPs": "دا درمل معمولاً د الرجي نښو لکه پرنجي، خارښ او اوبلنې سترګې د کمولو لپاره کارول کیږي. دوز له درملپلورونکي یا ډاکټر څخه وپوښتئ.",
+    "warningsPs": "ځینې خلک ویده کوي؛ که موټر چلوئ یا ماشین کاروئ، پام وکړئ. ماشومانو ته پرته له مشورې مه ورکوئ. که ساه تنګي یا مخ پړسوب وي، دا د بیړني الرجي پر ځای نه دی — کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for cetirizine (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-loratadine",
+    "category": "allergy-respiratory",
+    "names": [
+      "Loratadine",
+      "Claritin",
+      "لوراتادین",
+      "کلاریتین"
+    ],
+    "usesPs": "دا درمل معمولاً د موسمي الرجي او خارښ د کمولو لپاره کارول کیږي. دوز مه اټکل کوئ.",
+    "warningsPs": "که د ځیګر ناروغي لرئ، مخکې مشوره وکړئ. د نورو الرجي درملو سره پرته له مشورې یوځای مه یې خورئ. بیړنۍ الرجي کې ایپی‌نفرین یا کلینیک اړین دی، نه یوازې دا ګولۍ.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for loratadine (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-chlorpheniramine",
+    "category": "allergy-respiratory",
+    "names": [
+      "Chlorpheniramine",
+      "Piriton",
+      "کلورفینیرامین",
+      "پیریتون"
+    ],
+    "usesPs": "دا درمل معمولاً د الرجي او خارښ د کمولو لپاره کارول کیږي. ډېری وخت خلک ویده کوي.",
+    "warningsPs": "له الکول سره مه یې یوځای کوئ. ماشومانو او زاړو خلکو ته پرته له مشورې مه ورکوئ. که ساه ستونزه زیاته شي، کلینیک ته ولاړ شئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — chlorphenamine (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-salbutamol",
+    "category": "allergy-respiratory",
+    "names": [
+      "Salbutamol",
+      "Albuterol",
+      "Ventolin",
+      "سالبوټامول",
+      "وینټولین"
+    ],
+    "usesPs": "دا تنفسي درمل (اېنهلر یا محلول) معمولاً د ساه تنګۍ د نښو د لنډمهاله اسانتیا لپاره د ډاکټر په لارښود کارول کیږي.",
+    "warningsPs": "که اېنهلر په تکرار سره نه کافي کیږي، یا شونډې شینې شي او خبرې نه شي کولی، سمدستي بیړني خدمت ته ولاړ شئ. دوز او ډول یې په خپله مه بدلوه. لومړی ځل کارولو مخکې ښوونه واخلئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — salbutamol (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-dextromethorphan",
+    "category": "allergy-respiratory",
+    "names": [
+      "Dextromethorphan",
+      "DXM cough syrup",
+      "ډیکسټرومیټورفان",
+      "د ټوخي شربت"
+    ],
+    "usesPs": "ځینې د ټوخي شربتونه دا ماده لري او معمولاً د وچ ټوخي د کمولو لپاره بازار ته وړاندې کیږي. لیبل ولولئ او له درملپلورونکي څخه وپوښتئ.",
+    "warningsPs": "ماشومانو ته ځینې ټوخي شربتونه مناسب نه دي. که بلغم سره وینه، لوړه تبه، یا ساه تنګي وي، کلینیک ته ولاړ شئ. له نورو سړو درملو سره پرته له مشورې یوځای مه یې خورئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for dextromethorphan cough syrups (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]

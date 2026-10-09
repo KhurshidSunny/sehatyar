@@ -1,0 +1,102 @@
+[
+  {
+    "id": "med-omeprazole",
+    "category": "stomach",
+    "names": [
+      "Omeprazole",
+      "Losec",
+      "Prilosec",
+      "اومیپرازول",
+      "لوزیک"
+    ],
+    "usesPs": "دا درمل معمولاً د تیزابیت، سوځېدوني او د معدې د تیزاب کمولو لپاره کارول کیږي. اوږدمهاله کارول پرته له ډاکټر مه پیل کوئ.",
+    "warningsPs": "که تورې پاخانې، وینه په استفراغ کې، یا ناڅاپه وزن کمښت لرئ، کلینیک ته ولاړ شئ. له نورو درملو سره تعامل کولی شي؛ لیست یې درملپلورونکي ته وښایاست.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — omeprazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-famotidine",
+    "category": "stomach",
+    "names": [
+      "Famotidine",
+      "Pepcid",
+      "فاموتیدین",
+      "پیپسید"
+    ],
+    "usesPs": "دا درمل معمولاً د تیزابیت او سوځېدوني د کمولو لپاره کارول کیږي. دوز له لیبل یا درملپلورونکي سره سم وساتئ.",
+    "warningsPs": "که نښې دوام وکړي یا وینه ووینئ، کلینیک ته ولاړ شئ. پښتورګي ناروغۍ کې مخکې مشوره وکړئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for famotidine (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-antacid",
+    "category": "stomach",
+    "names": [
+      "Antacid",
+      "Magnesium hydroxide",
+      "Aluminum hydroxide",
+      "Maalox",
+      "انټي اسید",
+      "مالوکس",
+      "معدې پوډر"
+    ],
+    "usesPs": "انټي اسیدونه معمولاً د تیزابیت او معدې سوځېدوني د لنډمهاله اسانتیا لپاره کارول کیږي.",
+    "warningsPs": "له نورو درملو سره په یوه وخت کې مه یې خورئ؛ جذب خنډولی شي. که درد شدید وي یا تکرار شي، کلینیک ته ولاړ شئ. پښتورګي ناروغۍ کې ځینې ډولونه مناسب نه دي.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO / package guidance on antacids (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-loperamide",
+    "category": "stomach",
+    "names": [
+      "Loperamide",
+      "Imodium",
+      "لوپرامید",
+      "ایموډیم"
+    ],
+    "usesPs": "دا درمل په ځینو حالتونو کې د اسهال د کمولو لپاره کارول کیږي. د ماشومانو او وینه‌دار اسهال لپاره په خپله مه یې ورکوئ.",
+    "warningsPs": "که تبه، وینه په اسهال کې، یا سختې معدې درد وي، مه یې خورئ — کلینیک ته ولاړ شئ. ماشومانو ته پرته له ډاکټر خطرناک کیدی شي. ORS معمولاً لومړی قدم دی.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO diarrhea guidance and loperamide label cautions (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "med-domperidone",
+    "category": "stomach",
+    "names": [
+      "Domperidone",
+      "Motilium",
+      "دومپریدون",
+      "موتیلیوم"
+    ],
+    "usesPs": "دا درمل معمولاً د کانګو او د معدې د خالي کېدو د اسانتیا لپاره د ډاکټر یا درملپلورونکي په لارښود کارول کیږي.",
+    "warningsPs": "د زړه ځینې خطرونه لري؛ پرته له مشورې اوږد مهال مه یې خورئ. که سینې درد، بې نظمه زړه ټکان، یا بې هوشي راشي، سمدستي کلینیک ته ولاړ شئ. ماشومانو ته پرته له ډاکټر مه ورکوئ.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for domperidone (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-09",
+    "reviewStatus": "draft"
+  }
+]
+

@@ -27,6 +27,24 @@ Seed data for SehatYar. All health and medicine text must stay non-prescribing a
 | `lastReviewed` | Date the entry was last checked (`YYYY-MM-DD`) |
 | `reviewStatus` | `draft` until checked by a health worker, then `reviewed` |
 
+## Medicine files
+
+`medicines/categories.json` lists medicine groups in display order. Each other file in `medicines/` holds catalog entries for one group, named after the category `id`.
+
+| Field | Meaning |
+|---|---|
+| `id` | Stable id, `med-{slug}` |
+| `category` | Category `id` from `medicines/categories.json` |
+| `names` | English and local name spellings used for search and OCR matching |
+| `usesPs` | Short Pashto description of common uses (non-prescribing) |
+| `warningsPs` | Short Pashto cautions; points users to clinic care when needed |
+| `audioUrl` | Recorded uses/warnings path, or `null` until recorded |
+| `source` | `title` of the reference and its `url` when it has a stable public link |
+| `lastReviewed` | Date the entry was last checked (`YYYY-MM-DD`) |
+| `reviewStatus` | `draft` until checked by a health worker, then `reviewed` |
+
+Medicine entries must not tell the user to take a specific dose or to take a medicine for a self-diagnosed symptom. Identification and general information only.
+
 ## Rules
 
 - Prefer short, clear Pashto.
