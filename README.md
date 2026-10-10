@@ -36,6 +36,7 @@ sehatyar/
   .gitignore
   docs/
     PROJECT_PLAN.md
+    CONTENT_AND_SAFETY.md
   apps/
     web/          # PWA frontend
     api/          # FastAPI backend
@@ -48,6 +49,7 @@ sehatyar/
 ## Documentation
 
 - [Project plan](docs/PROJECT_PLAN.md) — scope, features, stack, safety rules
+- [Content and safety](docs/CONTENT_AND_SAFETY.md) — allowed / forbidden content and review process
 - [Web app](apps/web/README.md)
 - [API](apps/api/README.md)
 - [Content data](data/README.md)
@@ -55,10 +57,13 @@ sehatyar/
 
 ## Safety
 
+Full policy: [CONTENT_AND_SAFETY.md](docs/CONTENT_AND_SAFETY.md).
+
 - No automated prescribing  
 - No uncontrolled live web medical answers  
 - Danger signs point users to clinic care  
-- Content is curated and dated  
+- Content is curated, dated, and reviewable  
+
 
 ## Author
 

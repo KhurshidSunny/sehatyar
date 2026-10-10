@@ -127,7 +127,9 @@ These rules are fixed for the project:
 4. Every FAQ and medicine entry should have a source note and last-reviewed date.
 5. If confidence is low (weak OCR match), say so and offer typed search.
 
-I will treat content quality as part of the product, not as an afterthought.
+Full policy (allowed / forbidden content, disclaimer, review process): [CONTENT_AND_SAFETY.md](./CONTENT_AND_SAFETY.md).
+
+Content quality is part of the product, not an afterthought.
 
 ---
 

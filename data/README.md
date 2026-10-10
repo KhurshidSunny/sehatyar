@@ -1,6 +1,6 @@
 # Curated content
 
-Seed data for SehatYar. All health and medicine text must stay non-prescribing and reviewable.
+Seed data for SehatYar. All health and medicine text must stay non-prescribing and reviewable. See [docs/CONTENT_AND_SAFETY.md](../docs/CONTENT_AND_SAFETY.md) for the full content policy.
 
 ## Folders
 
