@@ -31,6 +31,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | `main.py` | FastAPI app + `/health` |
 | `db.py` | Motor MongoDB client |
 | `config.py` | Settings from env |
+| `schemas/` | Pydantic models for FAQ, medicine, and feedback |
 
 ## Endpoints (planned surface)
 
@@ -40,6 +41,20 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | FAQs | Categories, lists, and answer payloads |
 | Medicines | Name search and OCR-assisted match |
 | Feedback | Helpfulness votes on answers |
+
+## Schemas
+
+Pydantic models under `schemas/` match the curated JSON under `/data` and the planned API payloads:
+
+| Module | Models |
+|---|---|
+| `schemas/faq.py` | `FaqCategory`, `Faq`, `FaqSummary` |
+| `schemas/medicine.py` | `MedicineCategory`, `Medicine`, `MedicineSummary` |
+| `schemas/feedback.py` | `FeedbackCreate`, `FeedbackRecord` |
+
+`dangerLevel` is one of `info` / `clinic` / `emergency`. `reviewStatus` is `draft` or `reviewed`. Feedback stores only `targetType`, `targetId`, and `helpful` (no personal identity).
+
+Matching TypeScript types live in `apps/web/lib/types/`.
 
 ## Notes
 

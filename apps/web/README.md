@@ -27,6 +27,10 @@ npm run start
 npm run lint
 ```
 
+## Types
+
+Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` and mirror `apps/api/schemas/`.
+
 ## Notes
 
 - UI targets low-literacy use: large tap targets and short Pashto copy.

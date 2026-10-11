@@ -107,6 +107,8 @@ If the user asks for diagnosis, dosing, or â€œwhich medicine should I buy for â€
 |---|---|
 | [PROJECT_PLAN.md](./PROJECT_PLAN.md) | Scope and product decisions |
 | [../data/README.md](../data/README.md) | FAQ and medicine field definitions |
+| [../apps/api/schemas/](../apps/api/schemas/) | Pydantic models for FAQ, medicine, feedback |
+| [../apps/web/lib/types/](../apps/web/lib/types/) | Matching TypeScript content types |
 | [../README.md](../README.md) | Project overview and safety summary |
 | [../apps/api/README.md](../apps/api/README.md) | API must stay informational |
 | [../apps/web/README.md](../apps/web/README.md) | UI disclaimer expectations |
