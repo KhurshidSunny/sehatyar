@@ -21,6 +21,7 @@ copy .env.example .env   # or: cp .env.example .env
 
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 # then open http://127.0.0.1:8000/health  (mongo.connected should be true)
+# FAQ routes: /categories , /faqs?category=fever , /faqs/fever-01
 ```
 
 | File | Purpose |
@@ -31,16 +32,22 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | `main.py` | FastAPI app + `/health` |
 | `db.py` | Motor MongoDB client |
 | `config.py` | Settings from env |
+| `routers/` | HTTP route modules |
+| `services/` | Content loaders and lookups |
 | `schemas/` | Pydantic models for FAQ, medicine, and feedback |
 
-## Endpoints (planned surface)
+## Endpoints
 
-| Area | Purpose |
-|---|---|
-| Health | Service check |
-| FAQs | Categories, lists, and answer payloads |
-| Medicines | Name search and OCR-assisted match |
-| Feedback | Helpfulness votes on answers |
+| Method | Path | Purpose |
+|---|---|---|
+| GET | `/health` | Service + MongoDB check |
+| GET | `/categories` | FAQ categories in display order |
+| GET | `/faqs` | FAQ summaries (`?category=` optional filter) |
+| GET | `/faqs/{id}` | Full FAQ answer payload |
+
+Planned next: medicine name search, OCR match, and feedback votes.
+
+FAQ reads come from curated JSON under `FAQ_DATA_DIR` (default `../../data/faqs`). MongoDB is used for health checks now; seeding FAQ documents into Atlas is a later step.
 
 ## Schemas
 

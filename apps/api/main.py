@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from config import get_settings
 from db import close_db, get_db, ping_db
+from routers.faqs import router as faqs_router
 
 
 @asynccontextmanager
@@ -33,6 +34,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(faqs_router)
 
 
 @app.get("/health")
@@ -65,4 +68,6 @@ async def root():
         "name": "SehatYar API",
         "docs": "/docs",
         "health": "/health",
+        "categories": "/categories",
+        "faqs": "/faqs",
     }
