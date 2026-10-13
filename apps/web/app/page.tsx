@@ -3,10 +3,18 @@ export default function Home() {
     <div className="flex flex-1 flex-col">
       <header className="border-b border-border bg-surface px-4 py-5 sm:px-6">
         <div className="mx-auto w-full max-w-xl text-center">
-          <p className="text-3xl font-bold tracking-tight text-brand sm:text-4xl">
+          <p
+            className="notranslate text-3xl font-bold tracking-tight text-brand sm:text-4xl"
+            translate="no"
+            lang="ps"
+          >
             صحت یار
           </p>
-          <p className="mt-1 text-lg font-medium text-foreground sm:text-xl">
+          <p
+            className="notranslate mt-1 text-lg font-medium text-foreground sm:text-xl"
+            translate="no"
+            lang="en"
+          >
             SehatYar
           </p>
           <p className="mt-3 text-base text-muted sm:text-lg">
