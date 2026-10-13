@@ -12,8 +12,12 @@ from routers.faqs import router as faqs_router
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
-    # Warm the Mongo client on startup
-    await ping_db()
+    # Warm Mongo on startup, but do not crash the process if Atlas is unreachable.
+    # /health reports connected vs degraded so Render can still start the HTTP server.
+    try:
+        await ping_db()
+    except Exception as exc:  # noqa: BLE001
+        print(f"MongoDB ping failed on startup: {exc}", flush=True)
     yield
     await close_db()
 

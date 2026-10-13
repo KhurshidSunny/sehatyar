@@ -11,7 +11,11 @@ def get_client() -> AsyncIOMotorClient:
     global _client
     if _client is None:
         settings = get_settings()
-        _client = AsyncIOMotorClient(settings.mongo_uri)
+        # Fail fast on bad URI / network so startup and /health do not hang.
+        _client = AsyncIOMotorClient(
+            settings.mongo_uri,
+            serverSelectionTimeoutMS=5000,
+        )
     return _client
 
 
