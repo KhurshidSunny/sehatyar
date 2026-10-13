@@ -1,5 +1,6 @@
 """MongoDB Atlas / local connection via Motor."""
 
+import certifi
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
 
 from config import get_settings
@@ -12,9 +13,11 @@ def get_client() -> AsyncIOMotorClient:
     if _client is None:
         settings = get_settings()
         # Fail fast on bad URI / network so startup and /health do not hang.
+        # tlsCAFile=certifi helps Atlas TLS on some cloud Python builds (e.g. Render).
         _client = AsyncIOMotorClient(
             settings.mongo_uri,
             serverSelectionTimeoutMS=5000,
+            tlsCAFile=certifi.where(),
         )
     return _client
 
