@@ -44,10 +44,11 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | GET | `/categories` | FAQ categories in display order |
 | GET | `/faqs` | FAQ summaries (`?category=` optional filter) |
 | GET | `/faqs/{id}` | Full FAQ answer payload |
+| GET | `/medicines/search?q=` | Fuzzy medicine name search (optional `limit`) |
 
-Planned next: medicine name search, OCR match, and feedback votes.
+Planned next: feedback votes and OCR match.
 
-FAQ reads come from curated JSON under `FAQ_DATA_DIR` (default `../../data/faqs`). MongoDB is used for health checks now; seeding FAQ documents into Atlas is a later step.
+FAQ and medicine reads come from curated JSON (`FAQ_DATA_DIR`, `MEDICINE_DATA_DIR`). MongoDB is used for health checks now; seeding documents into Atlas is a later step.
 
 ## Schemas
 
