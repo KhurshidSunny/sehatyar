@@ -63,6 +63,30 @@ Pydantic models under `schemas/` match the curated JSON under `/data` and the pl
 
 Matching TypeScript types live in `apps/web/lib/types/`.
 
+## Deploy (Render + GitHub Actions)
+
+Live API: configure Root Directory `apps/api`, start with  
+`uvicorn main:app --host 0.0.0.0 --port $PORT`, health check `/health`.
+
+### One-time setup
+
+1. **Render → your web service → Settings → Deploy Hook**  
+   Create a hook and copy the URL (looks like `https://api.render.com/deploy/srv-...?...`).
+2. **GitHub → repo Settings → Secrets and variables → Actions**  
+   New secret name: `RENDER_DEPLOY_HOOK`  
+   Value: paste that Deploy Hook URL (never commit it).
+3. **Render → Settings → Auto-Deploy**  
+   Set to **Off** (or “Disable Auto-Deploy”) so only GitHub Actions triggers deploys.  
+   If Auto-Deploy stays On, every push can cause **two** deploys.
+
+### What happens after that
+
+Push to `main` that changes `apps/api/**` or `data/**` runs  
+`.github/workflows/deploy-api-render.yml`, which POSTs the deploy hook.  
+You can also run the workflow manually: GitHub → Actions → **Deploy API to Render** → **Run workflow**.
+
+Frontend on Vercel keeps using its own Git integration; this workflow is API-only.
+
 ## Notes
 
 - Content comes from curated data under `/data`, not open-web medical scraping.

@@ -1,0 +1,49 @@
+# Trigger a Render redeploy when API or curated data changes on main.
+# Requires GitHub secret: RENDER_DEPLOY_HOOK (Render → Service → Settings → Deploy Hook)
+
+name: Deploy API to Render
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/api/**"
+      - "data/**"
+      - ".github/workflows/deploy-api-render.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-api-render
+  cancel-in-progress: true
+
+jobs:
+  trigger-render:
+    name: Trigger Render deploy hook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check deploy hook secret
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "Missing GitHub secret RENDER_DEPLOY_HOOK."
+            echo "Create a Deploy Hook in Render (Service → Settings → Deploy Hook),"
+            echo "then add it as a repository secret named RENDER_DEPLOY_HOOK."
+            exit 1
+          fi
+
+      - name: Call Render deploy hook
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          echo "Triggering Render deploy..."
+          HTTP_CODE=$(curl -sS -o /tmp/render-hook-body.txt -w "%{http_code}" -X POST "$HOOK")
+          echo "HTTP status: $HTTP_CODE"
+          cat /tmp/render-hook-body.txt || true
+          echo
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            echo "Deploy hook failed."
+            exit 1
+          fi
+          echo "Render accepted the deploy request."

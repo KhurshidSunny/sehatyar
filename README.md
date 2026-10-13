@@ -25,7 +25,7 @@ Monorepo layout, FastAPI health check, Next.js web scaffolding, draft FAQ seed d
 | Database | MongoDB Atlas |
 | OCR | Tesseract |
 | NLP experiments | scikit-learn (+ small neural baseline) |
-| Hosting | Netlify/Vercel (web) + Render/Railway (API) |
+| Hosting | Vercel (web) + Render (API); API deploys via GitHub Actions deploy hook |
 
 ## Repository layout
 
