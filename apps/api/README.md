@@ -22,6 +22,7 @@ copy .env.example .env   # or: cp .env.example .env
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 # then open http://127.0.0.1:8000/health  (mongo.connected should be true)
 # FAQ routes: /categories , /faqs?category=fever , /faqs/fever-01
+# Feedback: POST /feedback  {"targetType":"faq","targetId":"fever-01","helpful":true}
 ```
 
 | File | Purpose |
@@ -33,7 +34,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | `db.py` | Motor MongoDB client |
 | `config.py` | Settings from env |
 | `routers/` | HTTP route modules |
-| `services/` | Content loaders and lookups |
+| `services/` | Content loaders, lookups, and feedback persistence |
 | `schemas/` | Pydantic models for FAQ, medicine, and feedback |
 
 ## Endpoints
@@ -45,10 +46,11 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | GET | `/faqs` | FAQ summaries (`?category=` optional filter) |
 | GET | `/faqs/{id}` | Full FAQ answer payload |
 | GET | `/medicines/search?q=` | Fuzzy medicine name search (optional `limit`) |
+| POST | `/feedback` | Store anonymous helpfulness vote (`targetType`, `targetId`, `helpful`) |
 
-Planned next: feedback votes and OCR match.
+Planned next: seed script, then FAQ UI and OCR match.
 
-FAQ and medicine reads come from curated JSON (`FAQ_DATA_DIR`, `MEDICINE_DATA_DIR`). MongoDB is used for health checks now; seeding documents into Atlas is a later step.
+FAQ and medicine reads come from curated JSON (`FAQ_DATA_DIR`, `MEDICINE_DATA_DIR`). Feedback votes are written to the MongoDB `feedback` collection. Seeding FAQ/medicine documents into Atlas is a later step.
 
 ## Schemas
 

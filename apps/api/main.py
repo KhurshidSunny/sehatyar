@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from config import get_settings
 from db import close_db, get_db, ping_db
 from routers.faqs import router as faqs_router
+from routers.feedback import router as feedback_router
 from routers.medicines import router as medicines_router
 
 
@@ -42,6 +43,7 @@ app.add_middleware(
 
 app.include_router(faqs_router)
 app.include_router(medicines_router)
+app.include_router(feedback_router)
 
 
 @app.get("/health")
@@ -77,4 +79,5 @@ async def root():
         "categories": "/categories",
         "faqs": "/faqs",
         "medicinesSearch": "/medicines/search?q=",
+        "feedback": "/feedback",
     }

@@ -83,6 +83,14 @@ def list_medicines() -> list[Medicine]:
     return list(medicines)
 
 
+def get_medicine(medicine_id: str) -> Medicine:
+    _, medicines = _catalog()
+    for medicine in medicines:
+        if medicine.id == medicine_id:
+            return medicine
+    raise KeyError(medicine_id)
+
+
 def to_summary(medicine: Medicine) -> MedicineSummary:
     return MedicineSummary(
         id=medicine.id,
