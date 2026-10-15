@@ -36,6 +36,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | `routers/` | HTTP route modules |
 | `services/` | Content loaders, lookups, and feedback persistence |
 | `schemas/` | Pydantic models for FAQ, medicine, and feedback |
+| `scripts/seed.py` | Loads curated JSON from `/data` into MongoDB |
 
 ## Endpoints
 
@@ -48,13 +49,30 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | GET | `/medicines/search?q=` | Fuzzy medicine name search (optional `limit`) |
 | POST | `/feedback` | Store anonymous helpfulness vote (`targetType`, `targetId`, `helpful`) |
 
-Planned next: seed script, then FAQ UI and OCR match.
+FAQ and medicine reads come from curated JSON (`FAQ_DATA_DIR`, `MEDICINE_DATA_DIR`). Feedback votes are written to the MongoDB `feedback` collection.
 
-FAQ and medicine reads come from curated JSON (`FAQ_DATA_DIR`, `MEDICINE_DATA_DIR`). Feedback votes are written to the MongoDB `feedback` collection. Seeding FAQ/medicine documents into Atlas is a later step.
+## Seeding MongoDB
+
+`scripts/seed.py` validates every file under `/data` with the same Pydantic models the API uses, then upserts the content into MongoDB keyed by each entry's `id`. Run it from `apps/api` with `.env` pointing at the target database:
+
+```bash
+python -m scripts.seed            # insert or update all content
+python -m scripts.seed --dry-run  # validate JSON and print counts, no writes
+python -m scripts.seed --prune    # also remove documents whose id left the JSON
+```
+
+| Collection | Source | Indexes |
+|---|---|---|
+| `faq_categories` | `data/faqs/categories.json` | `order` |
+| `faqs` | other `data/faqs/*.json` | `category` |
+| `medicine_categories` | `data/medicines/categories.json` | `order` |
+| `medicines` | other `data/medicines/*.json` | `category`, `names` |
+
+Re-running is safe: unchanged entries are left as they are, edited entries are replaced. `lastReviewed` is stored as an ISO date string. The `feedback` collection is never touched.
 
 ## Schemas
 
-Pydantic models under `schemas/` match the curated JSON under `/data` and the planned API payloads:
+Pydantic models under `schemas/` match the curated JSON under `/data` and the API payloads:
 
 | Module | Models |
 |---|---|
