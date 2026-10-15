@@ -1,3 +1,7 @@
+import Link from "next/link";
+
+import Disclaimer from "@/components/Disclaimer";
+
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
@@ -24,47 +28,30 @@ export default function Home() {
       </header>
 
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-4 px-4 py-8 sm:px-6">
-        <p className="text-center text-lg text-muted sm:text-xl">
-          څه غواړئ وکړئ؟
-        </p>
+        <p className="text-center text-lg text-muted sm:text-xl">څه غواړئ وکړئ؟</p>
 
-        <button
-          type="button"
-          disabled
-          className="min-h-20 w-full rounded-2xl bg-brand px-6 py-5 text-xl font-semibold text-white shadow-sm sm:text-2xl"
+        <Link
+          href="/faqs"
+          className="flex min-h-20 w-full flex-col items-center justify-center rounded-2xl bg-brand px-6 py-5 text-center text-xl font-semibold text-white shadow-sm transition hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
         >
           روغتیا پوښتنې
           <span className="mt-1 block text-base font-normal text-teal-50 sm:text-lg">
-            Health questions (soon)
+            Health questions
           </span>
-        </button>
+        </Link>
 
-        <button
-          type="button"
-          disabled
-          className="min-h-20 w-full rounded-2xl border-2 border-brand bg-surface px-6 py-5 text-xl font-semibold text-brand shadow-sm sm:text-2xl"
+        <Link
+          href="/medicines"
+          className="flex min-h-20 w-full flex-col items-center justify-center rounded-2xl border-2 border-brand bg-surface px-6 py-5 text-center text-xl font-semibold text-brand shadow-sm transition hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
         >
           دا درمل څه دی؟
           <span className="mt-1 block text-base font-normal text-muted sm:text-lg">
-            What is this medicine? (soon)
+            What is this medicine?
           </span>
-        </button>
+        </Link>
       </main>
 
-      <aside
-        className="border-t-2 border-disclaimer-border bg-disclaimer-bg px-4 py-4 sm:px-6"
-        role="note"
-        aria-label="Safety disclaimer"
-      >
-        <p className="mx-auto max-w-xl text-center text-base font-medium leading-relaxed text-disclaimer-text sm:text-lg">
-          دا اپلیکیشن یوازې معلومات ورکوي. دا ډاکټر نه دی او درمل نه تجویز کوي.
-          که ناروغي سخته وي، کلینیک یا روغتون ته لاړ شئ.
-        </p>
-        <p className="mx-auto mt-2 max-w-xl text-center text-sm text-disclaimer-text/90">
-          Information only — not a diagnosis or prescription. Seek clinic care for
-          serious symptoms.
-        </p>
-      </aside>
+      <Disclaimer />
     </div>
   );
 }

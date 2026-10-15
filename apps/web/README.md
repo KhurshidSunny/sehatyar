@@ -31,8 +31,17 @@ npm run lint
 
 Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` and mirror `apps/api/schemas/`.
 
+## Screens
+
+| Path | Purpose |
+|---|---|
+| `/` | Home — large entry links for FAQs and medicine lookup |
+| `/faqs` | Health questions section |
+| `/medicines` | Medicine lookup section |
+
+`components/Disclaimer.tsx` is the permanent non-prescribing notice on each of these screens.
+
 ## Notes
 
 - UI targets low-literacy use: large tap targets and short Pashto copy.
-- The home screen has two entry points (health questions, medicine lookup) and a permanent disclaimer that the app does not diagnose or prescribe.
 - Layout is right-to-left (`lang="ps"`, `dir="rtl"`) with Noto Naskh Arabic for Pashto text.
