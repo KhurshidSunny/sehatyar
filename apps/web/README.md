@@ -36,10 +36,13 @@ Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` an
 | Path | Purpose |
 |---|---|
 | `/` | Home — large entry links for FAQs and medicine lookup |
-| `/faqs` | Health questions section |
+| `/faqs` | FAQ categories as large tap targets |
+| `/faqs/[category]` | Questions in one category, with clinic / emergency badges |
 | `/medicines` | Medicine lookup section |
 
 `components/Disclaimer.tsx` is the permanent non-prescribing notice on each of these screens.
+
+FAQ screens are rendered at build time from the curated JSON in `data/faqs/` (see `lib/faqContent.ts`). Unknown category ids return 404.
 
 ## Notes
 
