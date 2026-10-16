@@ -2,13 +2,15 @@
 
 import type { ReactNode } from "react";
 
+import BrandLogo from "@/components/BrandLogo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { LocaleProvider } from "@/lib/i18n/LocaleProvider";
 
 function ChromeBar() {
   return (
-    <div className="border-b border-border bg-surface px-4 py-2 sm:px-6" dir="ltr">
-      <div className="mx-auto flex w-full max-w-xl items-center justify-end">
+    <div className="border-b border-border bg-surface px-4 py-2.5 sm:px-6" dir="ltr">
+      <div className="mx-auto flex w-full max-w-xl items-center justify-between gap-3">
+        <BrandLogo size="sm" priority />
         <LanguageSwitcher />
       </div>
     </div>

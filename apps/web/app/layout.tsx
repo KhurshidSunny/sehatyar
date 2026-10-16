@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   title: "SehatYar | صحت یار",
   description:
     "Pashto and English health literacy assistant — curated FAQs and medicine pack help. Information only, not a doctor.",
+  applicationName: "SehatYar",
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   other: {
     google: "notranslate",
   },
