@@ -10,7 +10,9 @@ Progressive web app for FAQ browsing and medicine lookup.
 
 ## Local development
 
-From `apps/web`:
+1. Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_API_URL` (default `http://localhost:8000`).
+2. Start the API from `apps/api` (see that README) so `/categories` and `/faqs` respond.
+3. From `apps/web`:
 
 ```bash
 npm install
@@ -26,6 +28,18 @@ npm run build
 npm run start
 npm run lint
 ```
+
+## API client
+
+FAQ screens load live data from FastAPI via `lib/api/`:
+
+| Helper | Endpoint |
+|---|---|
+| `fetchFaqCategories()` | `GET /categories` |
+| `fetchFaqSummaries(categoryId?)` | `GET /faqs?category=` |
+| `fetchFaq(faqId)` | `GET /faqs/{id}` |
+
+Loading, empty, and error UI live in `components/AsyncState.tsx`. CORS must allow the web origin (`CORS_ORIGINS` on the API, usually `http://localhost:3000`).
 
 ## Types
 
@@ -43,9 +57,9 @@ Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` an
 
 `components/Disclaimer.tsx` is the permanent non-prescribing notice on each of these screens.
 
-FAQ screens are rendered at build time from the curated JSON in `data/faqs/` (see `lib/faqContent.ts`). Unknown category or FAQ ids return 404. When `audioUrl` is null, the answer screen shows a clear missing-audio state instead of a broken player.
+Unknown category or FAQ ids show a not-found empty state. When `audioUrl` is null, the answer screen shows a clear missing-audio state instead of a broken player.
 
 ## Notes
 
-- UI targets low-literacy use: large tap targets and short Pashto copy.
-- Layout is right-to-left (`lang="ps"`, `dir="rtl"`) with Noto Naskh Arabic for Pashto text.
+- UI targets low-literacy use: large tap targets and short Pashto / English copy.
+- Default locale is Pashto (`lang="ps"`, `dir="rtl"`) with Noto Naskh Arabic; English uses LTR.

@@ -25,7 +25,12 @@ export type MessageKey =
   | "medicineHint"
   | "language"
   | "languagePs"
-  | "languageEn";
+  | "languageEn"
+  | "loading"
+  | "loadError"
+  | "retry"
+  | "notFound"
+  | "emptyCategories";
 
 const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
   ps: {
@@ -51,6 +56,11 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     language: "ژبه",
     languagePs: "پښتو",
     languageEn: "English",
+    loading: "مهرباني وکړئ انتظار وکړئ…",
+    loadError: "معلومات ونه لوستل شول. انټرنېټ وګورئ او بیا هڅه وکړئ.",
+    retry: "بیا هڅه",
+    notFound: "دا پاڼه ونه موندل شوه.",
+    emptyCategories: "لا کټګورۍ نشته.",
   },
   en: {
     brandName: "SehatYar",
@@ -75,6 +85,11 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     language: "Language",
     languagePs: "پښتو",
     languageEn: "English",
+    loading: "Please wait…",
+    loadError: "Could not load content. Check your connection and try again.",
+    retry: "Try again",
+    notFound: "This page was not found.",
+    emptyCategories: "No categories yet.",
   },
 };
 

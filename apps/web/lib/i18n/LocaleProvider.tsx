@@ -56,8 +56,16 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setLocaleState(readStoredLocale());
-    setReady(true);
+    let cancelled = false;
+    // Defer so hydration can finish before applying a stored locale.
+    queueMicrotask(() => {
+      if (cancelled) return;
+      setLocaleState(readStoredLocale());
+      setReady(true);
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
