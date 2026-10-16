@@ -5,12 +5,19 @@ import { useLocale } from "@/lib/i18n/LocaleProvider";
 export function LoadingState() {
   const { t } = useLocale();
   return (
-    <p
-      className="rounded-2xl border-2 border-border bg-surface px-5 py-8 text-center text-lg text-muted"
+    <div
+      className="flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-border bg-surface px-5 py-12"
       role="status"
+      aria-live="polite"
+      aria-busy="true"
     >
-      {t("loading")}
-    </p>
+      <span className="relative flex h-14 w-14 items-center justify-center" aria-hidden="true">
+        <span className="absolute inset-0 rounded-full border-[3px] border-brand/20" />
+        <span className="absolute inset-0 animate-spin rounded-full border-[3px] border-transparent border-t-brand border-r-brand" />
+        <span className="h-3 w-3 animate-pulse rounded-full bg-brand" />
+      </span>
+      <p className="text-base text-muted sm:text-lg">{t("loading")}</p>
+    </div>
   );
 }
 
