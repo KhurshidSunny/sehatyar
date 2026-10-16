@@ -38,11 +38,12 @@ Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` an
 | `/` | Home — large entry links for FAQs and medicine lookup |
 | `/faqs` | FAQ categories as large tap targets |
 | `/faqs/[category]` | Questions in one category, with clinic / emergency badges |
+| `/faqs/[category]/[faqId]` | Answer text + Play audio (or “no audio yet”) |
 | `/medicines` | Medicine lookup section |
 
 `components/Disclaimer.tsx` is the permanent non-prescribing notice on each of these screens.
 
-FAQ screens are rendered at build time from the curated JSON in `data/faqs/` (see `lib/faqContent.ts`). Unknown category ids return 404.
+FAQ screens are rendered at build time from the curated JSON in `data/faqs/` (see `lib/faqContent.ts`). Unknown category or FAQ ids return 404. When `audioUrl` is null, the answer screen shows a clear missing-audio state instead of a broken player.
 
 ## Notes
 

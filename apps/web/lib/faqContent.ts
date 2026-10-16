@@ -60,3 +60,11 @@ export async function getFaqSummaries(categoryId: string): Promise<FaqSummary[]>
     .filter((faq) => faq.category === categoryId)
     .map(toSummary);
 }
+
+export async function getFaq(id: string): Promise<Faq | undefined> {
+  return (await getCatalog()).faqs.find((faq) => faq.id === id);
+}
+
+export async function getAllFaqs(): Promise<Faq[]> {
+  return (await getCatalog()).faqs;
+}

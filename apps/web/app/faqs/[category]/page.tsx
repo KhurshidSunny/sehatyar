@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import DangerBadge from "@/components/DangerBadge";
@@ -41,14 +42,16 @@ export default async function FaqCategoryPage({
         ) : (
           <ol className="flex flex-col gap-3">
             {questions.map((question) => (
-              <li
-                key={question.id}
-                className="flex min-h-16 flex-col justify-center gap-2 rounded-2xl border-2 border-border bg-surface px-5 py-4 shadow-sm"
-              >
-                <span className="text-lg font-semibold leading-relaxed text-foreground sm:text-xl">
-                  {question.questionPs}
-                </span>
-                <DangerBadge level={question.dangerLevel} />
+              <li key={question.id}>
+                <Link
+                  href={`/faqs/${category.id}/${question.id}`}
+                  className="flex min-h-16 w-full flex-col justify-center gap-2 rounded-2xl border-2 border-border bg-surface px-5 py-4 shadow-sm transition hover:border-brand hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                >
+                  <span className="text-lg font-semibold leading-relaxed text-foreground sm:text-xl">
+                    {question.questionPs}
+                  </span>
+                  <DangerBadge level={question.dangerLevel} />
+                </Link>
               </li>
             ))}
           </ol>
