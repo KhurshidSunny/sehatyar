@@ -5,6 +5,7 @@
     "questionPs": "تبه څه ده او څنګه پوه شم چې تبه لرم؟",
     "questionEn": "What is fever and how do I know I have one?",
     "answerPs": "تبه هغه وخت ده چې د بدن تودوخه له عادي حالت څخه لوړه شي. که ترمامیټر لرئ، تودوخه پرې اندازه کړئ. که ترمامیټر نه وي، تندی او سینه د لاس په شا وګورئ؛ که ډېر ګرم وي، ښايي تبه وي. تبه پخپله ناروغي نه ده، د بلې ناروغۍ نښه ده.",
+    "answerEn": "Fever is when body temperature rises above normal. If you have a thermometer, measure with it. If not, feel the forehead and chest with the back of your hand; if very hot, it may be fever. Fever itself is not a disease — it is a sign of another illness.",
     "paraphrasesPs": [
       "زه څنګه پوه شم چې تبه لرم؟",
       "د تبې نښې کومې دي؟",
@@ -12,7 +13,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "info",
-    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "source": {
+      "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -22,6 +26,7 @@
     "questionPs": "کله چې تبه ولرم، په کور کې څه وکړم؟",
     "questionEn": "What can I do at home when I have a fever?",
     "answerPs": "ډېر استراحت وکړئ او ډېرې اوبه، شوروا یا نور مایعات وڅښئ. سپک او پاک کالي واغوندئ او کوټه هوادار وساتئ. تندی په نیمګرمو اوبو لوند ټوکر سره پاک کړئ. د هر درمل له خوړلو مخکې له ډاکټر یا درملپلورونکي سره مشوره وکړئ.",
+    "answerEn": "Rest a lot and drink plenty of water, soup, or other fluids. Wear light clean clothes and keep the room aired. Wipe the forehead with a cloth dampened in lukewarm water. Ask a doctor or pharmacist before taking any medicine.",
     "paraphrasesPs": [
       "په تبه کې څه وکړم؟",
       "تبه په کور کې څنګه کمه کړم؟",
@@ -29,7 +34,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "info",
-    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "source": {
+      "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -39,6 +47,7 @@
     "questionPs": "د ماشوم تبه کله خطرناکه ده؟",
     "questionEn": "When is a child's fever dangerous?",
     "answerPs": "ماشوم سمدستي روغتون یا کلینیک ته یوسئ که: له دوو میاشتو کم عمر ولري او تبه ولري، تشنج ولري، ډېر ویده وي او نه ویښیږي، شیدې یا اوبه نه شي څښلی، هر څه چې خوري کانګې یې کوي، یا ساه یې چټکه او سخته وي.",
+    "answerEn": "Take the child to a hospital or clinic right away if: younger than two months with fever, has a seizure, is very sleepy and will not wake, cannot drink milk or water, vomits everything, or breathes fast and hard.",
     "paraphrasesPs": [
       "د ماشوم تبه څه وخت خطر لري؟",
       "ماشوم مې تبه لري، روغتون ته یې یوسم؟",
@@ -46,7 +55,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "emergency",
-    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "source": {
+      "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -56,6 +68,7 @@
     "questionPs": "تبه څو ورځې دوام وکړي نو ډاکټر ته ولاړ شم؟",
     "questionEn": "How long can a fever last before I should see a doctor?",
     "answerPs": "که تبه له دریو ورځو زیاته دوام وکړي، یا هره ورځ بېرته راشي، کلینیک ته ولاړ شئ. ماشومان، زاړه خلک او امیندوارې میرمنې باید لا ژر کلینیک ته ولاړ شي. که له تبې سره سخت سر درد، د غاړې شخوالی یا بې هوښي وي، سمدستي روغتون ته ولاړ شئ.",
+    "answerEn": "If fever lasts more than three days, or returns every day, go to a clinic. Children, older adults, and pregnant women should go sooner. With severe headache, stiff neck, or loss of consciousness, go to hospital immediately.",
     "paraphrasesPs": [
       "تبه مې څو ورځې ده، ډاکټر ته ولاړ شم؟",
       "اوږده تبه کله خطرناکه ده؟",
@@ -63,7 +76,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "clinic",
-    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "source": {
+      "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -73,6 +89,7 @@
     "questionPs": "په تبه کې ځان په کمپلو کې ونغاړم؟",
     "questionEn": "Should I wrap up in blankets when I have a fever?",
     "answerPs": "نه. ډېرې کمپلې او درانه کالي د بدن تودوخه نوره هم لوړوي. سپک کالي واغوندئ او که سړه مو شي، یو نری ټوکر پر ځان واچوئ. ماشومان هم په ډېرو کالیو کې مه نغاړئ.",
+    "answerEn": "No. Heavy blankets and thick clothes can raise body heat further. Wear light clothes; if you feel cold, use one thin cover. Do not wrap children in too many layers either.",
     "paraphrasesPs": [
       "په تبه کې ډېر کالي واغوندم؟",
       "تبه لرونکی ماشوم پوښ کړم که نه؟",
@@ -80,7 +97,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "info",
-    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "source": {
+      "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -90,6 +110,7 @@
     "questionPs": "تبه او ملاریا: کله د ملاریا ټیسټ وکړم؟",
     "questionEn": "Fever and malaria: when should I get a malaria test?",
     "answerPs": "په هغو سیمو کې چې ملاریا شته، هره تبه باید د ملاریا لپاره وازمویل شي. کلینیک ته ولاړ شئ او د وینې ټیسټ وکړئ. ملاریا ژر درملنه غواړي؛ ځنډ یې خطرناک کېدای شي، په ځانګړي ډول د ماشومانو او امیندوارو میرمنو لپاره.",
+    "answerEn": "In areas where malaria is present, every fever should be tested for malaria. Go to a clinic for a blood test. Malaria needs prompt treatment; delay can be dangerous, especially for children and pregnant women.",
     "paraphrasesPs": [
       "ملاریا لرم که نه؟",
       "د ملاریا ټیسټ کله وکړم؟",
@@ -97,7 +118,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "clinic",
-    "source": { "title": "WHO fact sheet: Malaria", "url": "https://www.who.int/news-room/fact-sheets/detail/malaria" },
+    "source": {
+      "title": "WHO fact sheet: Malaria",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/malaria"
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -107,6 +131,7 @@
     "questionPs": "له تبې سره کومې نښې بیړنۍ دي؟",
     "questionEn": "Which signs with a fever need emergency care?",
     "answerPs": "سمدستي روغتون ته ولاړ شئ که له تبې سره دا نښې وي: د غاړې شخوالی، سخت سر درد، بې هوښي یا ګډوډي، تشنج، د ساه اخیستلو ستونزه، په پوستکي سرې یا تورې داغې چې په فشار نه ورکیږي، یا دومره کمزوري چې ودرېدای نه شئ.",
+    "answerEn": "Go to hospital immediately if fever comes with: stiff neck, severe headache, confusion or unconsciousness, seizure, breathing difficulty, red or dark skin spots that do not fade when pressed, or weakness so severe you cannot stand.",
     "paraphrasesPs": [
       "د تبې سره کومې نښې خطرناکې دي؟",
       "تبه او د غاړې شخوالی لرم، څه وکړم؟",
@@ -114,7 +139,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "emergency",
-    "source": { "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet", "url": null },
+    "source": {
+      "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   }

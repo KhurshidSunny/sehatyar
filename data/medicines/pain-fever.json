@@ -11,7 +11,9 @@
       "پینادول"
     ],
     "usesPs": "دا درمل معمولاً د سر درد، بدن درد او تبې د کمولو لپاره کارول کیږي. دا تشخیص نه کوي او دوز یې ستاسو لپاره په خپله مه ټاکئ — له ډاکټر یا درملپلورونکي څخه وپوښتئ.",
+    "usesEn": "This medicine is commonly used to ease headache, body aches, and fever. It does not diagnose illness. Do not choose a dose yourself — ask a doctor or pharmacist.",
     "warningsPs": "له سپارښتنې زیات مه یې خورئ؛ ډېر مقدار ځیګر ته زیان رسوي. که مخکې ځیګر ناروغي لرئ، یا نور درمل چې پیراسیټامول لري خورئ، مخکې مشوره وکړئ. ماشومانو او امیندوارو ته دوز پرته له روغتیايي مشورې مه ورکوئ. که سخت الرجي، ساه تنګي یا پوستکی سور شي، سمدستي کلینیک ته ولاړ شئ.",
+    "warningsEn": "Do not take more than advised; large amounts can harm the liver. If you have liver disease, or take other products that contain paracetamol, ask first. Do not dose children or pregnant people without health advice. Seek clinic care for severe allergy, breathing trouble, or skin rash.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — paracetamol monograph (general reference)",
@@ -31,7 +33,9 @@
       "بروفین"
     ],
     "usesPs": "دا درمل معمولاً د درد، التهاب او تبې د کمولو لپاره کارول کیږي. د ځان لپاره دوز مه ټاکئ؛ له ډاکټر یا درملپلورونکي څخه وپوښتئ.",
+    "usesEn": "This medicine is commonly used to ease pain, inflammation, and fever. Do not set your own dose; ask a doctor or pharmacist.",
     "warningsPs": "په خالي معده یې مه خورئ که معده مو حساسه وي. که د معدې زخم، وینې تویېدل، پښتورګي ناروغي، یا د زړه ستونزه لرئ، مخکې مشوره وکړئ. له اسپرین یا نورو ورته درملو سره پرته له مشورې یوځای مه یې خورئ. امیندواري او کوچني ماشومان ځانګړې پاملرنه غواړي.",
+    "warningsEn": "Avoid on an empty stomach if your stomach is sensitive. Ask first if you have stomach ulcers, bleeding, kidney problems, or heart disease. Do not combine with aspirin or similar medicines without advice. Pregnancy and young children need special care.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — ibuprofen monograph (general reference)",
@@ -51,7 +55,9 @@
       "اسیټیل سالیسیلیک اسید"
     ],
     "usesPs": "دا درمل په ځینو حالتونو کې د درد او تبې لپاره کارول کیږي، او په ځینو ناروغانو کې د زړه د ساتنې لپاره د ډاکټر په سپارښتنه ورکول کیږي. په خپله مه پیل کوئ.",
+    "usesEn": "This medicine is sometimes used for pain or as advised by a clinician for other reasons. It is not for self-diagnosis. Ask a doctor or pharmacist before use.",
     "warningsPs": "ماشومانو او تنکیو ځوانانو ته د ویروسي ناروغۍ پر مهال معمولاً نه ورکول کیږي (د ری سندرم خطر). که د وینې تویېدل، معدې زخم، یا د وینې نری کوونکي درمل خورئ، مخکې مشوره وکړئ. اسپرین الرجي یا ساه تنګي کې سمدستي کلینیک ته ولاړ شئ.",
+    "warningsEn": "Do not give aspirin to children or teenagers with viral illness unless a clinician says so. Ask first if you have bleeding problems, stomach ulcers, or asthma. Seek urgent care for black stools, vomiting blood, or severe allergy.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — acetylsalicylic acid (general reference)",
@@ -70,7 +76,9 @@
       "وولټارین"
     ],
     "usesPs": "دا درمل معمولاً د عضلاتو او بندونو د درد او التهاب د کمولو لپاره کارول کیږي. دوز او موده یې له ډاکټر یا درملپلورونکي څخه وپوښتئ.",
+    "usesEn": "This medicine is commonly used for pain and inflammation when advised by a clinician. Do not decide the dose yourself.",
     "warningsPs": "اوږدمهاله یا لوړ دوز پرته له مشورې مه کاروئ. د معدې، ځیګر، پښتورګو یا زړه ستونزې کې خطر زیاتیږي. که وینه په استفراغ یا پاخانه کې ووینئ، سمدستي کلینیک ته ولاړ شئ.",
+    "warningsEn": "Can irritate the stomach and affect kidneys or heart risk in some people. Ask before use if you have ulcers, kidney disease, or heart problems. Not for unsupervised use in pregnancy.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — diclofenac (general reference)",
@@ -89,7 +97,9 @@
       "پونسټان"
     ],
     "usesPs": "دا درمل معمولاً د درد، په تېره د میاشتني درد، د کمولو لپاره کارول کیږي. دوز مه ټاکئ؛ مشوره وکړئ.",
+    "usesEn": "This medicine is sometimes used for pain when a clinician advises it. Identification only — ask a professional about use.",
     "warningsPs": "د معدې زخم، وینې تویېدل، یا پښتورګي ناروغۍ کې پرته له ډاکټر مه یې خورئ. که سختې معدې درد، تورې پاخانې یا الرجي راشي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "May upset the stomach or affect kidneys. Ask first if you have ulcers, kidney disease, or are pregnant. Stop and seek care for severe belly pain or allergic signs.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for mefenamic acid (general OTC/prescription label information)",
@@ -108,7 +118,9 @@
       "نیپروسن"
     ],
     "usesPs": "دا درمل معمولاً د درد او التهاب د کمولو لپاره کارول کیږي. د ځان تشخیص او دوز مه کوئ.",
+    "usesEn": "This medicine is commonly used for pain and inflammation under clinical advice. Do not self-prescribe a dose.",
     "warningsPs": "د معدې، زړه او پښتورګو خطرونه لري که ناسم وکارول شي. له نورو درد درملو سره پرته له مشورې یوځای مه یې خورئ. امیندواري کې مخکې مشوره اړینه ده.",
+    "warningsEn": "Ask first with stomach ulcers, kidney disease, heart disease, or pregnancy. Take with food if advised. Seek care for black stools or breathing difficulty.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for naproxen (general label information)",

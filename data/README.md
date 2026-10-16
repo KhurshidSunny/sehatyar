@@ -17,9 +17,10 @@ Seed data for SehatYar. All health and medicine text must stay non-prescribing a
 |---|---|
 | `id` | Stable id, `{category}-{NN}` |
 | `category` | Category `id` from `categories.json` |
-| `questionPs` | Question shown to the user |
-| `questionEn` | English gloss for content review |
-| `answerPs` | Short answer shown and read aloud |
+| `questionPs` | Question shown when language is Pashto |
+| `questionEn` | Question shown when language is English |
+| `answerPs` | Short answer shown (and read aloud) in Pashto |
+| `answerEn` | Short answer shown in English |
 | `paraphrasesPs` | Other ways users ask the same question, used for intent matching |
 | `audioUrl` | Recorded answer path, or `null` until recorded |
 | `dangerLevel` | `info` (self-care), `clinic` (visit a clinic soon), or `emergency` (go to hospital now) |
@@ -37,7 +38,9 @@ Seed data for SehatYar. All health and medicine text must stay non-prescribing a
 | `category` | Category `id` from `medicines/categories.json` |
 | `names` | English and local name spellings used for search and OCR matching |
 | `usesPs` | Short Pashto description of common uses (non-prescribing) |
+| `usesEn` | Short English description of common uses (non-prescribing) |
 | `warningsPs` | Short Pashto cautions; points users to clinic care when needed |
+| `warningsEn` | Short English cautions; points users to clinic care when needed |
 | `audioUrl` | Recorded uses/warnings path, or `null` until recorded |
 | `source` | `title` of the reference and its `url` when it has a stable public link |
 | `lastReviewed` | Date the entry was last checked (`YYYY-MM-DD`) |

@@ -1,0 +1,87 @@
+export type Locale = "ps" | "en";
+
+export const LOCALES: Locale[] = ["ps", "en"];
+export const DEFAULT_LOCALE: Locale = "ps";
+export const LOCALE_COOKIE = "sehatyar-locale";
+
+export type MessageKey =
+  | "brandName"
+  | "tagline"
+  | "whatDoYouWant"
+  | "healthQuestions"
+  | "whatIsThisMedicine"
+  | "chooseCategory"
+  | "chooseQuestion"
+  | "noQuestionsYet"
+  | "answer"
+  | "back"
+  | "home"
+  | "disclaimer"
+  | "clinicBadge"
+  | "emergencyBadge"
+  | "audioUnavailable"
+  | "playAudio"
+  | "stopAudio"
+  | "medicineHint"
+  | "language"
+  | "languagePs"
+  | "languageEn";
+
+const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
+  ps: {
+    brandName: "صحت یار",
+    tagline: "روغتیا پوښتنې او د درملو پېژندنه — په ساده پښتو کې",
+    whatDoYouWant: "څه غواړئ وکړئ؟",
+    healthQuestions: "روغتیا پوښتنې",
+    whatIsThisMedicine: "دا درمل څه دی؟",
+    chooseCategory: "کټګوري غوره کړئ",
+    chooseQuestion: "پوښتنه غوره کړئ",
+    noQuestionsYet: "په دې برخه کې لا پوښتنې نشته.",
+    answer: "ځواب",
+    back: "شاته",
+    home: "کور",
+    disclaimer:
+      "دا اپلیکیشن یوازې معلومات ورکوي. دا ډاکټر نه دی او درمل نه تجویز کوي. که ناروغي سخته وي، کلینیک یا روغتون ته لاړ شئ.",
+    clinicBadge: "کلینیک ته لاړ شئ",
+    emergencyBadge: "بیړنی حالت",
+    audioUnavailable: "غږ لا نشته",
+    playAudio: "غږ واورئ",
+    stopAudio: "ودروئ",
+    medicineHint: "د درملو پیک عکس واخلئ یا نوم ولیکئ",
+    language: "ژبه",
+    languagePs: "پښتو",
+    languageEn: "English",
+  },
+  en: {
+    brandName: "SehatYar",
+    tagline: "Health questions and medicine pack help — in clear language",
+    whatDoYouWant: "What would you like to do?",
+    healthQuestions: "Health questions",
+    whatIsThisMedicine: "What is this medicine?",
+    chooseCategory: "Choose a category",
+    chooseQuestion: "Choose a question",
+    noQuestionsYet: "No questions in this section yet.",
+    answer: "Answer",
+    back: "Back",
+    home: "Home",
+    disclaimer:
+      "This app gives information only. It is not a doctor and does not prescribe medicine. For serious illness, go to a clinic or hospital.",
+    clinicBadge: "Go to a clinic",
+    emergencyBadge: "Emergency",
+    audioUnavailable: "Audio not available yet",
+    playAudio: "Play audio",
+    stopAudio: "Stop",
+    medicineHint: "Photograph a medicine pack or type the name",
+    language: "Language",
+    languagePs: "پښتو",
+    languageEn: "English",
+  },
+};
+
+export function t(locale: Locale, key: MessageKey): string {
+  return MESSAGES[locale][key];
+}
+
+export function isLocale(value: string | null | undefined): value is Locale {
+  return value === "ps" || value === "en";
+}

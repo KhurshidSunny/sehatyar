@@ -5,6 +5,7 @@
     "questionPs": "د امیندوارۍ پر مهال څو ځله کلینیک ته ولاړه شم؟",
     "questionEn": "How many check-ups do I need during pregnancy?",
     "answerPs": "نړیوال روغتیايي سازمان د امیندوارۍ پر مهال لږ تر لږه اته ځله معاینه سپارښتنه کوي. هر څومره ژر چې پوه شئ امیندواره یاست، لومړۍ معاینه وکړئ. په معاینو کې د وینې فشار، د ماشوم وده او د وینې کموالی ګوري.",
+    "answerEn": "WHO recommends at least eight check-ups during pregnancy. Have the first visit as soon as you know you are pregnant. Visits check blood pressure, baby growth, and anemia.",
     "paraphrasesPs": [
       "د امیندوارۍ معاینه څو ځله وکړم؟",
       "امیندواره یم، کلینیک ته کله ولاړه شم؟",
@@ -12,7 +13,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "info",
-    "source": { "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)", "url": null },
+    "source": {
+      "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -22,6 +26,7 @@
     "questionPs": "د امیندوارۍ پر مهال کومې نښې خطرناکې دي؟",
     "questionEn": "What are the danger signs during pregnancy?",
     "answerPs": "سمدستي روغتون ته ولاړه شئ که: وینه راشي، سخت سر درد او د سترګو تیاره والی ولرئ، تشنج، د مخ او لاسونو ناڅاپه پړسوب، لوړه تبه، د خېټې سخت درد، د اوبو ناڅاپه راتلل، یا د ماشوم حرکت کم یا بند شي.",
+    "answerEn": "Go to hospital immediately if: bleeding, severe headache with blurred vision, seizure, sudden swelling of face or hands, high fever, severe belly pain, sudden water breaking, or the baby’s movements decrease or stop.",
     "paraphrasesPs": [
       "په امیندوارۍ کې وینه راځي، څه وکړم؟",
       "د حمل خطرناکې نښې کومې دي؟",
@@ -29,7 +34,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "emergency",
-    "source": { "title": "WHO fact sheet: Maternal mortality", "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality" },
+    "source": {
+      "title": "WHO fact sheet: Maternal mortality",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -39,6 +47,7 @@
     "questionPs": "امیندواره ښځه څه وخوري؟",
     "questionEn": "What should a pregnant woman eat?",
     "answerPs": "ډول ډول خواړه وخورئ: سابه، میوه، دال، لوبیا، هګۍ، غوښه، شیدې او ماست. ډېرې پاکې اوبه وڅښئ. د کلینیک کارکوونکی به درته ووايي چې کومې ویټامین یا اوسپنې ګولۍ اړینې دي؛ پخپله یې مه اخلئ.",
+    "answerEn": "Eat a variety of foods: vegetables, fruit, lentils, beans, eggs, meat, milk, and yoghurt. Drink plenty of clean water. Clinic staff will tell you which vitamin or iron tablets you need — do not start them on your own.",
     "paraphrasesPs": [
       "په امیندوارۍ کې کوم خواړه ښه دي؟",
       "د حمل پر وخت څه وخورم؟",
@@ -46,7 +55,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "info",
-    "source": { "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)", "url": null },
+    "source": {
+      "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -56,6 +68,7 @@
     "questionPs": "ولې باید زېږون په روغتون یا کلینیک کې وشي؟",
     "questionEn": "Why should childbirth happen in a hospital or clinic?",
     "answerPs": "د زېږون پر مهال ناڅاپي ستونزې لکه ډېره وینه بهېدل یا د ماشوم ساه نه اخیستل پېښېدای شي. په روغتون یا کلینیک کې روزل شوې قابله یا ډاکټر شته چې ژر مرسته کولی شي. له مخکې د ټرانسپورټ او پیسو پلان جوړ کړئ.",
+    "answerEn": "During birth, sudden problems can occur such as heavy bleeding or a baby who does not breathe. A hospital or clinic has a trained midwife or doctor who can help quickly. Plan transport and money in advance.",
     "paraphrasesPs": [
       "په کور کې زېږون خطر لري؟",
       "زېږون چېرته وکړم؟",
@@ -63,7 +76,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "info",
-    "source": { "title": "WHO fact sheet: Maternal mortality", "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality" },
+    "source": {
+      "title": "WHO fact sheet: Maternal mortality",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -73,6 +89,7 @@
     "questionPs": "له زېږون وروسته مور کومو نښو ته پام وکړي؟",
     "questionEn": "Which signs should a mother watch for after childbirth?",
     "answerPs": "که له زېږون وروسته ډېره وینه راشي، لوړه تبه، بدبویه مایع، سخت سر درد، د ساه لنډوالی، تشنج، یا د سینو سخت درد او سوروالی ولرئ، سمدستي روغتون ته ولاړه شئ. په لومړۍ اونۍ کې د مور او ماشوم معاینه مهمه ده.",
+    "answerEn": "After birth, go to hospital immediately for heavy bleeding, high fever, foul-smelling discharge, severe headache, shortness of breath, seizure, or hard painful red breasts. A mother-and-baby check in the first week is important.",
     "paraphrasesPs": [
       "له زېږون وروسته ډېره وینه راځي، څه وکړم؟",
       "د زېږون وروسته خطرناکې نښې کومې دي؟",
@@ -80,7 +97,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "emergency",
-    "source": { "title": "WHO fact sheet: Maternal mortality", "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality" },
+    "source": {
+      "title": "WHO fact sheet: Maternal mortality",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -90,6 +110,7 @@
     "questionPs": "د امیندوارۍ پر مهال پخپله درمل خوړل سم دي؟",
     "questionEn": "Is it safe to take medicines on my own during pregnancy?",
     "answerPs": "نه. ځینې درمل ماشوم ته زیان رسوي. د امیندوارۍ پر مهال هر درمل، حتی د سر درد، ټوخي یا ګیاهي درمل، یوازې د ډاکټر یا درملپلورونکي له مشورې وروسته وخورئ. ډاکټر ته ووایاست چې امیندواره یاست.",
+    "answerEn": "No. Some medicines harm the baby. In pregnancy, take any medicine — even for headache, cough, or herbal remedies — only after asking a doctor or pharmacist. Tell them you are pregnant.",
     "paraphrasesPs": [
       "امیندواره یم، درمل وخورم؟",
       "په حمل کې کوم درمل خطر لري؟",
@@ -97,7 +118,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "clinic",
-    "source": { "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)", "url": null },
+    "source": {
+      "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
+      "url": null
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   },
@@ -107,6 +131,7 @@
     "questionPs": "د امیندوارۍ پر مهال د ټیټانوس واکسین ولې اړین دی؟",
     "questionEn": "Why is the tetanus vaccine needed during pregnancy?",
     "answerPs": "د ټیټانوس واکسین مور او نوی زېږېدلی ماشوم له ټیټانوس (کزاز) څخه ساتي. دا واکسین د امیندوارۍ پر مهال په کلینیک کې ورکول کیږي. خپل د واکسین کارت وساتئ او روغتیايي کارکوونکي ته یې وښایاست.",
+    "answerEn": "The tetanus vaccine protects the mother and newborn from tetanus. It is given at the clinic during pregnancy. Keep your vaccination card and show it to the health worker.",
     "paraphrasesPs": [
       "امیندواره یم، کوم واکسین واخلم؟",
       "د کزاز واکسین په حمل کې ولې ورکوي؟",
@@ -114,7 +139,10 @@
     ],
     "audioUrl": null,
     "dangerLevel": "info",
-    "source": { "title": "WHO fact sheet: Maternal mortality", "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality" },
+    "source": {
+      "title": "WHO fact sheet: Maternal mortality",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+    },
     "lastReviewed": "2026-10-07",
     "reviewStatus": "draft"
   }

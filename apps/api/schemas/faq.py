@@ -22,6 +22,7 @@ class Faq(ReviewedContentBase):
     questionPs: str = Field(min_length=1)
     questionEn: str = Field(min_length=1)
     answerPs: str = Field(min_length=1)
+    answerEn: str = Field(min_length=1)
     paraphrasesPs: list[str] = Field(default_factory=list)
     dangerLevel: DangerLevel
 
@@ -40,5 +41,6 @@ class FaqSummary(BaseModel):
     id: str
     category: str
     questionPs: str
+    questionEn: str
     dangerLevel: DangerLevel
     audioUrl: str | None = None

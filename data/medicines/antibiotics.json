@@ -9,7 +9,9 @@
       "اموکسیل"
     ],
     "usesPs": "دا یو انټي بیوټیک دی چې د ډاکټر په تشخیص سره د ځینو باکټریایي عفونتونو لپاره ورکول کیږي. په خپله یې د تبې یا ټوخي لپاره مه پیل کوئ.",
+    "usesEn": "This is an antibiotic used only when a clinician decides it is needed. It does not work for every infection.",
     "warningsPs": "که پینی سیلین الرجي لرئ، مه یې خورئ. کورس نیمګړی مه پرېږدئ پرته له ډاکټر سپارښتنې. بې ځایه کارول مقاومت زیاتوي. که سخت خارښ، پړسوب یا ساه تنګي راشي، سمدستي کلینیک ته ولاړ شئ.",
+    "warningsEn": "Never start or share antibiotics on your own. Finish the course only as told. Seek care for rash, swelling, or breathing trouble.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — amoxicillin (general reference)",
@@ -28,7 +30,9 @@
       "زیترومیکس"
     ],
     "usesPs": "دا انټي بیوټیک د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي. د نښو په اساس په خپله مه یې خورئ.",
+    "usesEn": "This is an antibiotic used only under clinical advice for certain infections.",
     "warningsPs": "د زړه ځینې ناروغۍ یا نورو درملو سره تعامل کوي. که مخکې د زړه یا ځیګر ستونزه لرئ، مخکې ووایاست. الرجي یا سخت اسهال کې کلینیک ته ولاړ شئ.",
+    "warningsEn": "Do not self-start antibiotics. Tell the clinician about heart medicines and allergies. Seek care for severe side effects.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — azithromycin (general reference)",
@@ -47,7 +51,9 @@
       "فلاګیل"
     ],
     "usesPs": "دا درمل د ځینو عفونتونو (لکه ځینې معدې او کولمو عفونتونه) لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This medicine is used for certain infections when a clinician prescribes it. Avoid alcohol if advised.",
     "warningsPs": "د درملو پر مهال الکول مه څښئ. امیندواري او شیدې ورکولو کې مخکې مشوره وکړئ. په خپله کورس مه اټکل کوئ.",
+    "warningsEn": "Do not use without a prescription decision. Ask about pregnancy and other medicines. Seek care for severe rash or neurological symptoms.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — metronidazole (general reference)",
@@ -66,7 +72,9 @@
       "سیپرو"
     ],
     "usesPs": "دا انټي بیوټیک د ځینو باکټریایي عفونتونو لپاره د ډاکټر په تشخیص کارول کیږي. د عادي زکام لپاره مناسب نه دی.",
+    "usesEn": "This is an antibiotic used only when prescribed for specific infections.",
     "warningsPs": "ماشومان او ځوانان ځینې وختونه ځانګړې خطرونه لري؛ پرته له ډاکټر مه ورکوئ. د لمر حساسیت، تاندون درد، یا الرجي کې سمدستي مشوره وکړئ. بې ځایه کارول مه کوئ.",
+    "warningsEn": "Not for unsupervised use. Ask about tendon pain, children, and pregnancy. Complete only as directed by a clinician.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — ciprofloxacin (general reference)",
@@ -87,7 +95,9 @@
       "سیپټرین"
     ],
     "usesPs": "دا ترکیبی انټي بیوټیک د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This antibiotic combination is used only when a clinician advises it.",
     "warningsPs": "که سلفـا درملو ته الرجي لرئ، مه یې خورئ. که پوستکی خارښ، تبه، یا ساه ستونزه راشي، سمدستي کلینیک ته ولاړ شئ. په خپله تشخیص مه کوئ.",
+    "warningsEn": "Tell staff about sulfa allergy. Do not self-medicate. Seek care for rash or breathing difficulty.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — co-trimoxazole (general reference)",
@@ -104,7 +114,9 @@
       "ډوکسی سایکلین"
     ],
     "usesPs": "دا انټي بیوټیک د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي. په خپله مه پیل کوئ.",
+    "usesEn": "This antibiotic is used only under clinical advice. It can increase sun sensitivity.",
     "warningsPs": "امیندواري او کوچني ماشومان کې معمولاً ځانګړې محدودیتونه لري. د لمر سره پوستکی حساس کیدی شي. له شیدو او انټي اسید سره د وخت په اړه مشوره وکړئ.",
+    "warningsEn": "Ask about pregnancy, children, and other medicines. Do not start antibiotics without advice.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — doxycycline (general reference)",

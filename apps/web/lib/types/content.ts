@@ -22,6 +22,7 @@ export interface Faq {
   questionPs: string;
   questionEn: string;
   answerPs: string;
+  answerEn: string;
   paraphrasesPs: string[];
   audioUrl: string | null;
   dangerLevel: DangerLevel;
@@ -34,6 +35,7 @@ export interface FaqSummary {
   id: string;
   category: string;
   questionPs: string;
+  questionEn: string;
   dangerLevel: DangerLevel;
   audioUrl: string | null;
 }
@@ -50,7 +52,9 @@ export interface Medicine {
   category: string;
   names: string[];
   usesPs: string;
+  usesEn: string;
   warningsPs: string;
+  warningsEn: string;
   audioUrl: string | null;
   source: ContentSource;
   lastReviewed: string; // YYYY-MM-DD
@@ -62,7 +66,9 @@ export interface MedicineSummary {
   category: string;
   names: string[];
   usesPs: string;
+  usesEn: string;
   warningsPs: string;
+  warningsEn: string;
   audioUrl: string | null;
 }
 

@@ -9,7 +9,9 @@
       "زرټیک"
     ],
     "usesPs": "دا درمل معمولاً د الرجي نښو لکه پرنجي، خارښ او اوبلنې سترګې د کمولو لپاره کارول کیږي. دوز له درملپلورونکي یا ډاکټر څخه وپوښتئ.",
+    "usesEn": "This medicine is commonly used for allergy symptoms such as itching or runny nose when advised. Ask a pharmacist or doctor.",
     "warningsPs": "ځینې خلک ویده کوي؛ که موټر چلوئ یا ماشین کاروئ، پام وکړئ. ماشومانو ته پرته له مشورې مه ورکوئ. که ساه تنګي یا مخ پړسوب وي، دا د بیړني الرجي پر ځای نه دی — کلینیک ته ولاړ شئ.",
+    "warningsEn": "May cause drowsiness in some people. Ask before use in pregnancy, breastfeeding, or with other sedating medicines.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for cetirizine (general label information)",
@@ -28,7 +30,9 @@
       "کلاریتین"
     ],
     "usesPs": "دا درمل معمولاً د موسمي الرجي او خارښ د کمولو لپاره کارول کیږي. دوز مه اټکل کوئ.",
+    "usesEn": "This medicine is commonly used for allergy symptoms when advised. Identification only — confirm suitability with a professional.",
     "warningsPs": "که د ځیګر ناروغي لرئ، مخکې مشوره وکړئ. د نورو الرجي درملو سره پرته له مشورې یوځای مه یې خورئ. بیړنۍ الرجي کې ایپی‌نفرین یا کلینیک اړین دی، نه یوازې دا ګولۍ.",
+    "warningsEn": "Ask about other medicines and liver disease. Seek care for severe allergic reactions.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for loratadine (general label information)",
@@ -47,7 +51,9 @@
       "پیریتون"
     ],
     "usesPs": "دا درمل معمولاً د الرجي او خارښ د کمولو لپاره کارول کیږي. ډېری وخت خلک ویده کوي.",
+    "usesEn": "This medicine is commonly used for allergy symptoms when advised. It may cause sleepiness.",
     "warningsPs": "له الکول سره مه یې یوځای کوئ. ماشومانو او زاړو خلکو ته پرته له مشورې مه ورکوئ. که ساه ستونزه زیاته شي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Avoid driving or risky work if drowsy. Ask before use in children, older adults, or pregnancy.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — chlorphenamine (general reference)",
@@ -67,7 +73,9 @@
       "وینټولین"
     ],
     "usesPs": "دا تنفسي درمل (اېنهلر یا محلول) معمولاً د ساه تنګۍ د نښو د لنډمهاله اسانتیا لپاره د ډاکټر په لارښود کارول کیږي.",
+    "usesEn": "This inhaler or medicine is used for breathing problems such as asthma when prescribed. It does not replace emergency care.",
     "warningsPs": "که اېنهلر په تکرار سره نه کافي کیږي، یا شونډې شینې شي او خبرې نه شي کولی، سمدستي بیړني خدمت ته ولاړ شئ. دوز او ډول یې په خپله مه بدلوه. لومړی ځل کارولو مخکې ښوونه واخلئ.",
+    "warningsEn": "If breathing is still hard after use, go to hospital. Only use the device and dose a clinician taught you.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — salbutamol (general reference)",
@@ -86,7 +94,9 @@
       "د ټوخي شربت"
     ],
     "usesPs": "ځینې د ټوخي شربتونه دا ماده لري او معمولاً د وچ ټوخي د کمولو لپاره بازار ته وړاندې کیږي. لیبل ولولئ او له درملپلورونکي څخه وپوښتئ.",
+    "usesEn": "This cough medicine is sometimes used for dry cough in adults when advised. It does not treat pneumonia.",
     "warningsPs": "ماشومانو ته ځینې ټوخي شربتونه مناسب نه دي. که بلغم سره وینه، لوړه تبه، یا ساه تنګي وي، کلینیک ته ولاړ شئ. له نورو سړو درملو سره پرته له مشورې یوځای مه یې خورئ.",
+    "warningsEn": "Ask before use with other cough/cold products. Seek care for fast breathing, chest pain, or cough with blood.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for dextromethorphan cough syrups (general label information)",

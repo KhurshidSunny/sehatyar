@@ -9,7 +9,9 @@
       "ویټامین ګولۍ"
     ],
     "usesPs": "ملټي ویټامینونه معمولاً د ورځني ویټامین او منرال د بشپړولو لپاره کارول کیږي. دا د ناروغۍ درملنه نه ده.",
+    "usesEn": "Multivitamins may support nutrition when diet is poor, but they do not treat serious disease. Ask a pharmacist if needed.",
     "warningsPs": "له سپارښتنې زیات مه یې خورئ. که امیندواره یاست یا نوري درمل خورئ، مخکې مشوره وکړئ. د ماشومانو ډولونه له لویانو جلا دي.",
+    "warningsEn": "Keep away from children in overdose amounts. Seek clinic care for unexplained weight loss or ongoing illness.",
     "audioUrl": null,
     "source": {
       "title": "General nutrition supplement labeling practices (non-prescribing reference)",
@@ -30,7 +32,9 @@
       "آیرون ګولۍ"
     ],
     "usesPs": "د اوسپنې ګولۍ معمولاً د اوسپنې کمښت د بشپړولو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "Iron tablets are used for iron deficiency when a clinician advises them. They do not replace clinic testing when needed.",
     "warningsPs": "ماشومانو ته په ناڅاپي خوړلو سره خطرناک زهر کیدی شي — له ماشومانو لرې وساتئ. قبضیت یا تورې پاخانې عامې دي؛ که سخت درد یا وینه ووینئ، کلینیک ته ولاړ شئ. دوز په خپله مه زیاتوئ.",
+    "warningsEn": "Overdose is dangerous, especially for children. Ask about dose and constipation. Seek care for severe belly pain.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — ferrous salt (general reference)",
@@ -50,7 +54,9 @@
       "فولیټ"
     ],
     "usesPs": "فولیک اسید معمولاً د امیندواری دمخه او پر مهال، او د ځینو کمښتونو لپاره د ډاکټر په لارښود کارول کیږي.",
+    "usesEn": "Folic acid is often advised before and during early pregnancy and for some anemias. Follow clinic advice.",
     "warningsPs": "دا د نورو ویټامینونو پر ځای تشخیص نه دی. که قبضیت یا نورې نښې دوام وکړي، کلینیک ته ولاړ شئ. دوز له مشورې سره سم وساتئ.",
+    "warningsEn": "Tell the clinician about other medicines. It does not replace antenatal visits.",
     "audioUrl": null,
     "source": {
       "title": "WHO antenatal care guidance — folic acid (general reference)",
@@ -69,7 +75,9 @@
       "کولیکلسیفیرول"
     ],
     "usesPs": "ویټامین ډي معمولاً د هډوکو روغتیا او د ویټامین ډي کمښت د بشپړولو لپاره کارول کیږي. ازموینه او دوز له ډاکټر سره سم کړئ.",
+    "usesEn": "Vitamin D is sometimes advised when deficiency is found or risk is high. Ask a clinician about need and dose.",
     "warningsPs": "ډېر لوړ دوز زیانمن کیدی شي. له نورو کلسیم یا ویټامین ډي محصولاتو سره پرته له مشورې یوځای مه یې زیاتوئ.",
+    "warningsEn": "High doses without advice can be harmful. Seek care for ongoing bone pain or muscle weakness evaluation.",
     "audioUrl": null,
     "source": {
       "title": "General vitamin D supplement labeling (non-prescribing reference)",
@@ -88,7 +96,9 @@
       "کلسیم کاربونیټ"
     ],
     "usesPs": "کلسیم معمولاً د هډوکو د پیاوړتیا او د کلسیم کمښت د بشپړولو لپاره کارول کیږي.",
+    "usesEn": "Calcium supplements are sometimes used when diet is low or a clinician advises them.",
     "warningsPs": "له ځینو درملو (لکه انټي بیوټیک یا اوسپنه) سره د وخت په اړه مشوره وکړئ. که پښتورګي ډبرې لرئ، مخکې ووایاست. دوز په خپله مه زیاتوئ.",
+    "warningsEn": "Ask about kidney stones and other medicines. Supplements do not replace medical care for severe symptoms.",
     "audioUrl": null,
     "source": {
       "title": "General calcium supplement labeling (non-prescribing reference)",

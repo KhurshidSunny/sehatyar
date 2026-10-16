@@ -10,7 +10,9 @@
       "لوزیک"
     ],
     "usesPs": "دا درمل معمولاً د تیزابیت، سوځېدوني او د معدې د تیزاب کمولو لپاره کارول کیږي. اوږدمهاله کارول پرته له ډاکټر مه پیل کوئ.",
+    "usesEn": "This medicine is commonly used for stomach acid problems when a clinician advises it. It does not diagnose your condition.",
     "warningsPs": "که تورې پاخانې، وینه په استفراغ کې، یا ناڅاپه وزن کمښت لرئ، کلینیک ته ولاړ شئ. له نورو درملو سره تعامل کولی شي؛ لیست یې درملپلورونکي ته وښایاست.",
+    "warningsEn": "Ask a doctor or pharmacist before long or unsupervised use. Seek care for vomiting blood, black stools, or severe belly pain.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — omeprazole (general reference)",
@@ -29,7 +31,9 @@
       "پیپسید"
     ],
     "usesPs": "دا درمل معمولاً د تیزابیت او سوځېدوني د کمولو لپاره کارول کیږي. دوز له لیبل یا درملپلورونکي سره سم وساتئ.",
+    "usesEn": "This medicine is commonly used to reduce stomach acid when advised. Ask a professional before use.",
     "warningsPs": "که نښې دوام وکړي یا وینه ووینئ، کلینیک ته ولاړ شئ. پښتورګي ناروغۍ کې مخکې مشوره وکړئ.",
+    "warningsEn": "Tell the clinician about other medicines you take. Seek care for severe allergy or ongoing severe pain.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for famotidine (general label information)",
@@ -51,7 +55,9 @@
       "معدې پوډر"
     ],
     "usesPs": "انټي اسیدونه معمولاً د تیزابیت او معدې سوځېدوني د لنډمهاله اسانتیا لپاره کارول کیږي.",
+    "usesEn": "Antacids are commonly used for short-term heartburn or indigestion relief. They do not cure serious disease.",
     "warningsPs": "له نورو درملو سره په یوه وخت کې مه یې خورئ؛ جذب خنډولی شي. که درد شدید وي یا تکرار شي، کلینیک ته ولاړ شئ. پښتورګي ناروغۍ کې ځینې ډولونه مناسب نه دي.",
+    "warningsEn": "Ask if you have kidney disease or take other medicines. Persistent or severe pain needs clinic assessment.",
     "audioUrl": null,
     "source": {
       "title": "WHO / package guidance on antacids (general reference)",
@@ -70,7 +76,9 @@
       "ایموډیم"
     ],
     "usesPs": "دا درمل په ځینو حالتونو کې د اسهال د کمولو لپاره کارول کیږي. د ماشومانو او وینه‌دار اسهال لپاره په خپله مه یې ورکوئ.",
+    "usesEn": "This medicine is sometimes used to slow diarrhea in adults when a clinician or pharmacist advises it. Not for every situation.",
     "warningsPs": "که تبه، وینه په اسهال کې، یا سختې معدې درد وي، مه یې خورئ — کلینیک ته ولاړ شئ. ماشومانو ته پرته له ډاکټر خطرناک کیدی شي. ORS معمولاً لومړی قدم دی.",
+    "warningsEn": "Do not use if there is blood in stool, high fever, or in young children unless a clinician says so. Seek care if symptoms are severe.",
     "audioUrl": null,
     "source": {
       "title": "WHO diarrhea guidance and loperamide label cautions (general reference)",
@@ -89,7 +97,9 @@
       "موتیلیوم"
     ],
     "usesPs": "دا درمل معمولاً د کانګو او د معدې د خالي کېدو د اسانتیا لپاره د ډاکټر یا درملپلورونکي په لارښود کارول کیږي.",
+    "usesEn": "This medicine is sometimes used for nausea when a clinician advises it. Do not self-prescribe.",
     "warningsPs": "د زړه ځینې خطرونه لري؛ پرته له مشورې اوږد مهال مه یې خورئ. که سینې درد، بې نظمه زړه ټکان، یا بې هوشي راشي، سمدستي کلینیک ته ولاړ شئ. ماشومانو ته پرته له ډاکټر مه ورکوئ.",
+    "warningsEn": "Ask about heart rhythm risks and other medicines. Not for unsupervised use in children or pregnancy without advice.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for domperidone (general label information)",
@@ -99,4 +109,3 @@
     "reviewStatus": "draft"
   }
 ]
-

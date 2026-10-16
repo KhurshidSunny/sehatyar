@@ -21,7 +21,9 @@ class Medicine(ReviewedContentBase):
     category: str = Field(min_length=1)
     names: list[str] = Field(min_length=1)
     usesPs: str = Field(min_length=1)
+    usesEn: str = Field(min_length=1)
     warningsPs: str = Field(min_length=1)
+    warningsEn: str = Field(min_length=1)
 
     @field_validator("names")
     @classmethod
@@ -41,5 +43,7 @@ class MedicineSummary(BaseModel):
     category: str
     names: list[str]
     usesPs: str
+    usesEn: str
     warningsPs: str
+    warningsEn: str
     audioUrl: str | None = None

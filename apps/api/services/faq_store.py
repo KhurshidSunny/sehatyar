@@ -93,6 +93,7 @@ def to_summary(faq: Faq) -> FaqSummary:
         id=faq.id,
         category=faq.category,
         questionPs=faq.questionPs,
+        questionEn=faq.questionEn,
         dangerLevel=faq.dangerLevel,
         audioUrl=faq.audioUrl,
     )

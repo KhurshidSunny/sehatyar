@@ -34,3 +34,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+
+html[lang="en"] body {
+  font-family: "Segoe UI", Tahoma, system-ui, sans-serif;
+}

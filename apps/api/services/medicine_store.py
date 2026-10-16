@@ -97,7 +97,9 @@ def to_summary(medicine: Medicine) -> MedicineSummary:
         category=medicine.category,
         names=medicine.names,
         usesPs=medicine.usesPs,
+        usesEn=medicine.usesEn,
         warningsPs=medicine.warningsPs,
+        warningsEn=medicine.warningsEn,
         audioUrl=medicine.audioUrl,
     )
 

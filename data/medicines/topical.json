@@ -9,7 +9,9 @@
       "بیټاډین"
     ],
     "usesPs": "دا محلول معمولاً د پوستکي د پاکولو او د سطحي زخمونو د پاک ساتلو لپاره کارول کیږي.",
+    "usesEn": "This antiseptic is commonly used to clean skin around minor wounds when advised. It is not for deep or serious injuries alone.",
     "warningsPs": "سترګو، خولې یا ژورو زخمونو ته پرته له لارښود مه یې اچوئ. که آیوډین الرجي لرئ، مه یې کاروئ. ژور یا ککړ زخم کلینیک ته وښایاست.",
+    "warningsEn": "Ask about iodine allergy and thyroid disease. Large or dirty wounds need clinic care.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — povidone iodine (general reference)",
@@ -28,7 +30,9 @@
       "کینسټن"
     ],
     "usesPs": "دا کریم معمولاً د پوستکي د فنګس عفونتونو (لکه د پښو فنګس) د نښو لپاره کارول کیږي. تشخیص په خپله مه قطعی کوئ.",
+    "usesEn": "This cream is commonly used for certain fungal skin infections when advised. Confirm the problem with a professional if unsure.",
     "warningsPs": "که سیمه ډېره سور، پړسوب یا وینه‌داره شي، کلینیک ته ولاړ شئ. سترګو ته مه یې اچوئ. امیندواري کې مخکې مشوره وکړئ.",
+    "warningsEn": "Ask before use in pregnancy. Seek care if the rash worsens, spreads, or looks infected.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — clotrimazole (general reference)",
@@ -45,7 +49,9 @@
       "هایډروکورټیزون کریم"
     ],
     "usesPs": "دا کریم معمولاً د سپک خارښ او سوروالي د لنډمهاله کمولو لپاره کارول کیږي.",
+    "usesEn": "Mild steroid cream is sometimes used for itchy inflamed skin when advised. Use only as directed on the label or by a clinician.",
     "warningsPs": "په مخ، سترګو یا خلاص زخم باندې پرته له مشورې مه یې اچوئ. اوږد مهال مه کاروئ. که عفونت شکمن وي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Avoid long use on the face or broken skin without advice. Seek care for spreading infection or no improvement.",
     "audioUrl": null,
     "source": {
       "title": "Package-insert style reference for topical hydrocortisone (general label information)",
@@ -62,7 +68,9 @@
       "ټیټراسایکلین د سترګو مرهم"
     ],
     "usesPs": "دا مرهم په ځینو لارښودونو کې د سترګو د عفونت د مخنیوي یا درملنې لپاره د روغتیايي کارکوونکي په سپارښتنه کارول کیږي.",
+    "usesEn": "This eye ointment is used for certain eye infections when a clinician advises it. Do not self-treat severe eye pain.",
     "warningsPs": "په خپله د سترګو درد یا لید کمښت مه درملئ — کلینیک ته ولاړ شئ. لیبل او پاکوالی مراعات کړئ. که الرجي راشي، کار ولوځوئ.",
+    "warningsEn": "Seek urgent care for vision loss, strong light pain, or injury. Do not share eye medicines.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — tetracycline eye ointment (general reference)",
@@ -81,7 +89,9 @@
       "آکسیجن اوبه"
     ],
     "usesPs": "ځینې خلک یې د سطحي خړ زخمونو د پاکولو لپاره کاروي. تل لیبل ولولئ او له درملپلورونکي څخه وپوښتئ.",
+    "usesEn": "This solution is sometimes used to clean minor cuts. It is not ideal for every wound.",
     "warningsPs": "څښل یې خطرناک دي. ژورو زخمونو ته پرته له لارښود مه اچوئ. که زخم ژور، ککړ یا د حیوان چیچل وي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Do not swallow. Deep, dirty, or animal-bite wounds need clinic care, not home cleaning alone.",
     "audioUrl": null,
     "source": {
       "title": "General first-aid antiseptic labeling (non-prescribing reference)",

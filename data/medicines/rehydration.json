@@ -11,7 +11,9 @@
       "نمک اوبه"
     ],
     "usesPs": "ORS د اسهال پر مهال د بدن د اوبو او مالګو د بیرته ډکولو لپاره کارول کیږي. پاکو اوبو سره یې د کڅوړې د لارښود له مخې جوړ کړئ. که نه پوهیږئ، له روغتیايي کارکوونکي څخه وپوښتئ.",
+    "usesEn": "ORS replaces water and salts lost in diarrhea. Mix only as written on the packet. It does not treat the cause of every illness — seek care if danger signs appear.",
     "warningsPs": "ناپاکه اوبه مه کاروئ. که ماشوم ډېر ويده وي، سترګې یې ډوبې وي، ادرار یې بند وي، وینه په اسهال کې وي، یا اوبه نه شي څښلی، سمدستي کلینیک ته یې یوسئ. ORS د درملو پر ځای تشخیص نه دی.",
+    "warningsEn": "Use clean water and the correct amount. Discard leftover solution after one day. Go to a clinic for blood in stool, repeated vomiting, or severe weakness.",
     "audioUrl": null,
     "source": {
       "title": "WHO / UNICEF Oral Rehydration Salts guidance (general reference)",
@@ -30,7 +32,9 @@
       "زینک سلفيټ"
     ],
     "usesPs": "زینک په ځینو لارښودونو کې د ماشومانو د اسهال د مودې د کمولو لپاره د ORS سره وړاندیز کیږي. دوز او ورځې یې له ډاکټر یا روغتیايي کارکوونکي څخه وپوښتئ.",
+    "usesEn": "Zinc is sometimes given with ORS for childhood diarrhea when a health worker advises it. Ask a clinician for suitability and timing.",
     "warningsPs": "په خپله دوز مه زیاتوئ. که کانګې یا سختې معدې درد راشي، کار ولوځوئ او مشوره وکړئ. دا د خطرناکو نښو پر مهال د کلینیک ځای نه نیسي.",
+    "warningsEn": "Follow clinic advice for children. Do not replace ORS or clinic care. Seek help if the child worsens or cannot drink.",
     "audioUrl": null,
     "source": {
       "title": "WHO diarrhea treatment guidance — zinc supplementation (general reference)",
@@ -49,7 +53,9 @@
       "د ماشومانو د اوبو محلول"
     ],
     "usesPs": "دا محلولونه معمولاً د کانګو یا اسهال وروسته د اوبو او مالګو د بیرته ډکولو لپاره کارول کیږي. د عمر سره سم مقدار له روغتیايي مشورې سره وټاکئ.",
+    "usesEn": "Electrolyte drinks or solutions help replace fluids and salts. Prefer ORS for diarrhea when available. Ask a pharmacist if unsure which product you have.",
     "warningsPs": "شکرې مشروبات (لکه سودا) د سخت اسهال لپاره بدیل نه دي. که وچه خوله، بې حالۍ یا بې هوشي وي، سمدستي کلینیک ته ولاړ شئ.",
+    "warningsEn": "Very sweet soft drinks are not a substitute. Seek clinic care for severe dehydration signs.",
     "audioUrl": null,
     "source": {
       "title": "WHO rehydration principles for diarrhea (general reference)",

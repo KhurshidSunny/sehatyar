@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { useLocale } from "@/lib/i18n/LocaleProvider";
+
 interface FaqAudioButtonProps {
   audioUrl: string | null;
 }
@@ -11,6 +13,7 @@ interface FaqAudioButtonProps {
  * When audioUrl is null, shows a clear "no audio yet" state instead of a broken player.
  */
 export default function FaqAudioButton({ audioUrl }: FaqAudioButtonProps) {
+  const { t } = useLocale();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -28,8 +31,9 @@ export default function FaqAudioButton({ audioUrl }: FaqAudioButtonProps) {
         className="flex min-h-16 w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface px-5 py-4 text-center"
         role="status"
       >
-        <span className="text-lg font-semibold text-muted sm:text-xl">غږ لا نشته</span>
-        <span className="mt-1 text-base text-muted">Audio not available yet</span>
+        <span className="text-lg font-semibold text-muted sm:text-xl">
+          {t("audioUnavailable")}
+        </span>
       </div>
     );
   }
@@ -72,10 +76,7 @@ export default function FaqAudioButton({ audioUrl }: FaqAudioButtonProps) {
       className="flex min-h-16 w-full flex-col items-center justify-center rounded-2xl bg-brand px-5 py-4 text-center text-xl font-semibold text-white shadow-sm transition hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
       aria-pressed={playing}
     >
-      {playing ? "ودروئ" : "غږ واورئ"}
-      <span className="mt-1 block text-base font-normal text-teal-50">
-        {playing ? "Stop" : "Play audio"}
-      </span>
+      {playing ? t("stopAudio") : t("playAudio")}
     </button>
   );
 }

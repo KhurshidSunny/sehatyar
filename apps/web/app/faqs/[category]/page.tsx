@@ -1,10 +1,8 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
-
-import DangerBadge from "@/components/DangerBadge";
 import Disclaimer from "@/components/Disclaimer";
-import ScreenHeader from "@/components/ScreenHeader";
+import FaqQuestionLinks from "@/components/FaqQuestionLinks";
+import LocalizedCategoryHeader from "@/components/LocalizedCategoryHeader";
 import { getFaqCategories, getFaqCategory, getFaqSummaries } from "@/lib/faqContent";
+import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 
@@ -28,34 +26,10 @@ export default async function FaqCategoryPage({
 
   return (
     <div className="flex flex-1 flex-col">
-      <ScreenHeader title={category.namePs} backHref="/faqs" backLabel="شاته" />
+      <LocalizedCategoryHeader category={category} />
 
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-3 px-4 py-6 sm:px-6">
-        <p className="text-center text-lg text-muted sm:text-xl">
-          پوښتنه غوره کړئ
-        </p>
-
-        {questions.length === 0 ? (
-          <p className="rounded-2xl border-2 border-border bg-surface px-5 py-6 text-center text-lg text-muted">
-            په دې برخه کې لا پوښتنې نشته.
-          </p>
-        ) : (
-          <ol className="flex flex-col gap-3">
-            {questions.map((question) => (
-              <li key={question.id}>
-                <Link
-                  href={`/faqs/${category.id}/${question.id}`}
-                  className="flex min-h-16 w-full flex-col justify-center gap-2 rounded-2xl border-2 border-border bg-surface px-5 py-4 shadow-sm transition hover:border-brand hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-                >
-                  <span className="text-lg font-semibold leading-relaxed text-foreground sm:text-xl">
-                    {question.questionPs}
-                  </span>
-                  <DangerBadge level={question.dangerLevel} />
-                </Link>
-              </li>
-            ))}
-          </ol>
-        )}
+        <FaqQuestionLinks categoryId={category.id} questions={questions} />
       </main>
 
       <Disclaimer />

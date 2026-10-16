@@ -9,7 +9,9 @@
       "زینټیل"
     ],
     "usesPs": "دا درمل معمولاً د چینجي او ځینو نورو پرازیتي عفونتونو لپاره د ډاکټر یا روغتیايي پروګرام په سپارښتنه کارول کیږي.",
+    "usesEn": "This medicine is used for certain worm infections when a health programme or clinician advises it.",
     "warningsPs": "امیندواري کې مخکې مشوره وکړئ. دوز او تکرار په خپله مه اټکل کوئ. که سختې معدې درد یا الرجي راشي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Ask before use in pregnancy or young children. Follow the dose schedule given by health staff.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — albendazole (general reference)",
@@ -28,7 +30,9 @@
       "ویرموکس"
     ],
     "usesPs": "دا درمل معمولاً د چینجي درملنې لپاره د روغتیايي لارښود سره کارول کیږي.",
+    "usesEn": "This medicine is used for certain worm infections when advised by a clinician or campaign.",
     "warningsPs": "ماشومانو ته پرته له عمر او وزن سره سمې مشورې مه ورکوئ. امیندواري کې مخکې وپوښتئ.",
+    "warningsEn": "Ask about pregnancy and children’s dosing. Hygiene still matters to prevent reinfection.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — mebendazole (general reference)",
@@ -47,7 +51,9 @@
       "ګلوکوفاژ"
     ],
     "usesPs": "دا درمل د شوګر (ډایبېټیز ډول ۲) د کنټرول لپاره د ډاکټر په تشخیص او دوامداره څارنې سره کارول کیږي.",
+    "usesEn": "This medicine is used for diabetes when prescribed and monitored by a clinician. It is not for self-diagnosis.",
     "warningsPs": "په خپله مه پیل کوئ او مه دروئ. که سختې کانګې، ساه تنګي، یا غیرعادي ستړیا راشي، سمدستي کلینیک ته ولاړ شئ. دوز بدلول یوازې د ډاکټر کار دی.",
+    "warningsEn": "Do not start or change diabetes medicines alone. Seek urgent care for severe vomiting, deep breathing, or confusion.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — metformin (general reference)",
@@ -66,7 +72,9 @@
       "نورواسک"
     ],
     "usesPs": "دا درمل معمولاً د لوړ فشار د کنټرول لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This medicine is used for blood pressure when prescribed. Keep follow-up with your clinician.",
     "warningsPs": "په خپله مه پیل کوئ او ناڅاپه مه پرېږدئ. که سینه درد، سختې پړسوب، یا بې هوشي راشي، کلینیک ته ولاړ شئ. فشار په منظم ډول وڅارئ.",
+    "warningsEn": "Do not stop or change dose without advice. Seek care for severe dizziness, chest pain, or swelling that worries you.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — amlodipine (general reference)",
@@ -85,7 +93,9 @@
       "لیپیټور"
     ],
     "usesPs": "دا درمل معمولاً د وینې د غوړو (کولیسټرول) د کنټرول لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This medicine is used for cholesterol when prescribed. Lifestyle advice from your clinic still matters.",
     "warningsPs": "په خپله مه پیل کوئ. که عضلاتو سخت درد، تور ادرار، یا ژېړ پوستکی راشي، سمدستي کلینیک ته ولاړ شئ. د ځیګر ازموینې ممکن اړینې وي.",
+    "warningsEn": "Tell the clinician about muscle pain or other medicines. Not for unsupervised use in pregnancy.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — atorvastatin (general reference)",
@@ -104,7 +114,9 @@
       "خوراکي ضد حمل"
     ],
     "usesPs": "دا ګولۍ د حمل د مخنیوي لپاره د روغتیايي مشورې سره کارول کیږي. ډول او د کارولو لار یې له کلینیک څخه زده کړئ.",
+    "usesEn": "Oral contraceptives are used for family planning when counselled by a clinic. Choose a method with a health worker.",
     "warningsPs": "که سینې درد، یوې خوا فلج، سخت سر درد، یا پښې پړسوب راشي، سمدستي کلینیک ته ولاړ شئ. سګریټ او ځینې ناروغۍ خطر زیاتوي — مخکې مشوره اړینه ده. دا د جنسي لېږدونکو ناروغیو مخنیوی نه کوي.",
+    "warningsEn": "Ask about smoking, migraine, clotting history, and breastfeeding. Seek care for severe leg pain, chest pain, or vision changes.",
     "audioUrl": null,
     "source": {
       "title": "WHO family planning guidance — combined oral contraceptives (general reference)",
@@ -121,7 +133,9 @@
       "انسولین"
     ],
     "usesPs": "انسولین د شوګر د کنټرول لپاره د ډاکټر په تشخیص او روزنې سره کارول کیږي. ډولونه یې سره توپیر لري.",
+    "usesEn": "Insulin is used for diabetes only under clinical training and prescription. Never share pens or needles.",
     "warningsPs": "په خپله دوز مه بدلوه. که لړزېدل، خوله خوږېدل، ګډوډي یا بې هوشي راشي، سمدستي مرسته وغواړئ (ښایي وینه ډېره ټیټه وي). د ساتنې او ستنې پاکوالی زده کړئ.",
+    "warningsEn": "Learn hypoglycemia signs from your clinic. Seek urgent care for confusion, seizure, or inability to swallow sugar.",
     "audioUrl": null,
     "source": {
       "title": "WHO Model List of Essential Medicines — insulin (general reference)",

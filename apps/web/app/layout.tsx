@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Naskh_Arabic } from "next/font/google";
+
+import AppChrome from "@/components/AppChrome";
 import "./globals.css";
 
 const pashtoFont = Noto_Naskh_Arabic({
@@ -11,7 +13,10 @@ const pashtoFont = Noto_Naskh_Arabic({
 export const metadata: Metadata = {
   title: "SehatYar | صحت یار",
   description:
-    "Pashto health literacy assistant — curated FAQs and medicine pack help. Information only, not a doctor.",
+    "Pashto and English health literacy assistant — curated FAQs and medicine pack help. Information only, not a doctor.",
+  other: {
+    google: "notranslate",
+  },
 };
 
 export default function RootLayout({
@@ -20,8 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ps" dir="rtl" className={`${pashtoFont.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+    <html
+      lang="ps"
+      dir="rtl"
+      translate="no"
+      className={`${pashtoFont.variable} notranslate h-full`}
+    >
+      <body className="flex min-h-full flex-col antialiased">
+        <AppChrome>{children}</AppChrome>
+      </body>
     </html>
   );
 }

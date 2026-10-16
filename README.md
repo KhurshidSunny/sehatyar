@@ -14,7 +14,7 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-Monorepo layout, FastAPI health check, Next.js web scaffolding, draft FAQ seed data (42 Pashto FAQs across 6 categories), and a draft household medicine catalog (42 entries across 8 groups) are in place. Wired FAQ/medicine screens and APIs are not built yet.
+FAQ browse screens, bilingual Pashto/English UI (language switcher), dual-language FAQ and medicine seed fields, FastAPI content APIs, and MongoDB seed script are in place. Medicine pack photo/OCR flow is still to be wired on the web screens.
 
 ## Stack
 
