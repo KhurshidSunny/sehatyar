@@ -10,6 +10,19 @@ export class ApiError extends Error {
   }
 }
 
+async function parseError(response: Response): Promise<ApiError> {
+  let detail = response.statusText || "Request failed";
+  try {
+    const body = (await response.json()) as { detail?: string };
+    if (typeof body.detail === "string" && body.detail.trim()) {
+      detail = body.detail;
+    }
+  } catch {
+    // keep statusText
+  }
+  return new ApiError(response.status, detail);
+}
+
 export async function apiGet<T>(path: string): Promise<T> {
   const url = `${getApiBaseUrl()}${path.startsWith("/") ? path : `/${path}`}`;
   let response: Response;
@@ -23,16 +36,31 @@ export async function apiGet<T>(path: string): Promise<T> {
   }
 
   if (!response.ok) {
-    let detail = response.statusText || "Request failed";
-    try {
-      const body = (await response.json()) as { detail?: string };
-      if (typeof body.detail === "string" && body.detail.trim()) {
-        detail = body.detail;
-      }
-    } catch {
-      // keep statusText
-    }
-    throw new ApiError(response.status, detail);
+    throw await parseError(response);
+  }
+
+  return (await response.json()) as T;
+}
+
+export async function apiPost<T>(path: string, body: unknown): Promise<T> {
+  const url = `${getApiBaseUrl()}${path.startsWith("/") ? path : `/${path}`}`;
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+      cache: "no-store",
+    });
+  } catch {
+    throw new ApiError(0, "Network error");
+  }
+
+  if (!response.ok) {
+    throw await parseError(response);
   }
 
   return (await response.json()) as T;

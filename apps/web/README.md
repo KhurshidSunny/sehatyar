@@ -38,8 +38,9 @@ FAQ screens load live data from FastAPI via `lib/api/`:
 | `fetchFaqCategories()` | `GET /categories` |
 | `fetchFaqSummaries(categoryId?)` | `GET /faqs?category=` |
 | `fetchFaq(faqId)` | `GET /faqs/{id}` |
+| `postFeedback({ targetType, targetId, helpful })` | `POST /feedback` |
 
-Loading, empty, and error UI live in `components/AsyncState.tsx`. CORS must allow the web origin (`CORS_ORIGINS` on the API, usually `http://localhost:3000`).
+Loading, empty, and error UI live in `components/AsyncState.tsx`. FAQ answer screens include Yes/No helpfulness controls (`components/FaqHelpfulness.tsx`). CORS must allow the web origin (`CORS_ORIGINS` on the API, usually `http://localhost:3000`). Feedback votes require MongoDB on the API.
 
 ## Types
 
@@ -52,7 +53,7 @@ Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` an
 | `/` | Home — large entry links for FAQs and medicine lookup |
 | `/faqs` | FAQ categories as large tap targets |
 | `/faqs/[category]` | Questions in one category, with clinic / emergency badges |
-| `/faqs/[category]/[faqId]` | Answer text + Play audio (or “no audio yet”) |
+| `/faqs/[category]/[faqId]` | Answer text + Play audio (or “no audio yet”) + Yes/No feedback |
 | `/medicines` | Medicine lookup section |
 
 `components/Disclaimer.tsx` is the permanent non-prescribing notice on each of these screens.

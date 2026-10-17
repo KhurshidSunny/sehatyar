@@ -2,6 +2,7 @@
 
 import DangerBadge from "@/components/DangerBadge";
 import FaqAudioButton from "@/components/FaqAudioButton";
+import FaqHelpfulness from "@/components/FaqHelpfulness";
 import ScreenHeader from "@/components/ScreenHeader";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
 import type { Faq, FaqCategory } from "@/lib/types";
@@ -41,6 +42,7 @@ export default function FaqAnswerView({
         </div>
 
         <FaqAudioButton audioUrl={faq.audioUrl} />
+        <FaqHelpfulness faqId={faq.id} />
       </main>
     </>
   );

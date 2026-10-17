@@ -30,7 +30,12 @@ export type MessageKey =
   | "loadError"
   | "retry"
   | "notFound"
-  | "emptyCategories";
+  | "emptyCategories"
+  | "wasThisHelpful"
+  | "feedbackYes"
+  | "feedbackNo"
+  | "feedbackThanks"
+  | "feedbackError";
 
 const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
   ps: {
@@ -61,6 +66,11 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     retry: "بیا هڅه",
     notFound: "دا پاڼه ونه موندل شوه.",
     emptyCategories: "لا کټګورۍ نشته.",
+    wasThisHelpful: "دا ځواب ګټور و؟",
+    feedbackYes: "هو",
+    feedbackNo: "نه",
+    feedbackThanks: "مننه — ستاسو نظر مو واخیست.",
+    feedbackError: "نظر ونه لیږل شو. بیا هڅه وکړئ.",
   },
   en: {
     brandName: "SehatYar",
@@ -90,6 +100,11 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     retry: "Try again",
     notFound: "This page was not found.",
     emptyCategories: "No categories yet.",
+    wasThisHelpful: "Was this answer helpful?",
+    feedbackYes: "Yes",
+    feedbackNo: "No",
+    feedbackThanks: "Thank you — your feedback was saved.",
+    feedbackError: "Could not send feedback. Please try again.",
   },
 };
 
