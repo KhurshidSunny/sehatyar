@@ -54,7 +54,9 @@ Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` an
 | `/faqs` | FAQ categories as large tap targets |
 | `/faqs/[category]` | Questions in one category, with clinic / emergency badges |
 | `/faqs/[category]/[faqId]` | Answer text + Play audio (or “no audio yet”) + Yes/No feedback |
-| `/medicines` | Medicine lookup section |
+| `/medicines` | Medicine pack photo: camera / gallery, preview, confirm |
+
+Medicine photo UI lives in `components/MedicinePhotoUpload.tsx` (JPEG/PNG/WebP, max 8 MB). Pack text lookup is handled by the OCR API when that endpoint is available.
 
 `components/Disclaimer.tsx` is the permanent non-prescribing notice on each of these screens.
 

@@ -14,7 +14,7 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-FAQ browse screens, bilingual Pashto/English UI (language switcher), dual-language FAQ and medicine seed fields, FastAPI content APIs, and MongoDB seed script are in place. Medicine pack photo/OCR flow is still to be wired on the web screens.
+FAQ browse screens, bilingual Pashto/English UI, FastAPI content APIs, helpfulness feedback, and medicine pack photo capture (camera / gallery + preview) are in place. Pack OCR and catalog matching are still to be wired end-to-end.
 
 ## Stack
 

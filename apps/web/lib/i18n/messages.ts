@@ -35,7 +35,15 @@ export type MessageKey =
   | "feedbackYes"
   | "feedbackNo"
   | "feedbackThanks"
-  | "feedbackError";
+  | "feedbackError"
+  | "takePhoto"
+  | "choosePhoto"
+  | "changePhoto"
+  | "submitPhoto"
+  | "photoReady"
+  | "photoPreviewAlt"
+  | "photoTooLarge"
+  | "photoInvalidType";
 
 const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
   ps: {
@@ -71,6 +79,14 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     feedbackNo: "نه",
     feedbackThanks: "مننه — ستاسو نظر مو واخیست.",
     feedbackError: "نظر ونه لیږل شو. بیا هڅه وکړئ.",
+    takePhoto: "عکس واخلئ",
+    choosePhoto: "له ګالري څخه عکس غوره کړئ",
+    changePhoto: "بل عکس",
+    submitPhoto: "دا عکس وکاروئ",
+    photoReady: "عکس چمتو دی.",
+    photoPreviewAlt: "د درملو پیک عکس",
+    photoTooLarge: "عکس ډېر لوی دی. یو کوچنی عکس وکاروئ.",
+    photoInvalidType: "یوازې د عکس فایل وکاروئ.",
   },
   en: {
     brandName: "SehatYar",
@@ -105,6 +121,14 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     feedbackNo: "No",
     feedbackThanks: "Thank you — your feedback was saved.",
     feedbackError: "Could not send feedback. Please try again.",
+    takePhoto: "Take a photo",
+    choosePhoto: "Choose a photo from gallery",
+    changePhoto: "Choose another photo",
+    submitPhoto: "Use this photo",
+    photoReady: "Photo ready.",
+    photoPreviewAlt: "Medicine pack photo",
+    photoTooLarge: "That photo is too large. Choose a smaller one.",
+    photoInvalidType: "Please choose an image file.",
   },
 };
 
