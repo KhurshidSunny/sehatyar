@@ -49,7 +49,14 @@ export type MessageKey =
   | "ocrConfidence"
   | "confidenceHigh"
   | "confidenceMedium"
-  | "confidenceLow";
+  | "confidenceLow"
+  | "ocrTextLabel"
+  | "ocrTextEmpty"
+  | "ocrTapHint"
+  | "medicineUses"
+  | "medicineWarnings"
+  | "capturePhoto"
+  | "cancelCamera";
 
 const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
   ps: {
@@ -93,12 +100,20 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     photoTooLarge: "عکس ډېر لوی دی. یو کوچنی عکس وکاروئ.",
     photoInvalidType: "یوازې د عکس فایل وکاروئ.",
     ocrFailed: "عکس ونه لوستل شو. بیا هڅه وکړئ یا بل عکس وکاروئ.",
-    ocrNoMatch: "په لیست کې ورته درمل ونه موندل شو. بل عکس وکاروئ.",
+    ocrNoMatch:
+      "د درمل نوم په عکس کې ونه موندل شو. د کڅوړې لیبل روښانه او نږدې عکس واخلئ.",
     ocrMatches: "نږدې درمل",
     ocrConfidence: "باور",
     confidenceHigh: "لوړ",
     confidenceMedium: "منځنی",
     confidenceLow: "ټیټ",
+    ocrTextLabel: "له عکس څخه لوستل شوی متن",
+    ocrTextEmpty: "(هیڅ انګلیسي متن ونه لوستل شو — روښانه عکس واخلئ)",
+    ocrTapHint: "د جزئیاتو لپاره یو درمل وټاکئ",
+    medicineUses: "معمولاً د څه لپاره کارول کیږي",
+    medicineWarnings: "خبرتیاوې",
+    capturePhoto: "عکس واخلئ",
+    cancelCamera: "کیمرا بند کړئ",
   },
   en: {
     brandName: "SehatYar",
@@ -141,12 +156,20 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     photoTooLarge: "That photo is too large. Choose a smaller one.",
     photoInvalidType: "Please choose an image file.",
     ocrFailed: "Could not read the photo. Try again or choose another image.",
-    ocrNoMatch: "No matching medicine in the list. Try another photo.",
+    ocrNoMatch:
+      "No medicine name found in this photo. Take a clear, close photo of the pack label.",
     ocrMatches: "Possible matches",
     ocrConfidence: "Confidence",
     confidenceHigh: "High",
     confidenceMedium: "Medium",
     confidenceLow: "Low",
+    ocrTextLabel: "Text read from the photo",
+    ocrTextEmpty: "(No English text was read — try a sharper, closer photo)",
+    ocrTapHint: "Tap a medicine to see details",
+    medicineUses: "Commonly used for",
+    medicineWarnings: "Warnings",
+    capturePhoto: "Capture photo",
+    cancelCamera: "Close camera",
   },
 };
 

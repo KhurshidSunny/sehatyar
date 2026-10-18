@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { LoadingState } from "@/components/AsyncState";
+import MedicineCameraCapture from "@/components/MedicineCameraCapture";
+import MedicineResultView from "@/components/MedicineResultView";
 import { ApiError } from "@/lib/api/client";
 import { postMedicineOcr } from "@/lib/api/medicines";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
@@ -13,7 +15,22 @@ import {
 } from "@/lib/medicines/photo";
 import type { MedicineOcrCandidate } from "@/lib/types";
 
-type Phase = "pick" | "preview" | "loading" | "results" | "error";
+type Phase =
+  | "pick"
+  | "camera"
+  | "preview"
+  | "loading"
+  | "results"
+  | "detail"
+  | "error";
+
+function visibleCandidates(items: MedicineOcrCandidate[]): MedicineOcrCandidate[] {
+  const high = items.filter((item) => item.confidence === "high");
+  if (high.length > 0) {
+    return high;
+  }
+  return items.slice(0, 3);
+}
 
 export default function MedicinePhotoUpload() {
   const { locale, t } = useLocale();
@@ -27,6 +44,8 @@ export default function MedicinePhotoUpload() {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [photoError, setPhotoError] = useState<MedicinePhotoError | null>(null);
   const [candidates, setCandidates] = useState<MedicineOcrCandidate[]>([]);
+  const [selected, setSelected] = useState<MedicineOcrCandidate | null>(null);
+  const [ocrText, setOcrText] = useState("");
   const [ocrEmpty, setOcrEmpty] = useState(false);
 
   useEffect(() => {
@@ -45,6 +64,8 @@ export default function MedicinePhotoUpload() {
     setFile(null);
     setPhotoError(null);
     setCandidates([]);
+    setSelected(null);
+    setOcrText("");
     setOcrEmpty(false);
     setPhase("pick");
     if (cameraRef.current) cameraRef.current.value = "";
@@ -65,11 +86,19 @@ export default function MedicinePhotoUpload() {
     }
     setPhotoError(null);
     setCandidates([]);
+    setSelected(null);
+    setOcrText("");
     setOcrEmpty(false);
     setFile(next);
     setPreviewUrl(URL.createObjectURL(next));
     setPhase("preview");
   }
+
+  const openCameraFallback = useCallback(() => {
+    // Mobile browsers: file input with capture opens the device camera app.
+    setPhase("pick");
+    queueMicrotask(() => cameraRef.current?.click());
+  }, []);
 
   async function handleSubmit() {
     if (!file) {
@@ -79,8 +108,11 @@ export default function MedicinePhotoUpload() {
     setPhotoError(null);
     try {
       const result = await postMedicineOcr(file);
-      setCandidates(result.candidates);
-      setOcrEmpty(result.candidates.length === 0);
+      const ranked = visibleCandidates(result.candidates);
+      setCandidates(ranked);
+      setSelected(null);
+      setOcrText(result.ocrText.trim());
+      setOcrEmpty(ranked.length === 0);
       setPhase("results");
     } catch (error) {
       if (!(error instanceof ApiError)) {
@@ -98,7 +130,7 @@ export default function MedicinePhotoUpload() {
         id={cameraInputId}
         ref={cameraRef}
         type="file"
-        accept={MEDICINE_PHOTO_ACCEPT}
+        accept="image/*"
         capture="environment"
         className="sr-only"
         onChange={(event) => applyFile(event.target.files?.[0])}
@@ -114,12 +146,13 @@ export default function MedicinePhotoUpload() {
 
       {phase === "pick" ? (
         <div className="flex flex-col gap-3">
-          <label
-            htmlFor={cameraInputId}
-            className="flex min-h-20 w-full cursor-pointer items-center justify-center rounded-2xl bg-brand px-6 py-5 text-center text-xl font-semibold text-white shadow-sm transition hover:bg-brand-dark focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-brand sm:text-2xl"
+          <button
+            type="button"
+            onClick={() => setPhase("camera")}
+            className="flex min-h-20 w-full items-center justify-center rounded-2xl bg-brand px-6 py-5 text-center text-xl font-semibold text-white shadow-sm transition hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
           >
             {t("takePhoto")}
-          </label>
+          </button>
           <label
             htmlFor={fileInputId}
             className="flex min-h-20 w-full cursor-pointer items-center justify-center rounded-2xl border-2 border-brand bg-surface px-6 py-5 text-center text-xl font-semibold text-brand shadow-sm transition hover:bg-brand/5 focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-brand sm:text-2xl"
@@ -129,7 +162,15 @@ export default function MedicinePhotoUpload() {
         </div>
       ) : null}
 
-      {previewUrl && phase !== "pick" ? (
+      {phase === "camera" ? (
+        <MedicineCameraCapture
+          onCapture={(captured) => applyFile(captured)}
+          onCancel={() => setPhase("pick")}
+          onUnavailable={openCameraFallback}
+        />
+      ) : null}
+
+      {previewUrl && phase !== "pick" && phase !== "camera" && phase !== "detail" ? (
         <div className="overflow-hidden rounded-2xl border-2 border-border bg-surface shadow-sm">
           {/* eslint-disable-next-line @next/next/no-img-element -- local object URL preview */}
           <img
@@ -138,6 +179,16 @@ export default function MedicinePhotoUpload() {
             className="mx-auto max-h-72 w-full object-contain"
           />
         </div>
+      ) : null}
+
+      {phase === "detail" && selected ? (
+        <MedicineResultView
+          medicine={selected}
+          onBack={() => {
+            setSelected(null);
+            setPhase("results");
+          }}
+        />
       ) : null}
 
       {phase === "preview" ? (
@@ -186,40 +237,57 @@ export default function MedicinePhotoUpload() {
       {phase === "results" ? (
         <div className="flex flex-col gap-3">
           {ocrEmpty ? (
-            <p
-              className="rounded-2xl border-2 border-border bg-surface px-5 py-5 text-center text-lg text-muted"
-              role="status"
-            >
-              {t("ocrNoMatch")}
-            </p>
+            <div className="flex flex-col gap-3" role="status">
+              <p className="rounded-2xl border-2 border-border bg-surface px-5 py-5 text-center text-lg text-muted">
+                {t("ocrNoMatch")}
+              </p>
+              {/* Only show OCR text when it looks like a real label — never face gibberish. */}
+              {ocrText.length >= 8 && /[A-Za-z]{5,}/.test(ocrText) ? (
+                <>
+                  <p className="text-center text-base font-semibold text-foreground">
+                    {t("ocrTextLabel")}
+                  </p>
+                  <p className="whitespace-pre-wrap rounded-2xl border-2 border-dashed border-border bg-surface px-4 py-3 text-center text-base text-muted">
+                    {ocrText}
+                  </p>
+                </>
+              ) : null}
+            </div>
           ) : (
             <>
               <p className="text-center text-lg font-semibold text-foreground sm:text-xl">
                 {t("ocrMatches")}
               </p>
+              <p className="text-center text-base text-muted">{t("ocrTapHint")}</p>
               <ul className="flex flex-col gap-3">
                 {candidates.map((item) => (
-                  <li
-                    key={item.id}
-                    className="rounded-2xl border-2 border-border bg-surface px-5 py-4 shadow-sm"
-                  >
-                    <p className="text-lg font-semibold text-foreground sm:text-xl">
-                      {item.names[0]}
-                    </p>
-                    {item.names.length > 1 ? (
-                      <p className="mt-1 text-base text-muted">
-                        {item.names.slice(1, 3).join(" · ")}
-                      </p>
-                    ) : null}
-                    <p className="mt-2 text-base text-muted">
-                      {t("ocrConfidence")}:{" "}
-                      {item.confidence === "high"
-                        ? t("confidenceHigh")
-                        : item.confidence === "medium"
-                          ? t("confidenceMedium")
-                          : t("confidenceLow")}
-                      {locale === "en" ? ` (${Math.round(item.score)})` : ""}
-                    </p>
+                  <li key={item.id}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelected(item);
+                        setPhase("detail");
+                      }}
+                      className="flex w-full flex-col rounded-2xl border-2 border-border bg-surface px-5 py-4 text-start shadow-sm transition hover:border-brand hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                    >
+                      <span className="text-lg font-semibold text-foreground sm:text-xl">
+                        {item.names[0]}
+                      </span>
+                      {item.names.length > 1 ? (
+                        <span className="mt-1 text-base text-muted">
+                          {item.names.slice(1, 3).join(" · ")}
+                        </span>
+                      ) : null}
+                      <span className="mt-2 text-base text-muted">
+                        {t("ocrConfidence")}:{" "}
+                        {item.confidence === "high"
+                          ? t("confidenceHigh")
+                          : item.confidence === "medium"
+                            ? t("confidenceMedium")
+                            : t("confidenceLow")}
+                        {locale === "en" ? ` (${Math.round(item.score)})` : ""}
+                      </span>
+                    </button>
                   </li>
                 ))}
               </ul>

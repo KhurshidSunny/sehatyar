@@ -8,6 +8,7 @@ pytesseract>=0.3.10,<1.0.0
 scikit-learn>=1.5.0,<2.0.0
 numpy>=1.26.0,<3.0.0
 pandas>=2.2.0,<3.0.0
+# Optional: pip install opencv-python-headless  (sharper pack-photo preprocessing)
 rapidfuzz>=3.9.0,<4.0.0
 pydantic>=2.8.0,<3.0.0
 pydantic-settings>=2.4.0,<3.0.0

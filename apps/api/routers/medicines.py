@@ -48,7 +48,7 @@ async def ocr_medicine_pack(
         raise HTTPException(status_code=400, detail="Empty image upload")
 
     try:
-        ocr_text = extract_text_from_image_bytes(
+        extracted = extract_text_from_image_bytes(
             data,
             content_type=image.content_type,
         )
@@ -57,10 +57,18 @@ async def ocr_medicine_pack(
         status = 503 if "Tesseract" in message else 400
         raise HTTPException(status_code=status, detail=message) from exc
 
+    ocr_text = extracted.text
+    # Face / blank / gibberish: no matches and do not return OCR noise to the client.
+    if not extracted.usable or not medicine_store.ocr_has_medicine_anchor(ocr_text):
+        return MedicineOcrResponse(ocrText="", candidates=[])
+
     try:
         ranked = medicine_store.match_ocr_text(ocr_text, limit=limit)
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    if not ranked:
+        return MedicineOcrResponse(ocrText="", candidates=[])
 
     candidates = [
         MedicineOcrCandidate(
