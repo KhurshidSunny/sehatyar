@@ -56,7 +56,11 @@ export type MessageKey =
   | "medicineUses"
   | "medicineWarnings"
   | "capturePhoto"
-  | "cancelCamera";
+  | "cancelCamera"
+  | "typeMedicineName"
+  | "searchMedicine"
+  | "medicineSearchPlaceholder"
+  | "medicineSearchEmpty";
 
 const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
   ps: {
@@ -114,6 +118,10 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     medicineWarnings: "خبرتیاوې",
     capturePhoto: "عکس واخلئ",
     cancelCamera: "کیمرا بند کړئ",
+    typeMedicineName: "د درمل نوم ولیکئ",
+    searchMedicine: "پلټنه",
+    medicineSearchPlaceholder: "لکه Panadol یا پیراسیټامول",
+    medicineSearchEmpty: "په لیست کې ورته درمل ونه موندل شو. بل نوم هڅه وکړئ.",
   },
   en: {
     brandName: "SehatYar",
@@ -170,6 +178,10 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     medicineWarnings: "Warnings",
     capturePhoto: "Capture photo",
     cancelCamera: "Close camera",
+    typeMedicineName: "Type medicine name",
+    searchMedicine: "Search",
+    medicineSearchPlaceholder: "e.g. Panadol or Paracetamol",
+    medicineSearchEmpty: "No matching medicine in the list. Try another name.",
   },
 };
 

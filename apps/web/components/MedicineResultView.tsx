@@ -2,18 +2,25 @@
 
 import FaqAudioButton from "@/components/FaqAudioButton";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
-import type { MedicineOcrCandidate } from "@/lib/types";
+import type { MedicineOcrCandidate, MedicineSummary } from "@/lib/types";
+
+function hasMatchMeta(
+  medicine: MedicineSummary | MedicineOcrCandidate,
+): medicine is MedicineOcrCandidate {
+  return "confidence" in medicine && typeof medicine.confidence === "string";
+}
 
 export default function MedicineResultView({
   medicine,
   onBack,
 }: {
-  medicine: MedicineOcrCandidate;
+  medicine: MedicineSummary | MedicineOcrCandidate;
   onBack: () => void;
 }) {
   const { locale, t } = useLocale();
   const uses = locale === "ps" ? medicine.usesPs : medicine.usesEn;
   const warnings = locale === "ps" ? medicine.warningsPs : medicine.warningsEn;
+  const showConfidence = hasMatchMeta(medicine);
 
   return (
     <div className="flex flex-col gap-4">
@@ -34,14 +41,16 @@ export default function MedicineResultView({
             {medicine.names.slice(1).join(" · ")}
           </p>
         ) : null}
-        <p className="mt-3 text-base text-muted">
-          {t("ocrConfidence")}:{" "}
-          {medicine.confidence === "high"
-            ? t("confidenceHigh")
-            : medicine.confidence === "medium"
-              ? t("confidenceMedium")
-              : t("confidenceLow")}
-        </p>
+        {showConfidence ? (
+          <p className="mt-3 text-base text-muted">
+            {t("ocrConfidence")}:{" "}
+            {medicine.confidence === "high"
+              ? t("confidenceHigh")
+              : medicine.confidence === "medium"
+                ? t("confidenceMedium")
+                : t("confidenceLow")}
+          </p>
+        ) : null}
       </div>
 
       <div className="rounded-2xl border-2 border-border bg-surface px-5 py-5 shadow-sm">

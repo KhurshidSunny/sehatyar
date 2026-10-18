@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { LoadingState } from "@/components/AsyncState";
 import MedicineCameraCapture from "@/components/MedicineCameraCapture";
+import MedicineNameSearch from "@/components/MedicineNameSearch";
 import MedicineResultView from "@/components/MedicineResultView";
 import { ApiError } from "@/lib/api/client";
 import { postMedicineOcr } from "@/lib/api/medicines";
@@ -13,7 +14,7 @@ import {
   validateMedicinePhoto,
   type MedicinePhotoError,
 } from "@/lib/medicines/photo";
-import type { MedicineOcrCandidate } from "@/lib/types";
+import type { MedicineOcrCandidate, MedicineSummary } from "@/lib/types";
 
 type Phase =
   | "pick"
@@ -21,6 +22,7 @@ type Phase =
   | "preview"
   | "loading"
   | "results"
+  | "type"
   | "detail"
   | "error";
 
@@ -44,9 +46,13 @@ export default function MedicinePhotoUpload() {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [photoError, setPhotoError] = useState<MedicinePhotoError | null>(null);
   const [candidates, setCandidates] = useState<MedicineOcrCandidate[]>([]);
-  const [selected, setSelected] = useState<MedicineOcrCandidate | null>(null);
+  const [selected, setSelected] = useState<
+    MedicineOcrCandidate | MedicineSummary | null
+  >(null);
   const [ocrText, setOcrText] = useState("");
   const [ocrEmpty, setOcrEmpty] = useState(false);
+  /** Where Back from typed-search detail should return. */
+  const [detailReturn, setDetailReturn] = useState<Phase>("results");
 
   useEffect(() => {
     return () => {
@@ -67,6 +73,7 @@ export default function MedicinePhotoUpload() {
     setSelected(null);
     setOcrText("");
     setOcrEmpty(false);
+    setDetailReturn("results");
     setPhase("pick");
     if (cameraRef.current) cameraRef.current.value = "";
     if (fileRef.current) fileRef.current.value = "";
@@ -95,7 +102,6 @@ export default function MedicinePhotoUpload() {
   }
 
   const openCameraFallback = useCallback(() => {
-    // Mobile browsers: file input with capture opens the device camera app.
     setPhase("pick");
     queueMicrotask(() => cameraRef.current?.click());
   }, []);
@@ -120,6 +126,17 @@ export default function MedicinePhotoUpload() {
       }
       setPhase("error");
     }
+  }
+
+  function openTypedSearch(from: Phase) {
+    setDetailReturn(from);
+    setSelected(null);
+    setPhase("type");
+  }
+
+  function selectTypedMedicine(medicine: MedicineSummary) {
+    setSelected(medicine);
+    setPhase("detail");
   }
 
   return (
@@ -159,6 +176,13 @@ export default function MedicinePhotoUpload() {
           >
             {t("choosePhoto")}
           </label>
+          <button
+            type="button"
+            onClick={() => openTypedSearch("pick")}
+            className="flex min-h-16 w-full items-center justify-center rounded-2xl border-2 border-border bg-surface px-6 py-4 text-center text-xl font-semibold text-foreground shadow-sm transition hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
+          >
+            {t("typeMedicineName")}
+          </button>
         </div>
       ) : null}
 
@@ -170,7 +194,11 @@ export default function MedicinePhotoUpload() {
         />
       ) : null}
 
-      {previewUrl && phase !== "pick" && phase !== "camera" && phase !== "detail" ? (
+      {previewUrl &&
+      phase !== "pick" &&
+      phase !== "camera" &&
+      phase !== "detail" &&
+      phase !== "type" ? (
         <div className="overflow-hidden rounded-2xl border-2 border-border bg-surface shadow-sm">
           {/* eslint-disable-next-line @next/next/no-img-element -- local object URL preview */}
           <img
@@ -186,7 +214,21 @@ export default function MedicinePhotoUpload() {
           medicine={selected}
           onBack={() => {
             setSelected(null);
-            setPhase("results");
+            setPhase(detailReturn === "type" ? "type" : "results");
+          }}
+        />
+      ) : null}
+
+      {phase === "type" ? (
+        <MedicineNameSearch
+          showCancel
+          onCancel={() => {
+            setSelected(null);
+            setPhase(detailReturn === "pick" ? "pick" : detailReturn);
+          }}
+          onSelect={(medicine) => {
+            setDetailReturn("type");
+            selectTypedMedicine(medicine);
           }}
         />
       ) : null}
@@ -226,6 +268,13 @@ export default function MedicinePhotoUpload() {
           </button>
           <button
             type="button"
+            onClick={() => openTypedSearch("error")}
+            className="flex min-h-14 w-full items-center justify-center rounded-2xl border-2 border-brand bg-surface px-6 py-3 text-center text-lg font-semibold text-brand transition hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          >
+            {t("typeMedicineName")}
+          </button>
+          <button
+            type="button"
             onClick={clearSelection}
             className="flex min-h-14 w-full items-center justify-center rounded-2xl border-2 border-border bg-surface px-6 py-3 text-center text-lg font-semibold text-muted transition hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
@@ -241,7 +290,6 @@ export default function MedicinePhotoUpload() {
               <p className="rounded-2xl border-2 border-border bg-surface px-5 py-5 text-center text-lg text-muted">
                 {t("ocrNoMatch")}
               </p>
-              {/* Only show OCR text when it looks like a real label — never face gibberish. */}
               {ocrText.length >= 8 && /[A-Za-z]{5,}/.test(ocrText) ? (
                 <>
                   <p className="text-center text-base font-semibold text-foreground">
@@ -252,6 +300,12 @@ export default function MedicinePhotoUpload() {
                   </p>
                 </>
               ) : null}
+              <MedicineNameSearch
+                onSelect={(medicine) => {
+                  setDetailReturn("results");
+                  selectTypedMedicine(medicine);
+                }}
+              />
             </div>
           ) : (
             <>
@@ -266,6 +320,7 @@ export default function MedicinePhotoUpload() {
                       type="button"
                       onClick={() => {
                         setSelected(item);
+                        setDetailReturn("results");
                         setPhase("detail");
                       }}
                       className="flex w-full flex-col rounded-2xl border-2 border-border bg-surface px-5 py-4 text-start shadow-sm transition hover:border-brand hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
@@ -291,12 +346,19 @@ export default function MedicinePhotoUpload() {
                   </li>
                 ))}
               </ul>
+              <button
+                type="button"
+                onClick={() => openTypedSearch("results")}
+                className="flex min-h-14 w-full items-center justify-center rounded-2xl border-2 border-brand bg-surface px-6 py-3 text-center text-lg font-semibold text-brand transition hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              >
+                {t("typeMedicineName")}
+              </button>
             </>
           )}
           <button
             type="button"
             onClick={clearSelection}
-            className="flex min-h-14 w-full items-center justify-center rounded-2xl border-2 border-brand bg-surface px-6 py-3 text-center text-lg font-semibold text-brand transition hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="flex min-h-14 w-full items-center justify-center rounded-2xl border-2 border-border bg-surface px-6 py-3 text-center text-lg font-semibold text-muted transition hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             {t("changePhoto")}
           </button>

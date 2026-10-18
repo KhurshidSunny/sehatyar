@@ -40,8 +40,9 @@ FAQ screens load live data from FastAPI via `lib/api/`:
 | `fetchFaq(faqId)` | `GET /faqs/{id}` |
 | `postFeedback({ targetType, targetId, helpful })` | `POST /feedback` |
 | `postMedicineOcr(file)` | `POST /medicines/ocr` (multipart `image`) |
+| `searchMedicines(q)` | `GET /medicines/search?q=` |
 
-Loading, empty, and error UI live in `components/AsyncState.tsx`. FAQ answer screens include Yes/No helpfulness controls (`components/FaqHelpfulness.tsx`). Medicine photo submit calls OCR and shows ranked catalog matches with confidence. CORS must allow the web origin (`CORS_ORIGINS` on the API, usually `http://localhost:3000`). Feedback votes require MongoDB on the API. OCR requires Tesseract on the API host.
+Loading, empty, and error UI live in `components/AsyncState.tsx`. FAQ answer screens include Yes/No helpfulness controls (`components/FaqHelpfulness.tsx`). Medicine photo submit calls OCR and shows ranked catalog matches with confidence. When OCR finds nothing (or fails), typed name search calls `/medicines/search`. CORS must allow the web origin (`CORS_ORIGINS` on the API, usually `http://localhost:3000`). Feedback votes require MongoDB on the API. OCR requires Tesseract on the API host.
 
 ## Types
 
@@ -55,9 +56,9 @@ Shared TypeScript shapes for FAQ, medicine, and feedback live in `lib/types/` an
 | `/faqs` | FAQ categories as large tap targets |
 | `/faqs/[category]` | Questions in one category, with clinic / emergency badges |
 | `/faqs/[category]/[faqId]` | Answer text + Play audio (or “no audio yet”) + Yes/No feedback |
-| `/medicines` | Medicine pack photo: camera / gallery, preview, confirm |
+| `/medicines` | Medicine pack photo or typed name search |
 
-Medicine photo UI lives in `components/MedicinePhotoUpload.tsx` (JPEG/PNG/WebP, max 8 MB). Submit sends the image to `POST /medicines/ocr` and lists fuzzy catalog matches.
+Medicine photo UI lives in `components/MedicinePhotoUpload.tsx` (JPEG/PNG/WebP, max 8 MB). Submit sends the image to `POST /medicines/ocr` and lists fuzzy catalog matches. Typed fallback uses `components/MedicineNameSearch.tsx` → `GET /medicines/search`.
 
 `components/Disclaimer.tsx` is the permanent non-prescribing notice on each of these screens.
 

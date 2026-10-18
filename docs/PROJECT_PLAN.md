@@ -218,7 +218,7 @@ No personal identity required for MVP.
 - Image upload
 - OCR extraction
 - Catalog matching
-- Result screen + typed fallback
+- Result screen + typed fallback (typed search wired to GET /medicines/search)
 
 ### Phase 4 — Offline PWA
 - Manifest + service worker
