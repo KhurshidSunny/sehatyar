@@ -65,3 +65,25 @@ export async function apiPost<T>(path: string, body: unknown): Promise<T> {
 
   return (await response.json()) as T;
 }
+
+/** Multipart POST (do not set Content-Type — the browser sets the boundary). */
+export async function apiPostForm<T>(path: string, form: FormData): Promise<T> {
+  const url = `${getApiBaseUrl()}${path.startsWith("/") ? path : `/${path}`}`;
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: form,
+      cache: "no-store",
+    });
+  } catch {
+    throw new ApiError(0, "Network error");
+  }
+
+  if (!response.ok) {
+    throw await parseError(response);
+  }
+
+  return (await response.json()) as T;
+}

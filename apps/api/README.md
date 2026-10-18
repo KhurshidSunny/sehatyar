@@ -23,6 +23,8 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 # then open http://127.0.0.1:8000/health  (mongo.connected should be true)
 # FAQ routes: /categories , /faqs?category=fever , /faqs/fever-01
 # Feedback: POST /feedback  {"targetType":"faq","targetId":"fever-01","helpful":true}
+# Medicine OCR: POST /medicines/ocr  (multipart field "image")
+# Requires Tesseract OCR on PATH, or set TESSERACT_CMD in .env
 ```
 
 | File | Purpose |
@@ -47,6 +49,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | GET | `/faqs` | FAQ summaries (`?category=` optional filter) |
 | GET | `/faqs/{id}` | Full FAQ answer payload |
 | GET | `/medicines/search?q=` | Fuzzy medicine name search (optional `limit`) |
+| POST | `/medicines/ocr` | Multipart pack photo → OCR text + ranked catalog matches |
 | POST | `/feedback` | Store anonymous helpfulness vote (`targetType`, `targetId`, `helpful`) |
 
 FAQ and medicine reads come from curated JSON (`FAQ_DATA_DIR`, `MEDICINE_DATA_DIR`). Feedback votes are written to the MongoDB `feedback` collection.
@@ -77,7 +80,7 @@ Pydantic models under `schemas/` match the curated JSON under `/data` and the AP
 | Module | Models |
 |---|---|
 | `schemas/faq.py` | `FaqCategory`, `Faq`, `FaqSummary` |
-| `schemas/medicine.py` | `MedicineCategory`, `Medicine`, `MedicineSummary` |
+| `schemas/medicine.py` | `MedicineCategory`, `Medicine`, `MedicineSummary`, OCR response models |
 | `schemas/feedback.py` | `FeedbackCreate`, `FeedbackRecord` |
 
 `dangerLevel` is one of `info` / `clinic` / `emergency`. `reviewStatus` is `draft` or `reviewed`. Feedback stores only `targetType`, `targetId`, and `helpful` (no personal identity).

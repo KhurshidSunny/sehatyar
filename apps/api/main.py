@@ -79,5 +79,6 @@ async def root():
         "categories": "/categories",
         "faqs": "/faqs",
         "medicinesSearch": "/medicines/search?q=",
+        "medicinesOcr": "POST /medicines/ocr",
         "feedback": "/feedback",
     }

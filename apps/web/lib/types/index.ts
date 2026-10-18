@@ -9,6 +9,9 @@ export type {
   FeedbackTargetType,
   Medicine,
   MedicineCategory,
+  MedicineMatchConfidence,
+  MedicineOcrCandidate,
+  MedicineOcrResponse,
   MedicineSummary,
   ReviewStatus,
 } from "./content";

@@ -14,7 +14,7 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-FAQ browse screens, bilingual Pashto/English UI, FastAPI content APIs, helpfulness feedback, and medicine pack photo capture (camera / gallery + preview) are in place. Pack OCR and catalog matching are still to be wired end-to-end.
+FAQ browse, bilingual UI, FastAPI content APIs, helpfulness feedback, medicine pack photo capture, OCR (`POST /medicines/ocr`), and catalog fuzzy matching are in place. Full medicine result detail screen and typed-name fallback are still open.
 
 ## Stack
 

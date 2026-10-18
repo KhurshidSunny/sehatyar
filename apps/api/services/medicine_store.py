@@ -136,3 +136,63 @@ def search_by_name(
 
     scored.sort(key=lambda item: (-item[0], item[1].id))
     return [to_summary(medicine) for _, medicine in scored[:limit]]
+
+
+def confidence_for_score(score: float) -> str:
+    if score >= 85:
+        return "high"
+    if score >= 70:
+        return "medium"
+    return "low"
+
+
+def _ocr_query_parts(ocr_text: str) -> list[str]:
+    """Build query strings from full OCR text plus non-trivial lines/tokens."""
+    cleaned = " ".join(ocr_text.split())
+    parts: list[str] = []
+    if cleaned:
+        parts.append(cleaned)
+
+    for line in ocr_text.splitlines():
+        line_clean = " ".join(line.split())
+        if len(line_clean) >= 3:
+            parts.append(line_clean)
+
+    for token in cleaned.replace("/", " ").replace("-", " ").split():
+        if len(token) >= 3 and any(ch.isalpha() for ch in token):
+            parts.append(token)
+
+    # Preserve order, drop duplicates.
+    seen: set[str] = set()
+    unique: list[str] = []
+    for part in parts:
+        key = part.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(part)
+    return unique
+
+
+def match_ocr_text(
+    ocr_text: str,
+    *,
+    limit: int = 5,
+    min_score: float = 65.0,
+) -> list[tuple[float, Medicine]]:
+    """Rank catalog medicines against OCR text fragments."""
+    parts = _ocr_query_parts(ocr_text)
+    if not parts:
+        return []
+
+    _, medicines = _catalog()
+    scored: list[tuple[float, Medicine]] = []
+    for medicine in medicines:
+        best = 0.0
+        for part in parts:
+            best = max(best, _best_name_score(part, medicine.names))
+        if best >= min_score:
+            scored.append((best, medicine))
+
+    scored.sort(key=lambda item: (-item[0], item[1].id))
+    return scored[:limit]

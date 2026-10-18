@@ -47,3 +47,19 @@ class MedicineSummary(BaseModel):
     warningsPs: str
     warningsEn: str
     audioUrl: str | None = None
+
+
+class MedicineOcrCandidate(MedicineSummary):
+    """Catalog hit from OCR text, with a 0–100 fuzzy score."""
+
+    score: float = Field(ge=0, le=100)
+    confidence: str = Field(description="high | medium | low")
+
+
+class MedicineOcrResponse(BaseModel):
+    """POST /medicines/ocr result: raw text plus ranked catalog matches."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    ocrText: str
+    candidates: list[MedicineOcrCandidate]

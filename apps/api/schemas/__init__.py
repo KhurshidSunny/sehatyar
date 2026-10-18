@@ -3,7 +3,13 @@
 from schemas.common import ContentSource, DangerLevel, ReviewStatus
 from schemas.faq import Faq, FaqCategory, FaqSummary
 from schemas.feedback import FeedbackCreate, FeedbackRecord, FeedbackTargetType
-from schemas.medicine import Medicine, MedicineCategory, MedicineSummary
+from schemas.medicine import (
+    Medicine,
+    MedicineCategory,
+    MedicineOcrCandidate,
+    MedicineOcrResponse,
+    MedicineSummary,
+)
 
 __all__ = [
     "ContentSource",
@@ -15,6 +21,8 @@ __all__ = [
     "Medicine",
     "MedicineCategory",
     "MedicineSummary",
+    "MedicineOcrCandidate",
+    "MedicineOcrResponse",
     "FeedbackCreate",
     "FeedbackRecord",
     "FeedbackTargetType",

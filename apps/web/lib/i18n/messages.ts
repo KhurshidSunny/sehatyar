@@ -40,10 +40,16 @@ export type MessageKey =
   | "choosePhoto"
   | "changePhoto"
   | "submitPhoto"
-  | "photoReady"
   | "photoPreviewAlt"
   | "photoTooLarge"
-  | "photoInvalidType";
+  | "photoInvalidType"
+  | "ocrFailed"
+  | "ocrNoMatch"
+  | "ocrMatches"
+  | "ocrConfidence"
+  | "confidenceHigh"
+  | "confidenceMedium"
+  | "confidenceLow";
 
 const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
   ps: {
@@ -82,11 +88,17 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     takePhoto: "عکس واخلئ",
     choosePhoto: "له ګالري څخه عکس غوره کړئ",
     changePhoto: "بل عکس",
-    submitPhoto: "دا عکس وکاروئ",
-    photoReady: "عکس چمتو دی.",
+    submitPhoto: "درمل وپلټئ",
     photoPreviewAlt: "د درملو پیک عکس",
     photoTooLarge: "عکس ډېر لوی دی. یو کوچنی عکس وکاروئ.",
     photoInvalidType: "یوازې د عکس فایل وکاروئ.",
+    ocrFailed: "عکس ونه لوستل شو. بیا هڅه وکړئ یا بل عکس وکاروئ.",
+    ocrNoMatch: "په لیست کې ورته درمل ونه موندل شو. بل عکس وکاروئ.",
+    ocrMatches: "نږدې درمل",
+    ocrConfidence: "باور",
+    confidenceHigh: "لوړ",
+    confidenceMedium: "منځنی",
+    confidenceLow: "ټیټ",
   },
   en: {
     brandName: "SehatYar",
@@ -124,11 +136,17 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     takePhoto: "Take a photo",
     choosePhoto: "Choose a photo from gallery",
     changePhoto: "Choose another photo",
-    submitPhoto: "Use this photo",
-    photoReady: "Photo ready.",
+    submitPhoto: "Look up medicine",
     photoPreviewAlt: "Medicine pack photo",
     photoTooLarge: "That photo is too large. Choose a smaller one.",
     photoInvalidType: "Please choose an image file.",
+    ocrFailed: "Could not read the photo. Try again or choose another image.",
+    ocrNoMatch: "No matching medicine in the list. Try another photo.",
+    ocrMatches: "Possible matches",
+    ocrConfidence: "Confidence",
+    confidenceHigh: "High",
+    confidenceMedium: "Medium",
+    confidenceLow: "Low",
   },
 };
 

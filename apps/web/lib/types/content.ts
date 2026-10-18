@@ -72,6 +72,18 @@ export interface MedicineSummary {
   audioUrl: string | null;
 }
 
+export type MedicineMatchConfidence = "high" | "medium" | "low";
+
+export interface MedicineOcrCandidate extends MedicineSummary {
+  score: number;
+  confidence: MedicineMatchConfidence | string;
+}
+
+export interface MedicineOcrResponse {
+  ocrText: string;
+  candidates: MedicineOcrCandidate[];
+}
+
 export interface FeedbackCreate {
   targetType: FeedbackTargetType;
   targetId: string;
