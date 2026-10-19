@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   description:
     "Pashto and English health literacy assistant — curated FAQs and medicine pack help. Information only, not a doctor.",
   applicationName: "SehatYar",
+  themeColor: "#0f766e",
+  appleWebApp: {
+    capable: true,
+    title: "SehatYar",
+    statusBarStyle: "default",
+  },
   icons: {
     icon: [
       { url: "/icon.png", sizes: "512x512", type: "image/png" },

@@ -64,6 +64,14 @@ Medicine photo UI lives in `components/MedicinePhotoUpload.tsx` (JPEG/PNG/WebP, 
 
 Unknown category or FAQ ids show a not-found empty state. When `audioUrl` is null, the answer screen shows a clear missing-audio state instead of a broken player.
 
+## PWA
+
+- `app/manifest.ts` serves the web app manifest (standalone display, theme `#0f766e`, 192/512 icons).
+- Icons live in `public/` (`icon-192.png`, `icon.png`, `apple-icon.png`).
+- `public/sw.js` registers via `components/ServiceWorkerRegister.tsx` and caches those icons. FAQ/page content is not cached yet.
+
+After `npm run build` and `npm run start` (or a deployed HTTPS origin), Chromium can offer “Install app”. Service workers need a secure context (localhost or HTTPS).
+
 ## Notes
 
 - UI targets low-literacy use: large tap targets and short Pashto / English copy.

@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import BrandLogo from "@/components/BrandLogo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import { LocaleProvider } from "@/lib/i18n/LocaleProvider";
 
 function ChromeBar() {
@@ -21,6 +22,7 @@ function ChromeBar() {
 export default function AppChrome({ children }: { children: ReactNode }) {
   return (
     <LocaleProvider>
+      <ServiceWorkerRegister />
       <ChromeBar />
       {children}
     </LocaleProvider>
