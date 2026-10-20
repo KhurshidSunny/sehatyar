@@ -1,5 +1,6 @@
 "use client";
 
+import CachedContentBadge from "@/components/CachedContentBadge";
 import DangerBadge from "@/components/DangerBadge";
 import FaqAudioButton from "@/components/FaqAudioButton";
 import FaqHelpfulness from "@/components/FaqHelpfulness";
@@ -10,9 +11,11 @@ import type { Faq, FaqCategory } from "@/lib/types";
 export default function FaqAnswerView({
   faq,
   category,
+  fromCache = false,
 }: {
   faq: Faq;
   category: FaqCategory | undefined;
+  fromCache?: boolean;
 }) {
   const { locale, t } = useLocale();
   const categoryName =
@@ -25,6 +28,8 @@ export default function FaqAnswerView({
       <ScreenHeader title={t("answer")} backHref={`/faqs/${faq.category}`} />
 
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-5 px-4 py-6 sm:px-6">
+        <CachedContentBadge visible={fromCache} />
+
         {categoryName ? (
           <p className="text-center text-base text-muted sm:text-lg">{categoryName}</p>
         ) : null}

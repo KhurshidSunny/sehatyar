@@ -72,6 +72,8 @@ Unknown category or FAQ ids show a not-found empty state. When `audioUrl` is nul
 - Offline pack: `public/offline/top-faqs.json` (categories + top FAQs: emergency, clinic, and first item per category). Precached on install.
 - Audio files go under `public/offline/audio/` and are listed in the pack’s `audioUrls` (none shipped yet). The client warms those URLs into the same cache when present.
 - FAQ helpers in `lib/api/faqs.ts` fall back to the offline pack when the API is unreachable. FAQs outside the pack still need the network.
+- `OfflineBanner` shows under the chrome bar when the device is offline.
+- FAQ screens show a “Saved content” badge when the response came from the offline pack (`fromCache`).
 
 After `npm run build` and `npm run start` (or a deployed HTTPS origin), Chromium can offer “Install app”. Service workers need a secure context (localhost or HTTPS).
 

@@ -60,7 +60,9 @@ export type MessageKey =
   | "typeMedicineName"
   | "searchMedicine"
   | "medicineSearchPlaceholder"
-  | "medicineSearchEmpty";
+  | "medicineSearchEmpty"
+  | "offlineBanner"
+  | "cachedContentBadge";
 
 const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
   ps: {
@@ -122,6 +124,8 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     searchMedicine: "پلټنه",
     medicineSearchPlaceholder: "لکه Panadol یا پیراسیټامول",
     medicineSearchEmpty: "په لیست کې ورته درمل ونه موندل شو. بل نوم هڅه وکړئ.",
+    offlineBanner: "تاسو اوس آفلاین یاست. خوندي شوې پوښتنې لا هم خلاصېږي.",
+    cachedContentBadge: "خوندي شوې مینځپانګه",
   },
   en: {
     brandName: "SehatYar",
@@ -182,6 +186,8 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     searchMedicine: "Search",
     medicineSearchPlaceholder: "e.g. Panadol or Paracetamol",
     medicineSearchEmpty: "No matching medicine in the list. Try another name.",
+    offlineBanner: "You are offline. Saved questions still open.",
+    cachedContentBadge: "Saved content",
   },
 };
 

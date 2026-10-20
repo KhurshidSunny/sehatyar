@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { EmptyState, ErrorState, LoadingState } from "@/components/AsyncState";
+import CachedContentBadge from "@/components/CachedContentBadge";
 import Disclaimer from "@/components/Disclaimer";
 import FaqCategoryLinks from "@/components/FaqCategoryLinks";
 import LocalizedScreenHeader from "@/components/LocalizedScreenHeader";
@@ -17,6 +18,7 @@ export default function FaqsCategoriesScreen() {
   const { t } = useLocale();
   const [status, setStatus] = useState<Status>("loading");
   const [categories, setCategories] = useState<FaqCategory[]>([]);
+  const [fromCache, setFromCache] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
@@ -24,9 +26,10 @@ export default function FaqsCategoriesScreen() {
 
     void (async () => {
       try {
-        const data = await fetchFaqCategories();
+        const result = await fetchFaqCategories();
         if (cancelled) return;
-        setCategories(data);
+        setCategories(result.data);
+        setFromCache(result.fromCache);
         setStatus("ready");
       } catch (error) {
         if (!(error instanceof ApiError)) {
@@ -34,6 +37,7 @@ export default function FaqsCategoriesScreen() {
         }
         if (cancelled) return;
         setCategories([]);
+        setFromCache(false);
         setStatus("error");
       }
     })();
@@ -46,6 +50,7 @@ export default function FaqsCategoriesScreen() {
   function handleRetry() {
     setStatus("loading");
     setCategories([]);
+    setFromCache(false);
     setReloadKey((key) => key + 1);
   }
 
@@ -60,7 +65,10 @@ export default function FaqsCategoriesScreen() {
           <EmptyState message={t("emptyCategories")} />
         ) : null}
         {status === "ready" && categories.length > 0 ? (
-          <FaqCategoryLinks categories={categories} />
+          <>
+            <CachedContentBadge visible={fromCache} />
+            <FaqCategoryLinks categories={categories} />
+          </>
         ) : null}
       </main>
 

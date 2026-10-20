@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import BrandLogo from "@/components/BrandLogo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import OfflineBanner from "@/components/OfflineBanner";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import { LocaleProvider } from "@/lib/i18n/LocaleProvider";
 
@@ -24,6 +25,7 @@ export default function AppChrome({ children }: { children: ReactNode }) {
     <LocaleProvider>
       <ServiceWorkerRegister />
       <ChromeBar />
+      <OfflineBanner />
       {children}
     </LocaleProvider>
   );

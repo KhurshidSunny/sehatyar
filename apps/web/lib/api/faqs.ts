@@ -7,6 +7,11 @@ import {
 } from "@/lib/offline/topFaqs";
 import type { Faq, FaqCategory, FaqSummary } from "@/lib/types";
 
+export type FaqLoadResult<T> = {
+  data: T;
+  fromCache: boolean;
+};
+
 async function fromOfflineCategories(): Promise<FaqCategory[]> {
   const pack = await loadOfflineFaqPack();
   return offlineCategories(pack);
@@ -32,28 +37,34 @@ async function fromOfflineFaq(faqId: string): Promise<Faq> {
   return faq;
 }
 
-export async function fetchFaqCategories(): Promise<FaqCategory[]> {
+export async function fetchFaqCategories(): Promise<FaqLoadResult<FaqCategory[]>> {
   try {
-    return await apiGet<FaqCategory[]>("/categories");
+    const data = await apiGet<FaqCategory[]>("/categories");
+    return { data, fromCache: false };
   } catch (error) {
     try {
-      return await fromOfflineCategories();
+      const data = await fromOfflineCategories();
+      return { data, fromCache: true };
     } catch {
       throw error;
     }
   }
 }
 
-export async function fetchFaqSummaries(categoryId?: string): Promise<FaqSummary[]> {
+export async function fetchFaqSummaries(
+  categoryId?: string,
+): Promise<FaqLoadResult<FaqSummary[]>> {
   try {
     const query =
       categoryId == null || categoryId === ""
         ? ""
         : `?category=${encodeURIComponent(categoryId)}`;
-    return await apiGet<FaqSummary[]>(`/faqs${query}`);
+    const data = await apiGet<FaqSummary[]>(`/faqs${query}`);
+    return { data, fromCache: false };
   } catch (error) {
     try {
-      return await fromOfflineSummaries(categoryId);
+      const data = await fromOfflineSummaries(categoryId);
+      return { data, fromCache: true };
     } catch (offlineError) {
       if (offlineError instanceof ApiError) {
         throw offlineError;
@@ -63,12 +74,14 @@ export async function fetchFaqSummaries(categoryId?: string): Promise<FaqSummary
   }
 }
 
-export async function fetchFaq(faqId: string): Promise<Faq> {
+export async function fetchFaq(faqId: string): Promise<FaqLoadResult<Faq>> {
   try {
-    return await apiGet<Faq>(`/faqs/${encodeURIComponent(faqId)}`);
+    const data = await apiGet<Faq>(`/faqs/${encodeURIComponent(faqId)}`);
+    return { data, fromCache: false };
   } catch (error) {
     try {
-      return await fromOfflineFaq(faqId);
+      const data = await fromOfflineFaq(faqId);
+      return { data, fromCache: true };
     } catch {
       throw error;
     }

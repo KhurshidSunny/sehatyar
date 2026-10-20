@@ -24,6 +24,7 @@ export default function FaqDetailScreen({
   const [status, setStatus] = useState<Status>("loading");
   const [faq, setFaq] = useState<Faq | null>(null);
   const [category, setCategory] = useState<FaqCategory | undefined>(undefined);
+  const [fromCache, setFromCache] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
@@ -31,21 +32,26 @@ export default function FaqDetailScreen({
 
     void (async () => {
       try {
-        const [detail, categories] = await Promise.all([
+        const [detailResult, categoriesResult] = await Promise.all([
           fetchFaq(faqId),
           fetchFaqCategories(),
         ]);
         if (cancelled) return;
 
+        const detail = detailResult.data;
         if (detail.category !== categoryId) {
           setFaq(null);
           setCategory(undefined);
+          setFromCache(false);
           setStatus("missing");
           return;
         }
 
         setFaq(detail);
-        setCategory(categories.find((item) => item.id === categoryId));
+        setCategory(
+          categoriesResult.data.find((item) => item.id === categoryId),
+        );
+        setFromCache(detailResult.fromCache || categoriesResult.fromCache);
         setStatus("ready");
       } catch (error) {
         if (cancelled) return;
@@ -53,6 +59,7 @@ export default function FaqDetailScreen({
         if (error instanceof ApiError && error.status === 404) {
           setFaq(null);
           setCategory(undefined);
+          setFromCache(false);
           setStatus("missing");
           return;
         }
@@ -62,6 +69,7 @@ export default function FaqDetailScreen({
         }
         setFaq(null);
         setCategory(undefined);
+        setFromCache(false);
         setStatus("error");
       }
     })();
@@ -75,13 +83,14 @@ export default function FaqDetailScreen({
     setStatus("loading");
     setFaq(null);
     setCategory(undefined);
+    setFromCache(false);
     setReloadKey((key) => key + 1);
   }
 
   return (
     <div className="flex flex-1 flex-col">
       {status === "ready" && faq ? (
-        <FaqAnswerView faq={faq} category={category} />
+        <FaqAnswerView faq={faq} category={category} fromCache={fromCache} />
       ) : (
         <>
           <LocalizedScreenHeader titleKey="answer" backHref={`/faqs/${categoryId}`} />

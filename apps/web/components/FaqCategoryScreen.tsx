@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { EmptyState, ErrorState, LoadingState } from "@/components/AsyncState";
+import CachedContentBadge from "@/components/CachedContentBadge";
 import Disclaimer from "@/components/Disclaimer";
 import FaqQuestionLinks from "@/components/FaqQuestionLinks";
 import LocalizedCategoryHeader from "@/components/LocalizedCategoryHeader";
@@ -19,6 +20,7 @@ export default function FaqCategoryScreen({ categoryId }: { categoryId: string }
   const [status, setStatus] = useState<Status>("loading");
   const [category, setCategory] = useState<FaqCategory | null>(null);
   const [questions, setQuestions] = useState<FaqSummary[]>([]);
+  const [fromCache, setFromCache] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
@@ -26,22 +28,25 @@ export default function FaqCategoryScreen({ categoryId }: { categoryId: string }
 
     void (async () => {
       try {
-        const [categories, faqs] = await Promise.all([
+        const [categoriesResult, faqsResult] = await Promise.all([
           fetchFaqCategories(),
           fetchFaqSummaries(categoryId),
         ]);
         if (cancelled) return;
 
-        const match = categories.find((item) => item.id === categoryId) ?? null;
+        const match =
+          categoriesResult.data.find((item) => item.id === categoryId) ?? null;
         if (!match) {
           setCategory(null);
           setQuestions([]);
+          setFromCache(false);
           setStatus("missing");
           return;
         }
 
         setCategory(match);
-        setQuestions(faqs);
+        setQuestions(faqsResult.data);
+        setFromCache(categoriesResult.fromCache || faqsResult.fromCache);
         setStatus("ready");
       } catch (error) {
         if (cancelled) return;
@@ -49,6 +54,7 @@ export default function FaqCategoryScreen({ categoryId }: { categoryId: string }
         if (error instanceof ApiError && error.status === 404) {
           setCategory(null);
           setQuestions([]);
+          setFromCache(false);
           setStatus("missing");
           return;
         }
@@ -58,6 +64,7 @@ export default function FaqCategoryScreen({ categoryId }: { categoryId: string }
         }
         setCategory(null);
         setQuestions([]);
+        setFromCache(false);
         setStatus("error");
       }
     })();
@@ -71,6 +78,7 @@ export default function FaqCategoryScreen({ categoryId }: { categoryId: string }
     setStatus("loading");
     setCategory(null);
     setQuestions([]);
+    setFromCache(false);
     setReloadKey((key) => key + 1);
   }
 
@@ -90,7 +98,10 @@ export default function FaqCategoryScreen({ categoryId }: { categoryId: string }
           questions.length === 0 ? (
             <EmptyState message={t("noQuestionsYet")} />
           ) : (
-            <FaqQuestionLinks categoryId={category.id} questions={questions} />
+            <>
+              <CachedContentBadge visible={fromCache} />
+              <FaqQuestionLinks categoryId={category.id} questions={questions} />
+            </>
           )
         ) : null}
       </main>
