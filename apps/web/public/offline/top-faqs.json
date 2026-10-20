@@ -1,0 +1,549 @@
+{
+  "version": 1,
+  "generatedFrom": "data/faqs",
+  "categories": [
+    {
+      "id": "fever",
+      "namePs": "تبه",
+      "nameEn": "Fever",
+      "order": 1
+    },
+    {
+      "id": "child-care",
+      "namePs": "د ماشوم پاملرنه",
+      "nameEn": "Child care",
+      "order": 2
+    },
+    {
+      "id": "diarrhea-ors",
+      "namePs": "اسهال او ORS",
+      "nameEn": "Diarrhea and ORS",
+      "order": 3
+    },
+    {
+      "id": "pregnancy",
+      "namePs": "امیندواري",
+      "nameEn": "Pregnancy",
+      "order": 4
+    },
+    {
+      "id": "vaccines",
+      "namePs": "واکسین",
+      "nameEn": "Vaccines",
+      "order": 5
+    },
+    {
+      "id": "when-to-visit-clinic",
+      "namePs": "کله کلینیک ته ولاړ شو",
+      "nameEn": "When to visit a clinic",
+      "order": 6
+    }
+  ],
+  "faqs": [
+    {
+      "id": "fever-01",
+      "category": "fever",
+      "questionPs": "تبه څه ده او څنګه پوه شم چې تبه لرم؟",
+      "questionEn": "What is fever and how do I know I have one?",
+      "answerPs": "تبه هغه وخت ده چې د بدن تودوخه له عادي حالت څخه لوړه شي. که ترمامیټر لرئ، تودوخه پرې اندازه کړئ. که ترمامیټر نه وي، تندی او سینه د لاس په شا وګورئ؛ که ډېر ګرم وي، ښايي تبه وي. تبه پخپله ناروغي نه ده، د بلې ناروغۍ نښه ده.",
+      "answerEn": "Fever is when body temperature rises above normal. If you have a thermometer, measure with it. If not, feel the forehead and chest with the back of your hand; if very hot, it may be fever. Fever itself is not a disease — it is a sign of another illness.",
+      "paraphrasesPs": [
+        "زه څنګه پوه شم چې تبه لرم؟",
+        "د تبې نښې کومې دي؟",
+        "بدن مې ګرم دی، دا تبه ده؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-03",
+      "category": "fever",
+      "questionPs": "د ماشوم تبه کله خطرناکه ده؟",
+      "questionEn": "When is a child's fever dangerous?",
+      "answerPs": "ماشوم سمدستي روغتون یا کلینیک ته یوسئ که: له دوو میاشتو کم عمر ولري او تبه ولري، تشنج ولري، ډېر ویده وي او نه ویښیږي، شیدې یا اوبه نه شي څښلی، هر څه چې خوري کانګې یې کوي، یا ساه یې چټکه او سخته وي.",
+      "answerEn": "Take the child to a hospital or clinic right away if: younger than two months with fever, has a seizure, is very sleepy and will not wake, cannot drink milk or water, vomits everything, or breathes fast and hard.",
+      "paraphrasesPs": [
+        "د ماشوم تبه څه وخت خطر لري؟",
+        "ماشوم مې تبه لري، روغتون ته یې یوسم؟",
+        "د ماشوم د تبې خطرناکې نښې کومې دي؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-04",
+      "category": "fever",
+      "questionPs": "تبه څو ورځې دوام وکړي نو ډاکټر ته ولاړ شم؟",
+      "questionEn": "How long can a fever last before I should see a doctor?",
+      "answerPs": "که تبه له دریو ورځو زیاته دوام وکړي، یا هره ورځ بېرته راشي، کلینیک ته ولاړ شئ. ماشومان، زاړه خلک او امیندوارې میرمنې باید لا ژر کلینیک ته ولاړ شي. که له تبې سره سخت سر درد، د غاړې شخوالی یا بې هوښي وي، سمدستي روغتون ته ولاړ شئ.",
+      "answerEn": "If fever lasts more than three days, or returns every day, go to a clinic. Children, older adults, and pregnant women should go sooner. With severe headache, stiff neck, or loss of consciousness, go to hospital immediately.",
+      "paraphrasesPs": [
+        "تبه مې څو ورځې ده، ډاکټر ته ولاړ شم؟",
+        "اوږده تبه کله خطرناکه ده؟",
+        "تبه نه ښه کیږي، څه وکړم؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-06",
+      "category": "fever",
+      "questionPs": "تبه او ملاریا: کله د ملاریا ټیسټ وکړم؟",
+      "questionEn": "Fever and malaria: when should I get a malaria test?",
+      "answerPs": "په هغو سیمو کې چې ملاریا شته، هره تبه باید د ملاریا لپاره وازمویل شي. کلینیک ته ولاړ شئ او د وینې ټیسټ وکړئ. ملاریا ژر درملنه غواړي؛ ځنډ یې خطرناک کېدای شي، په ځانګړي ډول د ماشومانو او امیندوارو میرمنو لپاره.",
+      "answerEn": "In areas where malaria is present, every fever should be tested for malaria. Go to a clinic for a blood test. Malaria needs prompt treatment; delay can be dangerous, especially for children and pregnant women.",
+      "paraphrasesPs": [
+        "ملاریا لرم که نه؟",
+        "د ملاریا ټیسټ کله وکړم؟",
+        "تبه او لړزه لرم، ملاریا به وي؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO fact sheet: Malaria",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/malaria"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-07",
+      "category": "fever",
+      "questionPs": "له تبې سره کومې نښې بیړنۍ دي؟",
+      "questionEn": "Which signs with a fever need emergency care?",
+      "answerPs": "سمدستي روغتون ته ولاړ شئ که له تبې سره دا نښې وي: د غاړې شخوالی، سخت سر درد، بې هوښي یا ګډوډي، تشنج، د ساه اخیستلو ستونزه، په پوستکي سرې یا تورې داغې چې په فشار نه ورکیږي، یا دومره کمزوري چې ودرېدای نه شئ.",
+      "answerEn": "Go to hospital immediately if fever comes with: stiff neck, severe headache, confusion or unconsciousness, seizure, breathing difficulty, red or dark skin spots that do not fade when pressed, or weakness so severe you cannot stand.",
+      "paraphrasesPs": [
+        "د تبې سره کومې نښې خطرناکې دي؟",
+        "تبه او د غاړې شخوالی لرم، څه وکړم؟",
+        "کله د تبې لپاره روغتون ته ولاړ شم؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "child-care-01",
+      "category": "child-care",
+      "questionPs": "ماشوم ته یوازې د مور شیدې تر کومه عمره ورکړو؟",
+      "questionEn": "Until what age should a baby have only breast milk?",
+      "answerPs": "د ژوند په لومړیو شپږو میاشتو کې ماشوم ته یوازې د مور شیدې ورکړئ؛ اوبه هم اړینې نه دي. د زېږون وروسته په لومړي ساعت کې شیدې ورکول پیل کړئ. له شپږو میاشتو وروسته نور خواړه پیل کړئ او د مور شیدې تر دوو کلونو یا زیات وخت پورې دوام ورکړئ.",
+      "answerEn": "For the first six months, give only breast milk; even water is not needed. Start breastfeeding within the first hour after birth. After six months, begin other foods and continue breastfeeding to two years or longer.",
+      "paraphrasesPs": [
+        "ماشوم ته څو میاشتې یوازې شیدې ورکړم؟",
+        "ماشوم ته اوبه کله ورکړم؟",
+        "د مور شیدې تر کله پورې ورکړو؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Infant and young child feeding",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "child-care-03",
+      "category": "child-care",
+      "questionPs": "د ماشوم د خوارځواکۍ نښې کومې دي؟",
+      "questionEn": "What are the signs of malnutrition in a child?",
+      "answerPs": "که ماشوم ډېر نری وي، وزن یې نه زیاتیږي، پښې یا مخ یې پړسېدلي وي، ډېر ستړی او بې حاله وي، یا د ویښتو رنګ یې بدل شوی وي، ښايي خوارځواکي ولري. ماشوم کلینیک ته یوسئ ترڅو وزن او قد یې اندازه شي. پړسېدلې پښې خطرناکه نښه ده.",
+      "answerEn": "If a child is very thin, is not gaining weight, has swollen feet or face, is very tired and weak, or has changed hair colour, they may be malnourished. Take them to a clinic for weight and height checks. Swollen feet are a danger sign.",
+      "paraphrasesPs": [
+        "ماشوم مې ډېر نری دی، څه وکړم؟",
+        "خوارځواکي څنګه پېژنو؟",
+        "د ماشوم وزن نه زیاتیږي، ولې؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO fact sheet: Malnutrition",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/malnutrition"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "child-care-04",
+      "category": "child-care",
+      "questionPs": "په نوي زېږېدلي ماشوم کې کومې نښې خطرناکې دي؟",
+      "questionEn": "What are the danger signs in a newborn baby?",
+      "answerPs": "نوی زېږېدلی ماشوم سمدستي روغتون ته یوسئ که: شیدې نه رودي، تشنج ولري، ساه یې چټکه یا سخته وي، ډېر سوړ یا ډېر ګرم وي، ټول بدن یې ژېړ شوی وي، یا د نوم شاوخوا سور او زوه لرونکی وي.",
+      "answerEn": "Take a newborn to hospital immediately if: they will not feed, have a seizure, breathe fast or hard, feel very cold or very hot, are yellow all over, or the cord area is red and pus-filled.",
+      "paraphrasesPs": [
+        "نوی زېږېدلی ماشوم شیدې نه رودي، څه وکړم؟",
+        "د نوي ماشوم خطرناکې نښې کومې دي؟",
+        "د نوي ماشوم بدن ژېړ دی، خطر لري؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "child-care-06",
+      "category": "child-care",
+      "questionPs": "ماشوم ټوخی لري او ساه یې چټکه ده، څه وکړم؟",
+      "questionEn": "My child has a cough and fast breathing. What should I do?",
+      "answerPs": "چټکه یا سخته ساه، یا دا چې د ساه اخیستلو پر وخت د سینې لاندې برخه ننوځي، د سینه بغل (نمونیا) نښه کېدای شي. ماشوم سمدستي کلینیک یا روغتون ته یوسئ. پخپله ماشوم ته درمل مه ورکوئ.",
+      "answerEn": "Fast or difficult breathing, or the lower chest pulling in when breathing, can be a sign of pneumonia. Take the child to a clinic or hospital at once. Do not give medicines on your own.",
+      "paraphrasesPs": [
+        "ماشوم مې سخته ساه اخلي، څه وکړم؟",
+        "د سینه بغل نښې کومې دي؟",
+        "ماشوم ټوخی او تبه لري، خطر لري؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Pneumonia in children",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/pneumonia"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "diarrhea-ors-01",
+      "category": "diarrhea-ors",
+      "questionPs": "ORS (او آر اس) څه شی دی؟",
+      "questionEn": "What is ORS?",
+      "answerPs": "ORS د مالګې او بورې یو ځانګړی پوډر دی چې په اوبو کې حل کیږي. د اسهال پر وخت بدن اوبه او مالګې له لاسه ورکوي؛ ORS دا بېرته پوره کوي او د اوبو د کمښت مخه نیسي. ORS په ډېرو کلینیکونو او درملتونونو کې پیدا کیږي.",
+      "answerEn": "ORS is a special salt-and-sugar powder mixed in water. During diarrhea the body loses water and salts; ORS replaces them and helps prevent dehydration. ORS is available in many clinics and pharmacies.",
+      "paraphrasesPs": [
+        "او آر اس څه ته وايي؟",
+        "ORS د څه لپاره دی؟",
+        "د اسهال پوډر څه دی؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Diarrhoeal disease",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "diarrhea-ors-04",
+      "category": "diarrhea-ors",
+      "questionPs": "د بدن د اوبو د کمښت نښې کومې دي؟",
+      "questionEn": "What are the signs of dehydration?",
+      "answerPs": "خوله او ژبه وچه وي، ډېره تنده وي، متیازې لږې یا تیارې وي، سترګې ننوتلې وي، او ماشوم بې آرامه یا ډېر سست وي. که د خېټې پوستکی ونیول شي او ورو بېرته خپل حالت ته راشي، د اوبو کمښت شدید دی. په دې حالت کې سمدستي کلینیک ته ولاړ شئ.",
+      "answerEn": "Dry mouth and tongue, strong thirst, little or dark urine, sunken eyes, and a restless or very weak child. If pinched belly skin returns slowly, dehydration is severe — go to a clinic immediately.",
+      "paraphrasesPs": [
+        "ډیهایډریشن څنګه پېژنم؟",
+        "د ماشوم په بدن کې اوبه کمې شوې، څنګه پوه شم؟",
+        "د اوبو کمښت نښې څه دي؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "diarrhea-ors-05",
+      "category": "diarrhea-ors",
+      "questionPs": "اسهال کله خطرناک دی؟",
+      "questionEn": "When is diarrhea dangerous?",
+      "answerPs": "سمدستي روغتون ته ولاړ شئ که: په اسهالو کې وینه وي، ماشوم هر څه چې څښي کانګې یې کوي، ډېر سست یا بې هوښه وي، لوړه تبه ولري، یا د اوبو د کمښت نښې ولري. که اسهال له دریو ورځو زیات دوام وکړي، کلینیک ته ولاړ شئ.",
+      "answerEn": "Go to hospital immediately if: there is blood in the stool, the child vomits everything they drink, is very weak or unconscious, has high fever, or shows dehydration signs. If diarrhea lasts more than three days, go to a clinic.",
+      "paraphrasesPs": [
+        "په اسهالو کې وینه ده، څه وکړم؟",
+        "اسهال څه وخت روغتون ته وړل غواړي؟",
+        "د اسهال خطرناکې نښې کومې دي؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Diarrhoeal disease",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "pregnancy-01",
+      "category": "pregnancy",
+      "questionPs": "د امیندوارۍ پر مهال څو ځله کلینیک ته ولاړه شم؟",
+      "questionEn": "How many check-ups do I need during pregnancy?",
+      "answerPs": "نړیوال روغتیايي سازمان د امیندوارۍ پر مهال لږ تر لږه اته ځله معاینه سپارښتنه کوي. هر څومره ژر چې پوه شئ امیندواره یاست، لومړۍ معاینه وکړئ. په معاینو کې د وینې فشار، د ماشوم وده او د وینې کموالی ګوري.",
+      "answerEn": "WHO recommends at least eight check-ups during pregnancy. Have the first visit as soon as you know you are pregnant. Visits check blood pressure, baby growth, and anemia.",
+      "paraphrasesPs": [
+        "د امیندوارۍ معاینه څو ځله وکړم؟",
+        "امیندواره یم، کلینیک ته کله ولاړه شم؟",
+        "د حمل پر وخت ډاکټر ته څو ځله ځو؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "pregnancy-02",
+      "category": "pregnancy",
+      "questionPs": "د امیندوارۍ پر مهال کومې نښې خطرناکې دي؟",
+      "questionEn": "What are the danger signs during pregnancy?",
+      "answerPs": "سمدستي روغتون ته ولاړه شئ که: وینه راشي، سخت سر درد او د سترګو تیاره والی ولرئ، تشنج، د مخ او لاسونو ناڅاپه پړسوب، لوړه تبه، د خېټې سخت درد، د اوبو ناڅاپه راتلل، یا د ماشوم حرکت کم یا بند شي.",
+      "answerEn": "Go to hospital immediately if: bleeding, severe headache with blurred vision, seizure, sudden swelling of face or hands, high fever, severe belly pain, sudden water breaking, or the baby’s movements decrease or stop.",
+      "paraphrasesPs": [
+        "په امیندوارۍ کې وینه راځي، څه وکړم؟",
+        "د حمل خطرناکې نښې کومې دي؟",
+        "د ماشوم حرکت کم شوی، خطر لري؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Maternal mortality",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "pregnancy-05",
+      "category": "pregnancy",
+      "questionPs": "له زېږون وروسته مور کومو نښو ته پام وکړي؟",
+      "questionEn": "Which signs should a mother watch for after childbirth?",
+      "answerPs": "که له زېږون وروسته ډېره وینه راشي، لوړه تبه، بدبویه مایع، سخت سر درد، د ساه لنډوالی، تشنج، یا د سینو سخت درد او سوروالی ولرئ، سمدستي روغتون ته ولاړه شئ. په لومړۍ اونۍ کې د مور او ماشوم معاینه مهمه ده.",
+      "answerEn": "After birth, go to hospital immediately for heavy bleeding, high fever, foul-smelling discharge, severe headache, shortness of breath, seizure, or hard painful red breasts. A mother-and-baby check in the first week is important.",
+      "paraphrasesPs": [
+        "له زېږون وروسته ډېره وینه راځي، څه وکړم؟",
+        "د زېږون وروسته خطرناکې نښې کومې دي؟",
+        "له ولادت وروسته تبه لرم، خطر لري؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Maternal mortality",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "pregnancy-06",
+      "category": "pregnancy",
+      "questionPs": "د امیندوارۍ پر مهال پخپله درمل خوړل سم دي؟",
+      "questionEn": "Is it safe to take medicines on my own during pregnancy?",
+      "answerPs": "نه. ځینې درمل ماشوم ته زیان رسوي. د امیندوارۍ پر مهال هر درمل، حتی د سر درد، ټوخي یا ګیاهي درمل، یوازې د ډاکټر یا درملپلورونکي له مشورې وروسته وخورئ. ډاکټر ته ووایاست چې امیندواره یاست.",
+      "answerEn": "No. Some medicines harm the baby. In pregnancy, take any medicine — even for headache, cough, or herbal remedies — only after asking a doctor or pharmacist. Tell them you are pregnant.",
+      "paraphrasesPs": [
+        "امیندواره یم، درمل وخورم؟",
+        "په حمل کې کوم درمل خطر لري؟",
+        "د امیندوارۍ پر وخت د سر درد درمل وخورم؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "vaccines-01",
+      "category": "vaccines",
+      "questionPs": "واکسین څه کوي؟",
+      "questionEn": "What do vaccines do?",
+      "answerPs": "واکسین بدن ته زده کوي چې د ځینو خطرناکو ناروغیو لکه شري، پولیو، نري رنځ او ټیټانوس پر وړاندې مبارزه وکړي. واکسین شوي ماشومان لږ ناروغه کیږي. واکسین هم ماشوم ساتي او هم ټولنه.",
+      "answerEn": "Vaccines teach the body to fight dangerous diseases such as measles, polio, tuberculosis, and tetanus. Vaccinated children get sick less often. Vaccines protect both the child and the community.",
+      "paraphrasesPs": [
+        "واکسین ولې ورکوو؟",
+        "د واکسین ګټه څه ده؟",
+        "واکسین زموږ بدن ته څه کوي؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Immunization coverage",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "vaccines-06",
+      "category": "vaccines",
+      "questionPs": "شري څومره خطرناکه ده؟",
+      "questionEn": "How dangerous is measles?",
+      "answerPs": "شري ډېره ساري ناروغي ده او کولی شي سینه بغل، اسهال، ړوندوالی او مړینه رامنځته کړي. نښې یې تبه، ټوخی، سرې سترګې او په بدن سرې دانې دي. د شري واکسین دواړه دوزه ماشوم خوندي ساتي. که ماشوم دا نښې ولري، کلینیک ته یې یوسئ.",
+      "answerEn": "Measles is highly contagious and can cause pneumonia, diarrhea, blindness, or death. Signs include fever, cough, red eyes, and a red body rash. Both measles vaccine doses protect the child. Take a child with these signs to a clinic.",
+      "paraphrasesPs": [
+        "د شري نښې کومې دي؟",
+        "ماشوم مې سرې دانې او تبه لري، شري ده؟",
+        "د شري واکسین ولې مهم دی؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO fact sheet: Measles",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/measles"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "when-to-visit-clinic-01",
+      "category": "when-to-visit-clinic",
+      "questionPs": "کومې نښې بیړنی حالت ښيي؟",
+      "questionEn": "Which signs mean an emergency?",
+      "answerPs": "سمدستي روغتون ته ولاړ شئ یا مرسته وغواړئ که: د ساه اخیستلو سخته ستونزه، د سینې سخت درد، بې هوښي، تشنج، ډېره وینه بهېدل، د بدن د یوې خوا ناڅاپه کمزوري یا د خبرو ستونزه، یا سخته سوځېدنه وي.",
+      "answerEn": "Go to hospital or get help immediately for: severe breathing difficulty, severe chest pain, unconsciousness, seizure, heavy bleeding, sudden weakness on one side of the body or trouble speaking, or a severe burn.",
+      "paraphrasesPs": [
+        "کله سمدستي روغتون ته ولاړ شو؟",
+        "بیړنۍ نښې کومې دي؟",
+        "څه وخت امبولانس ته زنګ ووهو؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO/ICRC Basic Emergency Care: approach to the acutely ill and injured",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "when-to-visit-clinic-02",
+      "category": "when-to-visit-clinic",
+      "questionPs": "ټوخی څو ورځې دوام وکړي نو ډاکټر ته ولاړ شم؟",
+      "questionEn": "How long can a cough last before I see a doctor?",
+      "answerPs": "که ټوخی له دوو اونیو زیات دوام وکړي، په ځانګړي ډول له تبې، د شپې خولو، د وزن کمېدو یا په بلغم کې له وینې سره، کلینیک ته ولاړ شئ او د نري رنځ ټیسټ وکړئ. نري رنځ د درملنې وړ دی.",
+      "answerEn": "If a cough lasts more than two weeks — especially with fever, night sweats, weight loss, or blood in sputum — go to a clinic and ask for a tuberculosis test. TB is treatable.",
+      "paraphrasesPs": [
+        "اوږد ټوخی لرم، څه وکړم؟",
+        "د نري رنځ نښې کومې دي؟",
+        "په بلغم کې وینه ده، خطر لري؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO fact sheet: Tuberculosis",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "when-to-visit-clinic-03",
+      "category": "when-to-visit-clinic",
+      "questionPs": "د سینې درد کله خطرناک دی؟",
+      "questionEn": "When is chest pain dangerous?",
+      "answerPs": "که د سینې درد سخت وي، لاس، غاړې یا ژامې ته خپور شي، یا له خولو، زړه بدوالي یا ساه لنډۍ سره وي، دا د زړه حمله کېدای شي. سمدستي روغتون ته ولاړ شئ او یوازې مه ځئ.",
+      "answerEn": "If chest pain is severe, spreads to the arm, neck, or jaw, or comes with sweating, nausea, or shortness of breath, it may be a heart attack. Go to hospital immediately and do not go alone.",
+      "paraphrasesPs": [
+        "سینه مې درد کوي، څه وکړم؟",
+        "د زړه حملې نښې کومې دي؟",
+        "د سینې درد او ساه لنډي لرم، خطر لري؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Cardiovascular diseases (CVDs)",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "when-to-visit-clinic-04",
+      "category": "when-to-visit-clinic",
+      "questionPs": "سر درد کله د اندېښنې وړ دی؟",
+      "questionEn": "When is a headache a cause for concern?",
+      "answerPs": "که سر درد ناڅاپه او ډېر سخت وي، له ټپ وروسته پیل شي، له تبې او د غاړې شخوالي سره وي، یا له کمزورۍ، د لید ستونزې یا ګډوډۍ سره وي، سمدستي روغتون ته ولاړ شئ. که سر درد بیا بیا راځي، کلینیک ته ولاړ شئ.",
+      "answerEn": "Go to hospital immediately if headache is sudden and very severe, starts after an injury, comes with fever and stiff neck, or with weakness, vision problems, or confusion. For headaches that keep returning, go to a clinic.",
+      "paraphrasesPs": [
+        "سخت سر درد لرم، څه وکړم؟",
+        "د سر درد خطرناکې نښې کومې دي؟",
+        "سر درد مې بیا بیا راځي، ډاکټر ته ولاړ شم؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Headache disorders",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "when-to-visit-clinic-05",
+      "category": "when-to-visit-clinic",
+      "questionPs": "د سوځېدنې لومړنۍ مرسته څه ده؟",
+      "questionEn": "What is first aid for a burn?",
+      "answerPs": "سوځېدلی ځای سمدستي شل دقیقې د سړو، خو نه یخو، بهېدونکو اوبو لاندې ونیسئ. ګوتمۍ او تنګ شیان لرې کړئ. پر سوځېدلي ځای غوړي، مسکه، د غاښو پیسټ یا نور کورني شیان مه لګوئ. لویې سوځېدنې، د مخ یا لاسونو سوځېدنې او د ماشومانو سوځېدنې روغتون ته یوسئ.",
+      "answerEn": "Hold the burn under cool — not icy — running water for about twenty minutes. Remove rings and tight items. Do not put oil, butter, toothpaste, or home pastes on the burn. Take large burns, face or hand burns, and burns in children to hospital.",
+      "paraphrasesPs": [
+        "لاس مې وسوځېد، څه وکړم؟",
+        "پر سوځېدنه څه ولګوم؟",
+        "ماشوم وسوځېد، روغتون ته یې یوسم؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO fact sheet: Burns",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/burns"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "when-to-visit-clinic-06",
+      "category": "when-to-visit-clinic",
+      "questionPs": "سپي وچیچلم، څه وکړم؟",
+      "questionEn": "What should I do after a dog bite?",
+      "answerPs": "ټپ سمدستي پنځلس دقیقې په صابون او ډېرو اوبو ومینځئ. بیا ژر تر ژره کلینیک ته ولاړ شئ ترڅو د لېوني سپي (ریبیز) د واکسین په اړه پرېکړه وشي. ریبیز د نښو له پیل وروسته تقریباً تل وژونکی دی، نو ځنډ مه کوئ.",
+      "answerEn": "Wash the wound immediately for fifteen minutes with soap and plenty of water. Then go to a clinic quickly to decide about rabies vaccine. Rabies is almost always fatal once symptoms start, so do not delay.",
+      "paraphrasesPs": [
+        "د سپي چیچلو وروسته څه وکړم؟",
+        "د لېوني سپي واکسین څه وخت واخلم؟",
+        "پیشو وچیچلم، خطر لري؟"
+      ],
+      "audioUrl": null,
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Rabies",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/rabies"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    }
+  ],
+  "audioUrls": []
+}

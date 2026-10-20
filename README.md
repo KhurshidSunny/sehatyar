@@ -14,7 +14,7 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-FAQ browse, bilingual UI, FastAPI content APIs, helpfulness feedback, medicine pack photo capture, OCR (`POST /medicines/ocr`), catalog fuzzy matching, result detail screen, typed-name fallback (`GET /medicines/search`), and PWA install basics (manifest + icon service worker) are in place.
+FAQ browse, bilingual UI, FastAPI content APIs, helpfulness feedback, medicine pack photo capture, OCR (`POST /medicines/ocr`), catalog fuzzy matching, result detail screen, typed-name fallback (`GET /medicines/search`), PWA install basics, and offline caching of the top FAQ pack (`public/offline/top-faqs.json`) are in place.
 
 ## Stack
 

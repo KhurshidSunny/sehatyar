@@ -68,7 +68,10 @@ Unknown category or FAQ ids show a not-found empty state. When `audioUrl` is nul
 
 - `app/manifest.ts` serves the web app manifest (standalone display, theme `#0f766e`, 192/512 icons).
 - Icons live in `public/` (`icon-192.png`, `icon.png`, `apple-icon.png`).
-- `public/sw.js` registers via `components/ServiceWorkerRegister.tsx` and caches those icons. FAQ/page content is not cached yet.
+- `public/sw.js` registers via `components/ServiceWorkerRegister.tsx`.
+- Offline pack: `public/offline/top-faqs.json` (categories + top FAQs: emergency, clinic, and first item per category). Precached on install.
+- Audio files go under `public/offline/audio/` and are listed in the pack’s `audioUrls` (none shipped yet). The client warms those URLs into the same cache when present.
+- FAQ helpers in `lib/api/faqs.ts` fall back to the offline pack when the API is unreachable. FAQs outside the pack still need the network.
 
 After `npm run build` and `npm run start` (or a deployed HTTPS origin), Chromium can offer “Install app”. Service workers need a secure context (localhost or HTTPS).
 
