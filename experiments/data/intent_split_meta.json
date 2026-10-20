@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "testPerFaq": 2,
+  "faqCount": 42,
+  "trainCount": 210,
+  "testCount": 84,
+  "paraphrasesPerFaqMin": 6,
+  "paraphrasesPerFaqMax": 6,
+  "faqDir": "data/faqs",
+  "files": {
+    "train": "intent_train.jsonl",
+    "test": "intent_test.jsonl"
+  }
+}

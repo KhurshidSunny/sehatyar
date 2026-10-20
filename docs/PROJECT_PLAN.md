@@ -226,6 +226,7 @@ No personal identity required for MVP.
 - Offline status in UI
 
 ### Phase 5 — Matching experiments
+- Paraphrase / intent train–test split from FAQ seed data
 - Train/evaluate FAQ text matching
 - Compare classical vs small neural baseline
 - Write a short technical note with metrics and limits
