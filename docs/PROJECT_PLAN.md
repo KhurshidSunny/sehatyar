@@ -226,9 +226,9 @@ No personal identity required for MVP.
 - Offline status in UI
 
 ### Phase 5 — Matching experiments
-- Paraphrase / intent train–test split from FAQ seed data
-- Train/evaluate FAQ text matching
-- Compare classical vs small neural baseline
+- Paraphrase / intent train–test split from FAQ seed data (`experiments/data/`)
+- Classical FAQ intent baseline: TF-IDF + LogisticRegression (`experiments/scripts/train_classical_intent.py`, metrics under `experiments/results/`)
+- Compare classical vs small neural baseline (next)
 - Write a short technical note with metrics and limits
 
 ### Phase 6 — Polish

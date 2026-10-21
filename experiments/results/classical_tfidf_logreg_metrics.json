@@ -1,0 +1,370 @@
+{
+  "model": "tfidf_char_wb_logreg",
+  "trainedOn": "2026-10-21",
+  "trainCount": 210,
+  "testCount": 84,
+  "labelCount": 42,
+  "trainLabelCounts": {
+    "child-care-01": 5,
+    "child-care-02": 5,
+    "child-care-03": 5,
+    "child-care-04": 5,
+    "child-care-05": 5,
+    "child-care-06": 5,
+    "child-care-07": 5,
+    "diarrhea-ors-01": 5,
+    "diarrhea-ors-02": 5,
+    "diarrhea-ors-03": 5,
+    "diarrhea-ors-04": 5,
+    "diarrhea-ors-05": 5,
+    "diarrhea-ors-06": 5,
+    "diarrhea-ors-07": 5,
+    "fever-01": 5,
+    "fever-02": 5,
+    "fever-03": 5,
+    "fever-04": 5,
+    "fever-05": 5,
+    "fever-06": 5,
+    "fever-07": 5,
+    "pregnancy-01": 5,
+    "pregnancy-02": 5,
+    "pregnancy-03": 5,
+    "pregnancy-04": 5,
+    "pregnancy-05": 5,
+    "pregnancy-06": 5,
+    "pregnancy-07": 5,
+    "vaccines-01": 5,
+    "vaccines-02": 5,
+    "vaccines-03": 5,
+    "vaccines-04": 5,
+    "vaccines-05": 5,
+    "vaccines-06": 5,
+    "vaccines-07": 5,
+    "when-to-visit-clinic-01": 5,
+    "when-to-visit-clinic-02": 5,
+    "when-to-visit-clinic-03": 5,
+    "when-to-visit-clinic-04": 5,
+    "when-to-visit-clinic-05": 5,
+    "when-to-visit-clinic-06": 5,
+    "when-to-visit-clinic-07": 5
+  },
+  "vectorizer": {
+    "analyzer": "char_wb",
+    "ngramRange": [
+      3,
+      5
+    ],
+    "sublinearTf": true
+  },
+  "classifier": {
+    "type": "LogisticRegression",
+    "C": 2.0,
+    "maxIter": 2000
+  },
+  "test": {
+    "accuracy": 0.5952,
+    "macroF1": 0.5944,
+    "weightedF1": 0.5944,
+    "top3Accuracy": 0.8571,
+    "perCategory": {
+      "child-care": {
+        "n": 14,
+        "accuracy": 0.5714
+      },
+      "diarrhea-ors": {
+        "n": 14,
+        "accuracy": 0.4286
+      },
+      "fever": {
+        "n": 14,
+        "accuracy": 0.4286
+      },
+      "pregnancy": {
+        "n": 14,
+        "accuracy": 0.7857
+      },
+      "vaccines": {
+        "n": 14,
+        "accuracy": 0.8571
+      },
+      "when-to-visit-clinic": {
+        "n": 14,
+        "accuracy": 0.5
+      }
+    },
+    "classificationReport": {
+      "child-care-01": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "child-care-02": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "child-care-03": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "child-care-04": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "child-care-05": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "child-care-06": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "child-care-07": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "diarrhea-ors-01": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "diarrhea-ors-02": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 2.0
+      },
+      "diarrhea-ors-03": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "diarrhea-ors-04": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "diarrhea-ors-05": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "diarrhea-ors-06": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "diarrhea-ors-07": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "fever-01": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "fever-02": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 2.0
+      },
+      "fever-03": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "fever-04": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "fever-05": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "fever-06": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "fever-07": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "pregnancy-01": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "pregnancy-02": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "pregnancy-03": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "pregnancy-04": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "pregnancy-05": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "pregnancy-06": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "pregnancy-07": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "vaccines-01": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "vaccines-02": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 2.0
+      },
+      "vaccines-03": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "vaccines-04": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "vaccines-05": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "vaccines-06": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "vaccines-07": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "when-to-visit-clinic-01": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "when-to-visit-clinic-02": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "when-to-visit-clinic-03": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "when-to-visit-clinic-04": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 2.0
+      },
+      "when-to-visit-clinic-05": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "when-to-visit-clinic-06": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "when-to-visit-clinic-07": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "accuracy": 0.5952380952380952,
+      "macro avg": {
+        "precision": 0.6587301587301587,
+        "recall": 0.5952380952380952,
+        "f1-score": 0.5944444444444444,
+        "support": 84.0
+      },
+      "weighted avg": {
+        "precision": 0.6587301587301587,
+        "recall": 0.5952380952380952,
+        "f1-score": 0.5944444444444444,
+        "support": 84.0
+      }
+    }
+  },
+  "files": {
+    "train": "intent_train.jsonl",
+    "test": "intent_test.jsonl",
+    "metricsJson": "classical_tfidf_logreg_metrics.json",
+    "metricsMd": "classical_tfidf_logreg_metrics.md",
+    "artifact": "classical_tfidf_logreg.joblib"
+  }
+}

@@ -1,0 +1,6 @@
+# Offline NLP experiments — install with:
+#   pip install -r experiments/requirements.txt
+# (or reuse apps/api/requirements.txt, which already includes scikit-learn)
+scikit-learn>=1.5.0,<2.0.0
+numpy>=1.26.0,<3.0.0
+joblib>=1.3.0,<2.0.0
