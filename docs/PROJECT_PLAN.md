@@ -227,9 +227,9 @@ No personal identity required for MVP.
 
 ### Phase 5 — Matching experiments
 - Paraphrase / intent train–test split from FAQ seed data (`experiments/data/`)
-- Classical FAQ intent baseline: TF-IDF + LogisticRegression (`experiments/scripts/train_classical_intent.py`, metrics under `experiments/results/`)
-- Compare classical vs small neural baseline (next)
-- Write a short technical note with metrics and limits
+- Classical FAQ intent baseline: TF-IDF + LogisticRegression (`experiments/scripts/train_classical_intent.py`)
+- Neural FAQ intent baseline: TF-IDF + TruncatedSVD + MLP (`experiments/scripts/train_neural_intent.py`), with comparison under `experiments/results/`
+- Write a short technical note with metrics and limits (next)
 
 ### Phase 6 — Polish
 - Better empty/error states

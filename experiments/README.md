@@ -17,9 +17,13 @@ experiments/
   scripts/
     export_intent_split.py      # rebuild train/test from data/faqs
     train_classical_intent.py   # TF-IDF + LogisticRegression baseline
+    train_neural_intent.py      # TF-IDF + TruncatedSVD + MLP baseline
   results/
     classical_tfidf_logreg_metrics.json
     classical_tfidf_logreg_metrics.md
+    neural_mlp_metrics.json
+    neural_mlp_metrics.md
+    intent_baseline_comparison.md
   artifacts/                # local .joblib models (gitignored)
 ```
 
@@ -55,11 +59,24 @@ Writes:
 - `results/classical_tfidf_logreg_metrics.md` — short readable summary
 - `artifacts/classical_tfidf_logreg.joblib` — fitted pipeline (local only; not committed)
 
-Latest held-out numbers are in the metrics files (accuracy, macro/weighted F1, top-3 accuracy, per-category accuracy).
+## Neural baseline (TF-IDF + TruncatedSVD + MLP)
+
+Same char TF-IDF features, reduced with TruncatedSVD (128 components), then a small `MLPClassifier` `(128, 64)`.
+
+```bash
+python experiments/scripts/train_neural_intent.py
+```
+
+Writes:
+
+- `results/neural_mlp_metrics.json` / `.md`
+- `results/intent_baseline_comparison.md` — side-by-side vs classical
+- `artifacts/neural_mlp.joblib` — local only
+
+Run the classical script first so the comparison table can load classical metrics.
 
 ## Expected next work
 
-- A small neural baseline (for example sklearn MLP) on the same split
 - Intent prediction API wiring using a chosen model
 - Short technical note on methods, metrics, and limits
 
