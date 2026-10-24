@@ -9,7 +9,9 @@ from config import get_settings
 from db import close_db, get_db, ping_db
 from routers.faqs import router as faqs_router
 from routers.feedback import router as feedback_router
+from routers.intent import router as intent_router
 from routers.medicines import router as medicines_router
+from services import intent as intent_service
 
 
 @asynccontextmanager
@@ -20,6 +22,11 @@ async def lifespan(_app: FastAPI):
         await ping_db()
     except Exception as exc:  # noqa: BLE001
         print(f"MongoDB ping failed on startup: {exc}", flush=True)
+    try:
+        model_name = intent_service.ensure_loaded()
+        print(f"Intent model ready: {model_name}", flush=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f"Intent model warm-up failed: {exc}", flush=True)
     yield
     await close_db()
 
@@ -43,6 +50,7 @@ app.add_middleware(
 
 app.include_router(faqs_router)
 app.include_router(medicines_router)
+app.include_router(intent_router)
 app.include_router(feedback_router)
 
 
@@ -80,5 +88,6 @@ async def root():
         "faqs": "/faqs",
         "medicinesSearch": "/medicines/search?q=",
         "medicinesOcr": "POST /medicines/ocr",
+        "predictIntent": "POST /predict-intent",
         "feedback": "/feedback",
     }

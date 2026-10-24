@@ -14,7 +14,7 @@ Many users face low literacy, weak internet, and medicine packs they cannot read
 
 ## Status
 
-FAQ browse, bilingual UI, FastAPI content APIs, helpfulness feedback, medicine pack photo capture, OCR (`POST /medicines/ocr`), catalog fuzzy matching, result detail screen, typed-name fallback (`GET /medicines/search`), PWA install basics, offline caching of the top FAQ pack, offline / saved-content UI indicators, a FAQ paraphrase train/test split under `experiments/data/`, and classical (TF-IDF + LogReg) plus neural (TF-IDF + SVD + MLP) intent baselines with comparison metrics under `experiments/results/` are in place.
+FAQ browse, bilingual UI, FastAPI content APIs, helpfulness feedback, medicine pack photo capture, OCR (`POST /medicines/ocr`), catalog fuzzy matching, result detail screen, typed-name fallback (`GET /medicines/search`), FAQ intent prediction (`POST /predict-intent`), PWA install basics, offline caching of the top FAQ pack, offline / saved-content UI indicators, a FAQ paraphrase train/test split under `experiments/data/`, and classical (TF-IDF + LogReg) plus neural (TF-IDF + SVD + MLP) intent baselines with comparison metrics under `experiments/results/` are in place.
 
 ## Stack
 

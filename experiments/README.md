@@ -75,9 +75,12 @@ Writes:
 
 Run the classical script first so the comparison table can load classical metrics.
 
+## Live API wiring
+
+`POST /predict-intent` in `apps/api` loads an optional `.joblib` from `INTENT_MODEL_PATH`, or trains the classical TF-IDF + LogReg recipe from FAQ seed data when no artifact is present.
+
 ## Expected next work
 
-- Intent prediction API wiring using a chosen model
 - Short technical note on methods, metrics, and limits
 
 ## Notes

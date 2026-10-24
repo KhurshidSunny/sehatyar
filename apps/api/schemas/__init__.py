@@ -3,6 +3,7 @@
 from schemas.common import ContentSource, DangerLevel, ReviewStatus
 from schemas.faq import Faq, FaqCategory, FaqSummary
 from schemas.feedback import FeedbackCreate, FeedbackRecord, FeedbackTargetType
+from schemas.intent import IntentCandidate, IntentPredictRequest, IntentPredictResponse
 from schemas.medicine import (
     Medicine,
     MedicineCategory,
@@ -23,6 +24,9 @@ __all__ = [
     "MedicineSummary",
     "MedicineOcrCandidate",
     "MedicineOcrResponse",
+    "IntentPredictRequest",
+    "IntentPredictResponse",
+    "IntentCandidate",
     "FeedbackCreate",
     "FeedbackRecord",
     "FeedbackTargetType",

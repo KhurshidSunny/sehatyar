@@ -26,6 +26,14 @@ class Settings(BaseSettings):
         default="../../data/medicines",
         alias="MEDICINE_DATA_DIR",
     )
+    intent_model_path: str | None = Field(
+        default=None,
+        alias="INTENT_MODEL_PATH",
+        description=(
+            "Optional path to a .joblib intent artifact. "
+            "If unset, the API trains TF-IDF+LogReg from FAQ seed data."
+        ),
+    )
     tesseract_cmd: str | None = Field(default=None, alias="TESSERACT_CMD")
 
     @property
