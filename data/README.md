@@ -22,7 +22,7 @@ Seed data for SehatYar. All health and medicine text must stay non-prescribing a
 | `answerPs` | Short answer shown (and read aloud) in Pashto |
 | `answerEn` | Short answer shown in English |
 | `paraphrasesPs` | Other ways users ask the same question (six per FAQ in the seed set), used for intent matching; see `experiments/data/` |
-| `audioUrl` | Recorded answer path, or `null` until recorded |
+| `audioUrl` | Pashto answer audio under the web app, e.g. `/audio/faqs/fever-01-answer-ps.mp3` (files live in `apps/web/public/audio/faqs/`) |
 | `dangerLevel` | `info` (self-care), `clinic` (visit a clinic soon), or `emergency` (go to hospital now) |
 | `source` | `title` of the reference and its `url` when it has a stable public link |
 | `lastReviewed` | Date the entry was last checked (`YYYY-MM-DD`) |

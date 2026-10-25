@@ -55,7 +55,7 @@
         "ترمامیټر نه لرم، تبه څنګه وګورم؟",
         "تبه او عادي تودوخه څه توپیر لري؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/fever-01-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -79,7 +79,7 @@
         "له دوو میاشتو کم ماشوم تبه لري، خطر لري؟",
         "ماشوم تبه لري او شیدې نه رودي، څه وکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/fever-03-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -103,7 +103,7 @@
         "تبه راځي او ځي، کلینیک ته ولاړ شم؟",
         "اوږده تبه لپاره کله ډاکټر وګورم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/fever-04-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -127,7 +127,7 @@
         "لړزه او تبه لرم، ملاریا وي؟",
         "د ملاریا ازموینه چیرته وکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/fever-06-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO fact sheet: Malaria",
@@ -151,7 +151,7 @@
         "له تبې سره سخت سر درد لرم، خطر لري؟",
         "تبه او ساه لنډي لرم، روغتون ته ولاړ شم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/fever-07-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -175,7 +175,7 @@
         "ماشوم ته شیدې بس دي که اوبه هم ورکړم؟",
         "د شپږو میاشتو مخکې ماشوم ته نور څه ورکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/child-care-01-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO fact sheet: Infant and young child feeding",
@@ -199,7 +199,7 @@
         "د خوارځواکۍ خطرناکې نښې کومې دي؟",
         "ماشوم خواړه نه خوري او نری دی، څه وکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/child-care-03-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO fact sheet: Malnutrition",
@@ -223,7 +223,7 @@
         "د نوي زېږېدلي لپاره کله روغتون ته ولاړ شو؟",
         "نوی ماشوم ساه په سختۍ اخلي، څه وکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/child-care-04-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -247,7 +247,7 @@
         "د ماشوم په سینه کې غږ دی، خطر لري؟",
         "ماشوم ټوخی کوي او شونډې یې نیلي دي، څه وکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/child-care-06-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO fact sheet: Pneumonia in children",
@@ -271,7 +271,7 @@
         "ORS د ماشوم لپاره څه کار کوي؟",
         "او آر اس پوډر ولې ورکوو؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/diarrhea-ors-01-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO fact sheet: Diarrhoeal disease",
@@ -295,7 +295,7 @@
         "خوله وچه ده او اوښکې نه لري، څه وکړم؟",
         "د اوبو کمښت کله خطرناک وي؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/diarrhea-ors-04-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -319,7 +319,7 @@
         "ماشوم اسهال لري او ستړی دی، خطر لري؟",
         "په اسهالو کې تبه او وینه وي، څه وکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/diarrhea-ors-05-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO fact sheet: Diarrhoeal disease",
@@ -343,7 +343,7 @@
         "امیندوارۍ کې کلینیک ته تګ مهالوېش څه دی؟",
         "لومړۍ امیندوارۍ معاینه کله وکړم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/pregnancy-01-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
@@ -367,7 +367,7 @@
         "د حمل پر وخت پښې پړسېدلي دي، خطر لري؟",
         "امیندواره یم او وینه راځي، روغتون ته ولاړه شم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/pregnancy-02-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO fact sheet: Maternal mortality",
@@ -391,7 +391,7 @@
         "د زېږون وروسته سینه درد او تبه لرم، خطر لري؟",
         "له ولادت وروسته کله کلینیک ته ولاړه شم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/pregnancy-05-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO fact sheet: Maternal mortality",
@@ -415,7 +415,7 @@
         "حمل کې درملپلورونکي ته ووایم چې امیندواره یم؟",
         "امیندواره یم، کوم درمل پرېږدم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/pregnancy-06-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
@@ -439,7 +439,7 @@
         "واکسین بدن ته معافیت ورکوي؟",
         "بې واکسینه ماشوم خطر کې دی؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/vaccines-01-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO fact sheet: Immunization coverage",
@@ -463,7 +463,7 @@
         "د شري واکسین ماشوم ته ورکړم؟",
         "شري خطرناکه ناروغي ده که نه؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/vaccines-06-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO fact sheet: Measles",
@@ -487,7 +487,7 @@
         "بې هوښي او ساه لنډي بیړني دي؟",
         "خطرناکې نښې کومې دي چې ځنډول نه شي؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/when-to-visit-clinic-01-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO/ICRC Basic Emergency Care: approach to the acutely ill and injured",
@@ -511,7 +511,7 @@
         "شپه ټوخی کوم او خوله خوږیږي، ډاکټر ته ولاړ شم؟",
         "اوږد ټوخی د نري رنځ نښه وي؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/when-to-visit-clinic-02-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO fact sheet: Tuberculosis",
@@ -535,7 +535,7 @@
         "سینه مې فشار کوي او خوله خوږه ده، څه وکړم؟",
         "د سینې درد سره ساه نه شم اخیستی، روغتون ته ولاړ شم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/when-to-visit-clinic-03-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO fact sheet: Cardiovascular diseases (CVDs)",
@@ -559,7 +559,7 @@
         "ناڅاپه سخت سر درد شو، څه وکړم؟",
         "سر درد او د غاړې شخوالی لرم، روغتون ته ولاړ شم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/when-to-visit-clinic-04-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO fact sheet: Headache disorders",
@@ -583,7 +583,7 @@
         "پر سوځېدنه غوړي ولګوم که نه؟",
         "لویه سوځېدنه کله روغتون ته وړل کیږي؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/when-to-visit-clinic-05-answer-ps.mp3",
       "dangerLevel": "clinic",
       "source": {
         "title": "WHO fact sheet: Burns",
@@ -607,7 +607,7 @@
         "د لېوني سپي ضد واکسین کله پیل کړم؟",
         "حیوان وچیچلم، کلینیک ته ولاړ شم؟"
       ],
-      "audioUrl": null,
+      "audioUrl": "/audio/faqs/when-to-visit-clinic-06-answer-ps.mp3",
       "dangerLevel": "emergency",
       "source": {
         "title": "WHO fact sheet: Rabies",
@@ -617,5 +617,30 @@
       "reviewStatus": "draft"
     }
   ],
-  "audioUrls": []
+  "audioUrls": [
+    "/audio/faqs/child-care-01-answer-ps.mp3",
+    "/audio/faqs/child-care-03-answer-ps.mp3",
+    "/audio/faqs/child-care-04-answer-ps.mp3",
+    "/audio/faqs/child-care-06-answer-ps.mp3",
+    "/audio/faqs/diarrhea-ors-01-answer-ps.mp3",
+    "/audio/faqs/diarrhea-ors-04-answer-ps.mp3",
+    "/audio/faqs/diarrhea-ors-05-answer-ps.mp3",
+    "/audio/faqs/fever-01-answer-ps.mp3",
+    "/audio/faqs/fever-03-answer-ps.mp3",
+    "/audio/faqs/fever-04-answer-ps.mp3",
+    "/audio/faqs/fever-06-answer-ps.mp3",
+    "/audio/faqs/fever-07-answer-ps.mp3",
+    "/audio/faqs/pregnancy-01-answer-ps.mp3",
+    "/audio/faqs/pregnancy-02-answer-ps.mp3",
+    "/audio/faqs/pregnancy-05-answer-ps.mp3",
+    "/audio/faqs/pregnancy-06-answer-ps.mp3",
+    "/audio/faqs/vaccines-01-answer-ps.mp3",
+    "/audio/faqs/vaccines-06-answer-ps.mp3",
+    "/audio/faqs/when-to-visit-clinic-01-answer-ps.mp3",
+    "/audio/faqs/when-to-visit-clinic-02-answer-ps.mp3",
+    "/audio/faqs/when-to-visit-clinic-03-answer-ps.mp3",
+    "/audio/faqs/when-to-visit-clinic-04-answer-ps.mp3",
+    "/audio/faqs/when-to-visit-clinic-05-answer-ps.mp3",
+    "/audio/faqs/when-to-visit-clinic-06-answer-ps.mp3"
+  ]
 }

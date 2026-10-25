@@ -14,7 +14,7 @@
       "ترمامیټر نه لرم، تبه څنګه وګورم؟",
       "تبه او عادي تودوخه څه توپیر لري؟"
     ],
-    "audioUrl": null,
+    "audioUrl": "/audio/faqs/fever-01-answer-ps.mp3",
     "dangerLevel": "info",
     "source": {
       "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -38,7 +38,7 @@
       "تبه لرونکی کس ته څه پاملرنه وکړم؟",
       "په تبه کې استراحت کافي دی؟"
     ],
-    "audioUrl": null,
+    "audioUrl": "/audio/faqs/fever-02-answer-ps.mp3",
     "dangerLevel": "info",
     "source": {
       "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -62,7 +62,7 @@
       "له دوو میاشتو کم ماشوم تبه لري، خطر لري؟",
       "ماشوم تبه لري او شیدې نه رودي، څه وکړم؟"
     ],
-    "audioUrl": null,
+    "audioUrl": "/audio/faqs/fever-03-answer-ps.mp3",
     "dangerLevel": "emergency",
     "source": {
       "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -86,7 +86,7 @@
       "تبه راځي او ځي، کلینیک ته ولاړ شم؟",
       "اوږده تبه لپاره کله ډاکټر وګورم؟"
     ],
-    "audioUrl": null,
+    "audioUrl": "/audio/faqs/fever-04-answer-ps.mp3",
     "dangerLevel": "clinic",
     "source": {
       "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -110,7 +110,7 @@
       "تبه لرونکی کس پوښ کړم که خلاص وساتم؟",
       "په تبه کې ډېرې کمپلې زیان لري؟"
     ],
-    "audioUrl": null,
+    "audioUrl": "/audio/faqs/fever-05-answer-ps.mp3",
     "dangerLevel": "info",
     "source": {
       "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
@@ -134,7 +134,7 @@
       "لړزه او تبه لرم، ملاریا وي؟",
       "د ملاریا ازموینه چیرته وکړم؟"
     ],
-    "audioUrl": null,
+    "audioUrl": "/audio/faqs/fever-06-answer-ps.mp3",
     "dangerLevel": "clinic",
     "source": {
       "title": "WHO fact sheet: Malaria",
@@ -158,7 +158,7 @@
       "له تبې سره سخت سر درد لرم، خطر لري؟",
       "تبه او ساه لنډي لرم، روغتون ته ولاړ شم؟"
     ],
-    "audioUrl": null,
+    "audioUrl": "/audio/faqs/fever-07-answer-ps.mp3",
     "dangerLevel": "emergency",
     "source": {
       "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
