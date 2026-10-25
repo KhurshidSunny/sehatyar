@@ -8,6 +8,8 @@ SehatYar helps people:
 
 It does **not** diagnose disease or prescribe medicine. It is information support only. Users should see a doctor or pharmacist when needed.
 
+**Live app:** [https://sehatyar-iota.vercel.app](https://sehatyar-iota.vercel.app)
+
 ## Why this exists
 
 Many users face low literacy, weak internet, and medicine packs they cannot read. SehatYar is designed for large tap targets, short answers, audio playback, and offline caching of top content.
@@ -37,6 +39,9 @@ sehatyar/
   docs/
     PROJECT_PLAN.md
     CONTENT_AND_SAFETY.md
+    TECHNICAL_NOTE.md
+    FOR_REVIEWERS.md
+    nlp-evaluation.md
   apps/
     web/          # PWA frontend
     api/          # FastAPI backend
@@ -50,6 +55,8 @@ sehatyar/
 
 - [Project plan](docs/PROJECT_PLAN.md) — scope, features, stack, safety rules
 - [Content and safety](docs/CONTENT_AND_SAFETY.md) — allowed / forbidden content and review process
+- [Technical note](docs/TECHNICAL_NOTE.md) — problem, methods, metrics, limits
+- [Demo guide](docs/FOR_REVIEWERS.md) — walkthrough for product evaluation
 - [NLP evaluation](docs/nlp-evaluation.md) — FAQ intent methods, metrics, and limits
 - [Web app](apps/web/README.md)
 - [API](apps/api/README.md)

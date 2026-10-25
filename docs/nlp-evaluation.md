@@ -108,7 +108,7 @@ The API path prefers the classical recipe for a simple, dependency-light default
 
 ## 7. What “good enough” means for v1
 
-For demos and reviewer checks:
+For demos and product evaluation:
 
 - Show the split sizes and the comparison table honestly.
 - Prefer demos that combine browse + intent ranking, not intent alone.

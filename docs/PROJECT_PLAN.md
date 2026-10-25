@@ -233,6 +233,8 @@ No personal identity required for MVP.
 - Intent methods, metrics, and limits: `docs/nlp-evaluation.md`
 
 ### Phase 6 — Polish
+- Technical note (problem, methods, metrics, limits): `docs/TECHNICAL_NOTE.md`
+- Demo / evaluation walkthrough: `docs/FOR_REVIEWERS.md`
 - Better empty/error states
 - Demo recording
 - README install and run instructions
