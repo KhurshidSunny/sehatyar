@@ -21,7 +21,9 @@ export type MessageKey =
   | "emergencyBadge"
   | "audioUnavailable"
   | "playAudio"
+  | "pauseAudio"
   | "stopAudio"
+  | "audioProgress"
   | "medicineHint"
   | "language"
   | "languagePs"
@@ -83,7 +85,9 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     emergencyBadge: "بیړنی حالت",
     audioUnavailable: "غږ لا نشته",
     playAudio: "غږ واورئ",
+    pauseAudio: "وځنډوئ",
     stopAudio: "ودروئ",
+    audioProgress: "د غږ پرمختګ",
     medicineHint: "د درملو پیک عکس واخلئ یا نوم ولیکئ",
     language: "ژبه",
     languagePs: "پښتو",
@@ -145,7 +149,9 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     emergencyBadge: "Emergency",
     audioUnavailable: "Audio not available yet",
     playAudio: "Play audio",
+    pauseAudio: "Pause",
     stopAudio: "Stop",
+    audioProgress: "Audio progress",
     medicineHint: "Photograph a medicine pack or type the name",
     language: "Language",
     languagePs: "پښتو",
