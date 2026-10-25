@@ -79,9 +79,7 @@ Run the classical script first so the comparison table can load classical metric
 
 `POST /predict-intent` in `apps/api` loads an optional `.joblib` from `INTENT_MODEL_PATH`, or trains the classical TF-IDF + LogReg recipe from FAQ seed data when no artifact is present.
 
-## Expected next work
-
-- Short technical note on methods, metrics, and limits
+Methods, metrics, and limits for reviewers: [docs/nlp-evaluation.md](../docs/nlp-evaluation.md).
 
 ## Notes
 

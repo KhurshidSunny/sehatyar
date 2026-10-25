@@ -50,6 +50,7 @@ sehatyar/
 
 - [Project plan](docs/PROJECT_PLAN.md) — scope, features, stack, safety rules
 - [Content and safety](docs/CONTENT_AND_SAFETY.md) — allowed / forbidden content and review process
+- [NLP evaluation](docs/nlp-evaluation.md) — FAQ intent methods, metrics, and limits
 - [Web app](apps/web/README.md)
 - [API](apps/api/README.md)
 - [Content data](data/README.md)

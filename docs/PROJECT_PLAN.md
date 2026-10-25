@@ -230,7 +230,7 @@ No personal identity required for MVP.
 - Classical FAQ intent baseline: TF-IDF + LogisticRegression (`experiments/scripts/train_classical_intent.py`)
 - Neural FAQ intent baseline: TF-IDF + TruncatedSVD + MLP (`experiments/scripts/train_neural_intent.py`), with comparison under `experiments/results/`
 - Intent prediction API: `POST /predict-intent` (`apps/api/routers/intent.py`)
-
+- Intent methods, metrics, and limits: `docs/nlp-evaluation.md`
 
 ### Phase 6 — Polish
 - Better empty/error states
