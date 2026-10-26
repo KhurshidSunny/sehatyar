@@ -50,8 +50,9 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 | GET | `/categories` | FAQ categories in display order |
 | GET | `/faqs` | FAQ summaries (`?category=` optional filter) |
 | GET | `/faqs/{id}` | Full FAQ answer payload |
-| GET | `/medicines/search?q=` | Fuzzy medicine name search (optional `limit`) |
-| POST | `/medicines/ocr` | Multipart pack photo → OCR text + ranked catalog matches |
+| GET | `/medicines/forms` | Dosage forms for the medicine picker (tablet, syrup, …) |
+| GET | `/medicines/search?q=` | Fuzzy medicine name search (optional `limit`, `form`) |
+| POST | `/medicines/ocr` | Multipart pack photo → OCR text + ranked catalog matches (optional `?form=`) |
 | POST | `/predict-intent` | Rank FAQ ids for typed text (`{"text":"..."}`; optional `?top_k=`) |
 | POST | `/feedback` | Store anonymous helpfulness vote (`targetType`, `targetId`, `helpful`) |
 

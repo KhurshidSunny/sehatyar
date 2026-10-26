@@ -26,8 +26,8 @@ except ImportError:  # pragma: no cover - optional dependency
 # Keep memory bounded for phone uploads.
 _MAX_EDGE_PX = 2000
 _MIN_EDGE_PX = 1000
-# Reject faces / blank walls: need enough readable Latin letters.
-_MIN_LETTER_COUNT = 10
+# Soft quality floor for "usable pack photo" — matching can still run below this.
+_MIN_LETTER_COUNT = 6
 _ALLOWED_CONTENT_TYPES = frozenset(
     {
         "image/jpeg",
@@ -257,11 +257,13 @@ def extract_text_from_image_bytes(
         raise OcrError(f"OCR failed: {exc}") from exc
 
     usable = _looks_like_pack_text(best_text, best_mean, best_max)
-    # Faces / walls often yield random characters — do not keep that noise.
-    text_out = best_text if usable else ""
+    # Keep OCR text whenever we got real letters so catalog matching can still run.
+    # usable is only a quality hint (faces / blank walls tend to fail it).
+    has_letters = best_letters >= 4 and bool(best_text.strip())
+    text_out = best_text if has_letters else ""
     return OcrExtract(
         text=text_out,
-        letter_count=max(0, best_letters) if usable else 0,
-        mean_confidence=round(best_mean, 1) if usable else 0.0,
-        usable=usable,
+        letter_count=max(0, best_letters) if has_letters else 0,
+        mean_confidence=round(best_mean, 1) if has_letters else 0.0,
+        usable=usable if has_letters else False,
     )

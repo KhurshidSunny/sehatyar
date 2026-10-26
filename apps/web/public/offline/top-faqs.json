@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "generatedFrom": "data/faqs",
   "categories": [
     {
@@ -41,126 +41,6 @@
   ],
   "faqs": [
     {
-      "id": "fever-01",
-      "category": "fever",
-      "questionPs": "تبه څه ده او څنګه پوه شم چې تبه لرم؟",
-      "questionEn": "What is fever and how do I know I have one?",
-      "answerPs": "تبه هغه وخت ده چې د بدن تودوخه له عادي حالت څخه لوړه شي. که ترمامیټر لرئ، تودوخه پرې اندازه کړئ. که ترمامیټر نه وي، تندی او سینه د لاس په شا وګورئ؛ که ډېر ګرم وي، ښايي تبه وي. تبه پخپله ناروغي نه ده، د بلې ناروغۍ نښه ده.",
-      "answerEn": "Fever is when body temperature rises above normal. If you have a thermometer, measure with it. If not, feel the forehead and chest with the back of your hand; if very hot, it may be fever. Fever itself is not a disease — it is a sign of another illness.",
-      "paraphrasesPs": [
-        "زه څنګه پوه شم چې تبه لرم؟",
-        "د تبې نښې کومې دي؟",
-        "بدن مې ګرم دی، دا تبه ده؟",
-        "تبه څنګه معلومه کړم؟",
-        "ترمامیټر نه لرم، تبه څنګه وګورم؟",
-        "تبه او عادي تودوخه څه توپیر لري؟"
-      ],
-      "audioUrl": "/audio/faqs/fever-01-answer-ps.mp3",
-      "dangerLevel": "info",
-      "source": {
-        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
-        "url": null
-      },
-      "lastReviewed": "2026-10-07",
-      "reviewStatus": "draft"
-    },
-    {
-      "id": "fever-03",
-      "category": "fever",
-      "questionPs": "د ماشوم تبه کله خطرناکه ده؟",
-      "questionEn": "When is a child's fever dangerous?",
-      "answerPs": "ماشوم سمدستي روغتون یا کلینیک ته یوسئ که: له دوو میاشتو کم عمر ولري او تبه ولري، تشنج ولري، ډېر ویده وي او نه ویښیږي، شیدې یا اوبه نه شي څښلی، هر څه چې خوري کانګې یې کوي، یا ساه یې چټکه او سخته وي.",
-      "answerEn": "Take the child to a hospital or clinic right away if: younger than two months with fever, has a seizure, is very sleepy and will not wake, cannot drink milk or water, vomits everything, or breathes fast and hard.",
-      "paraphrasesPs": [
-        "د ماشوم تبه څه وخت خطر لري؟",
-        "ماشوم مې تبه لري، روغتون ته یې یوسم؟",
-        "د ماشوم د تبې خطرناکې نښې کومې دي؟",
-        "ماشوم تشنج وکړ او تبه لري، څه وکړم؟",
-        "له دوو میاشتو کم ماشوم تبه لري، خطر لري؟",
-        "ماشوم تبه لري او شیدې نه رودي، څه وکړم؟"
-      ],
-      "audioUrl": "/audio/faqs/fever-03-answer-ps.mp3",
-      "dangerLevel": "emergency",
-      "source": {
-        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
-        "url": null
-      },
-      "lastReviewed": "2026-10-07",
-      "reviewStatus": "draft"
-    },
-    {
-      "id": "fever-04",
-      "category": "fever",
-      "questionPs": "تبه څو ورځې دوام وکړي نو ډاکټر ته ولاړ شم؟",
-      "questionEn": "How long can a fever last before I should see a doctor?",
-      "answerPs": "که تبه له دریو ورځو زیاته دوام وکړي، یا هره ورځ بېرته راشي، کلینیک ته ولاړ شئ. ماشومان، زاړه خلک او امیندوارې میرمنې باید لا ژر کلینیک ته ولاړ شي. که له تبې سره سخت سر درد، د غاړې شخوالی یا بې هوښي وي، سمدستي روغتون ته ولاړ شئ.",
-      "answerEn": "If fever lasts more than three days, or returns every day, go to a clinic. Children, older adults, and pregnant women should go sooner. With severe headache, stiff neck, or loss of consciousness, go to hospital immediately.",
-      "paraphrasesPs": [
-        "تبه مې څو ورځې ده، ډاکټر ته ولاړ شم؟",
-        "اوږده تبه کله خطرناکه ده؟",
-        "تبه نه ښه کیږي، څه وکړم؟",
-        "تبه له دریو ورځو زیاته شوه، څه وکړم؟",
-        "تبه راځي او ځي، کلینیک ته ولاړ شم؟",
-        "اوږده تبه لپاره کله ډاکټر وګورم؟"
-      ],
-      "audioUrl": "/audio/faqs/fever-04-answer-ps.mp3",
-      "dangerLevel": "clinic",
-      "source": {
-        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
-        "url": null
-      },
-      "lastReviewed": "2026-10-07",
-      "reviewStatus": "draft"
-    },
-    {
-      "id": "fever-06",
-      "category": "fever",
-      "questionPs": "تبه او ملاریا: کله د ملاریا ټیسټ وکړم؟",
-      "questionEn": "Fever and malaria: when should I get a malaria test?",
-      "answerPs": "په هغو سیمو کې چې ملاریا شته، هره تبه باید د ملاریا لپاره وازمویل شي. کلینیک ته ولاړ شئ او د وینې ټیسټ وکړئ. ملاریا ژر درملنه غواړي؛ ځنډ یې خطرناک کېدای شي، په ځانګړي ډول د ماشومانو او امیندوارو میرمنو لپاره.",
-      "answerEn": "In areas where malaria is present, every fever should be tested for malaria. Go to a clinic for a blood test. Malaria needs prompt treatment; delay can be dangerous, especially for children and pregnant women.",
-      "paraphrasesPs": [
-        "ملاریا لرم که نه؟",
-        "د ملاریا ټیسټ کله وکړم؟",
-        "تبه او لړزه لرم، ملاریا به وي؟",
-        "په ملاریا سیمه کې تبه لرم، ټیسټ وکړم؟",
-        "لړزه او تبه لرم، ملاریا وي؟",
-        "د ملاریا ازموینه چیرته وکړم؟"
-      ],
-      "audioUrl": "/audio/faqs/fever-06-answer-ps.mp3",
-      "dangerLevel": "clinic",
-      "source": {
-        "title": "WHO fact sheet: Malaria",
-        "url": "https://www.who.int/news-room/fact-sheets/detail/malaria"
-      },
-      "lastReviewed": "2026-10-07",
-      "reviewStatus": "draft"
-    },
-    {
-      "id": "fever-07",
-      "category": "fever",
-      "questionPs": "له تبې سره کومې نښې بیړنۍ دي؟",
-      "questionEn": "Which signs with a fever need emergency care?",
-      "answerPs": "سمدستي روغتون ته ولاړ شئ که له تبې سره دا نښې وي: د غاړې شخوالی، سخت سر درد، بې هوښي یا ګډوډي، تشنج، د ساه اخیستلو ستونزه، په پوستکي سرې یا تورې داغې چې په فشار نه ورکیږي، یا دومره کمزوري چې ودرېدای نه شئ.",
-      "answerEn": "Go to hospital immediately if fever comes with: stiff neck, severe headache, confusion or unconsciousness, seizure, breathing difficulty, red or dark skin spots that do not fade when pressed, or weakness so severe you cannot stand.",
-      "paraphrasesPs": [
-        "د تبې سره کومې نښې خطرناکې دي؟",
-        "تبه او د غاړې شخوالی لرم، څه وکړم؟",
-        "کله د تبې لپاره روغتون ته ولاړ شم؟",
-        "تبه او بې هوښي لرم، څه وکړم؟",
-        "له تبې سره سخت سر درد لرم، خطر لري؟",
-        "تبه او ساه لنډي لرم، روغتون ته ولاړ شم؟"
-      ],
-      "audioUrl": "/audio/faqs/fever-07-answer-ps.mp3",
-      "dangerLevel": "emergency",
-      "source": {
-        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
-        "url": null
-      },
-      "lastReviewed": "2026-10-07",
-      "reviewStatus": "draft"
-    },
-    {
       "id": "child-care-01",
       "category": "child-care",
       "questionPs": "ماشوم ته یوازې د مور شیدې تر کومه عمره ورکړو؟",
@@ -176,6 +56,30 @@
         "د شپږو میاشتو مخکې ماشوم ته نور څه ورکړم؟"
       ],
       "audioUrl": "/audio/faqs/child-care-01-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Infant and young child feeding",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "child-care-02",
+      "category": "child-care",
+      "questionPs": "ماشوم ته نور خواړه کله او څنګه پیل کړو؟",
+      "questionEn": "When and how should we start other foods for a baby?",
+      "answerPs": "کله چې ماشوم شپږ میاشتنی شي، نرم او میده خواړه لکه کچالو، ورېژې، دال، هګۍ او میوه پیل کړئ. لږ لږ پیل کړئ او ورو ورو یې زیات کړئ. خواړه پاک چمتو کړئ او له ورکولو مخکې خپل لاسونه ومینځئ. د مور شیدې هم دوام ورکړئ.",
+      "answerEn": "When the baby is six months old, start soft foods such as potato, rice, lentils, egg, and fruit. Begin with small amounts and increase slowly. Prepare food cleanly and wash your hands first. Keep breastfeeding as well.",
+      "paraphrasesPs": [
+        "ماشوم ته ډوډۍ کله پیل کړم؟",
+        "شپږ میاشتني ماشوم ته څه خواړه ورکړم؟",
+        "د ماشوم لومړني خواړه کوم دي؟",
+        "ماشوم ته تکمیلي خواړه کله پیل کړو؟",
+        "له شیدو وروسته څه خواړه ورکړم؟",
+        "ماشوم ته نرم خواړه څنګه پیل کړم؟"
+      ],
+      "audioUrl": "/audio/faqs/child-care-02-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO fact sheet: Infant and young child feeding",
@@ -233,6 +137,30 @@
       "reviewStatus": "draft"
     },
     {
+      "id": "child-care-05",
+      "category": "child-care",
+      "questionPs": "کله باید لاسونه په صابون ومینځو؟",
+      "questionEn": "When should we wash our hands with soap?",
+      "answerPs": "له تشناب وروسته، د ماشوم له پاکولو وروسته، د خوړو له پخولو مخکې، او د خوړو له خوړلو یا ماشوم ته د خوړو له ورکولو مخکې لاسونه په صابون او اوبو ومینځئ. لاس مینځل اسهال او د ساه ناروغۍ کموي.",
+      "answerEn": "Wash hands with soap and water after using the toilet, after cleaning a child, before cooking, and before eating or feeding a child. Handwashing reduces diarrhea and respiratory illness.",
+      "paraphrasesPs": [
+        "لاسونه څه وخت ومینځم؟",
+        "لاس مینځل ولې مهم دي؟",
+        "د ماشوم لپاره پاکوالی څنګه وساتم؟",
+        "له ډوډۍ مخکې لاسونه ومینځم؟",
+        "د ماشوم له پاملرنې وروسته لاسونه ومینځم؟",
+        "صابون سره لاس مینځل څنګه سم دي؟"
+      ],
+      "audioUrl": "/audio/faqs/child-care-05-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Diarrhoeal disease",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
       "id": "child-care-06",
       "category": "child-care",
       "questionPs": "ماشوم ټوخی لري او ساه یې چټکه ده، څه وکړم؟",
@@ -257,6 +185,30 @@
       "reviewStatus": "draft"
     },
     {
+      "id": "child-care-07",
+      "category": "child-care",
+      "questionPs": "د ماشوم د وزن او ودې څارنه ولې مهمه ده؟",
+      "questionEn": "Why is it important to track a child's weight and growth?",
+      "answerPs": "منظم وزن کول ښيي چې ماشوم ښه وده کوي که نه. ماشوم د واکسین او معاینې لپاره کلینیک ته یوسئ او وزن یې ولیکئ. که د ماشوم وزن څو میاشتې نه وي زیات شوی، له روغتیايي کارکوونکي سره خبرې وکړئ.",
+      "answerEn": "Regular weighing shows whether a child is growing well. Bring the child for vaccines and check-ups and record their weight. If weight has not increased for several months, talk with a health worker.",
+      "paraphrasesPs": [
+        "د ماشوم وزن څو ځله وکړم؟",
+        "ماشوم مې ښه وده کوي که نه؟",
+        "د ماشوم وده څنګه وڅارم؟",
+        "د ماشوم د ودې کارت ولې مهم دی؟",
+        "ماشوم مې د عمر په نسبت کوچنی دی، څه وکړم؟",
+        "کلینیک کې د وزن اندازه کول څو ځله وکړم؟"
+      ],
+      "audioUrl": "/audio/faqs/child-care-07-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Malnutrition",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/malnutrition"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
       "id": "diarrhea-ors-01",
       "category": "diarrhea-ors",
       "questionPs": "ORS (او آر اس) څه شی دی؟",
@@ -272,6 +224,54 @@
         "او آر اس پوډر ولې ورکوو؟"
       ],
       "audioUrl": "/audio/faqs/diarrhea-ors-01-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Diarrhoeal disease",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "diarrhea-ors-02",
+      "category": "diarrhea-ors",
+      "questionPs": "ORS څنګه جوړ کړم؟",
+      "questionEn": "How do I prepare ORS?",
+      "answerPs": "لومړی خپل لاسونه ومینځئ. یو پاکټ ORS په هغه اندازه پاکو یا جوش کړو او سړو شوو اوبو کې حل کړئ چې پر پاکټ لیکل شوې ده. اوبه له لیکل شوې اندازې کمې یا زیاتې مه کوئ. جوړ شوی ORS په یوه ورځ کې وکاروئ او پاتې یې توی کړئ.",
+      "answerEn": "Wash your hands first. Mix one ORS packet in the amount of clean or boiled-and-cooled water written on the packet. Do not use less or more water than stated. Use the mixed ORS within one day and throw away leftovers.",
+      "paraphrasesPs": [
+        "او آر اس په څومره اوبو کې حل کړم؟",
+        "د ORS جوړولو طریقه څه ده؟",
+        "ORS څنګه چمتو کوو؟",
+        "یوه کڅوړه ORS په څومره اوبو کې واچوم؟",
+        "ORS په جوشو اوبو کې جوړ کړم که سردو کې؟",
+        "او آر اس څنګه سم حل کړم؟"
+      ],
+      "audioUrl": "/audio/faqs/diarrhea-ors-02-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Diarrhoeal disease",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "diarrhea-ors-03",
+      "category": "diarrhea-ors",
+      "questionPs": "اسهال لرونکي ماشوم ته شیدې او خواړه ورکړو؟",
+      "questionEn": "Should we keep feeding a child who has diarrhea?",
+      "answerPs": "هو. د مور شیدې او عادي خواړه مه بندوئ. ماشوم ته له معمول څخه زیات مایعات ورکړئ. ډېر خوږ څښاکونه لکه سافټ ډرینک مه ورکوئ، ځکه اسهال ډېروي.",
+      "answerEn": "Yes. Do not stop breast milk or usual food. Give more fluids than usual. Avoid very sweet drinks such as soft drinks, which can worsen diarrhea.",
+      "paraphrasesPs": [
+        "په اسهال کې ماشوم ته ډوډۍ ورکړم؟",
+        "اسهال لرونکی ماشوم شیدې وخوري؟",
+        "د اسهال پر وخت څه خواړه ښه دي؟",
+        "په اسهال کې شیدې ودروي که دوام ورکړم؟",
+        "اسهال لرونکي ماشوم ته خواړه بند کړم؟",
+        "په اسهال کې څه وڅښو او څه وخورو؟"
+      ],
+      "audioUrl": "/audio/faqs/diarrhea-ors-03-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO fact sheet: Diarrhoeal disease",
@@ -329,6 +329,222 @@
       "reviewStatus": "draft"
     },
     {
+      "id": "diarrhea-ors-06",
+      "category": "diarrhea-ors",
+      "questionPs": "د اسهال مخه څنګه ونیسو؟",
+      "questionEn": "How can we prevent diarrhea?",
+      "answerPs": "پاکې یا جوش کړې اوبه وڅښئ، لاسونه په صابون ومینځئ، خواړه پاک او پوښلي وساتئ، تشناب وکاروئ، او ماشوم ته شپږ میاشتې یوازې د مور شیدې ورکړئ. د روټا ویروس واکسین هم د ماشومانو اسهال کموي.",
+      "answerEn": "Drink clean or boiled water, wash hands with soap, keep food clean and covered, use a toilet, and give only breast milk for the first six months. Rotavirus vaccine also reduces diarrhea in children.",
+      "paraphrasesPs": [
+        "اسهال څنګه ونه شي؟",
+        "د اسهال د مخنیوي لارې کومې دي؟",
+        "ماشوم له اسهال څخه څنګه وساتم؟",
+        "پاکې اوبه او لاس مینځل اسهال کموي؟",
+        "د اسهال د مخنیوي لپاره څه وکړم؟",
+        "ماشوم ته ناپاکه خواړه اسهال راوړي؟"
+      ],
+      "audioUrl": "/audio/faqs/diarrhea-ors-06-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Diarrhoeal disease",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "diarrhea-ors-07",
+      "category": "diarrhea-ors",
+      "questionPs": "که ORS نه وي، څه وکړم؟",
+      "questionEn": "What should I do if ORS is not available?",
+      "answerPs": "ماشوم ته د مور شیدې، پاکې اوبه، شوروا، د ورېژو اوبه یا شلومبې ورکړئ. هر څومره ژر چې کېدای شي ORS پیدا کړئ یا کلینیک ته ولاړ شئ. ډېر خوږ څښاکونه او بوره لرونکي جوسونه مه ورکوئ.",
+      "answerEn": "Give breast milk, clean water, soup, rice water, or yoghurt drinks. Get ORS as soon as you can or go to a clinic. Avoid very sweet drinks and sugary juices.",
+      "paraphrasesPs": [
+        "او آر اس نه لرم، څه ورکړم؟",
+        "د ORS پر ځای څه وکاروم؟",
+        "په کور کې د اسهال لپاره څه وڅښو؟",
+        "ORS بازار کې نشته، څه وڅښو؟",
+        "د کور جوړ شوي مالګین اوبه سم دي؟",
+        "بې ORS د اسهال پر وخت څه ورکړم؟"
+      ],
+      "audioUrl": "/audio/faqs/diarrhea-ors-07-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Diarrhoeal disease",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diarrhoeal-disease"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-01",
+      "category": "fever",
+      "questionPs": "تبه څه ده او څنګه پوه شم چې تبه لرم؟",
+      "questionEn": "What is fever and how do I know I have one?",
+      "answerPs": "تبه هغه وخت ده چې د بدن تودوخه له عادي حالت څخه لوړه شي. که ترمامیټر لرئ، تودوخه پرې اندازه کړئ. که ترمامیټر نه وي، تندی او سینه د لاس په شا وګورئ؛ که ډېر ګرم وي، ښايي تبه وي. تبه پخپله ناروغي نه ده، د بلې ناروغۍ نښه ده.",
+      "answerEn": "Fever is when body temperature rises above normal. If you have a thermometer, measure with it. If not, feel the forehead and chest with the back of your hand; if very hot, it may be fever. Fever itself is not a disease — it is a sign of another illness.",
+      "paraphrasesPs": [
+        "زه څنګه پوه شم چې تبه لرم؟",
+        "د تبې نښې کومې دي؟",
+        "بدن مې ګرم دی، دا تبه ده؟",
+        "تبه څنګه معلومه کړم؟",
+        "ترمامیټر نه لرم، تبه څنګه وګورم؟",
+        "تبه او عادي تودوخه څه توپیر لري؟"
+      ],
+      "audioUrl": "/audio/faqs/fever-01-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-02",
+      "category": "fever",
+      "questionPs": "کله چې تبه ولرم، په کور کې څه وکړم؟",
+      "questionEn": "What can I do at home when I have a fever?",
+      "answerPs": "ډېر استراحت وکړئ او ډېرې اوبه، شوروا یا نور مایعات وڅښئ. سپک او پاک کالي واغوندئ او کوټه هوادار وساتئ. تندی په نیمګرمو اوبو لوند ټوکر سره پاک کړئ. د هر درمل له خوړلو مخکې له ډاکټر یا درملپلورونکي سره مشوره وکړئ.",
+      "answerEn": "Rest a lot and drink plenty of water, soup, or other fluids. Wear light clean clothes and keep the room aired. Wipe the forehead with a cloth dampened in lukewarm water. Ask a doctor or pharmacist before taking any medicine.",
+      "paraphrasesPs": [
+        "په تبه کې څه وکړم؟",
+        "تبه په کور کې څنګه کمه کړم؟",
+        "د تبې لپاره کورنۍ پاملرنه څه ده؟",
+        "په تبه کې اوبه څومره وڅښم؟",
+        "تبه لرونکی کس ته څه پاملرنه وکړم؟",
+        "په تبه کې استراحت کافي دی؟"
+      ],
+      "audioUrl": "/audio/faqs/fever-02-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-03",
+      "category": "fever",
+      "questionPs": "د ماشوم تبه کله خطرناکه ده؟",
+      "questionEn": "When is a child's fever dangerous?",
+      "answerPs": "ماشوم سمدستي روغتون یا کلینیک ته یوسئ که: له دوو میاشتو کم عمر ولري او تبه ولري، تشنج ولري، ډېر ویده وي او نه ویښیږي، شیدې یا اوبه نه شي څښلی، هر څه چې خوري کانګې یې کوي، یا ساه یې چټکه او سخته وي.",
+      "answerEn": "Take the child to a hospital or clinic right away if: younger than two months with fever, has a seizure, is very sleepy and will not wake, cannot drink milk or water, vomits everything, or breathes fast and hard.",
+      "paraphrasesPs": [
+        "د ماشوم تبه څه وخت خطر لري؟",
+        "ماشوم مې تبه لري، روغتون ته یې یوسم؟",
+        "د ماشوم د تبې خطرناکې نښې کومې دي؟",
+        "ماشوم تشنج وکړ او تبه لري، څه وکړم؟",
+        "له دوو میاشتو کم ماشوم تبه لري، خطر لري؟",
+        "ماشوم تبه لري او شیدې نه رودي، څه وکړم؟"
+      ],
+      "audioUrl": "/audio/faqs/fever-03-answer-ps.mp3",
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-04",
+      "category": "fever",
+      "questionPs": "تبه څو ورځې دوام وکړي نو ډاکټر ته ولاړ شم؟",
+      "questionEn": "How long can a fever last before I should see a doctor?",
+      "answerPs": "که تبه له دریو ورځو زیاته دوام وکړي، یا هره ورځ بېرته راشي، کلینیک ته ولاړ شئ. ماشومان، زاړه خلک او امیندوارې میرمنې باید لا ژر کلینیک ته ولاړ شي. که له تبې سره سخت سر درد، د غاړې شخوالی یا بې هوښي وي، سمدستي روغتون ته ولاړ شئ.",
+      "answerEn": "If fever lasts more than three days, or returns every day, go to a clinic. Children, older adults, and pregnant women should go sooner. With severe headache, stiff neck, or loss of consciousness, go to hospital immediately.",
+      "paraphrasesPs": [
+        "تبه مې څو ورځې ده، ډاکټر ته ولاړ شم؟",
+        "اوږده تبه کله خطرناکه ده؟",
+        "تبه نه ښه کیږي، څه وکړم؟",
+        "تبه له دریو ورځو زیاته شوه، څه وکړم؟",
+        "تبه راځي او ځي، کلینیک ته ولاړ شم؟",
+        "اوږده تبه لپاره کله ډاکټر وګورم؟"
+      ],
+      "audioUrl": "/audio/faqs/fever-04-answer-ps.mp3",
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-05",
+      "category": "fever",
+      "questionPs": "په تبه کې ځان په کمپلو کې ونغاړم؟",
+      "questionEn": "Should I wrap up in blankets when I have a fever?",
+      "answerPs": "نه. ډېرې کمپلې او درانه کالي د بدن تودوخه نوره هم لوړوي. سپک کالي واغوندئ او که سړه مو شي، یو نری ټوکر پر ځان واچوئ. ماشومان هم په ډېرو کالیو کې مه نغاړئ.",
+      "answerEn": "No. Heavy blankets and thick clothes can raise body heat further. Wear light clothes; if you feel cold, use one thin cover. Do not wrap children in too many layers either.",
+      "paraphrasesPs": [
+        "په تبه کې ډېر کالي واغوندم؟",
+        "تبه لرونکی ماشوم پوښ کړم که نه؟",
+        "په تبه کې کمپله ښه ده؟",
+        "په تبه کې ماشوم ته ګرم کالي واغوندم؟",
+        "تبه لرونکی کس پوښ کړم که خلاص وساتم؟",
+        "په تبه کې ډېرې کمپلې زیان لري؟"
+      ],
+      "audioUrl": "/audio/faqs/fever-05-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-06",
+      "category": "fever",
+      "questionPs": "تبه او ملاریا: کله د ملاریا ټیسټ وکړم؟",
+      "questionEn": "Fever and malaria: when should I get a malaria test?",
+      "answerPs": "په هغو سیمو کې چې ملاریا شته، هره تبه باید د ملاریا لپاره وازمویل شي. کلینیک ته ولاړ شئ او د وینې ټیسټ وکړئ. ملاریا ژر درملنه غواړي؛ ځنډ یې خطرناک کېدای شي، په ځانګړي ډول د ماشومانو او امیندوارو میرمنو لپاره.",
+      "answerEn": "In areas where malaria is present, every fever should be tested for malaria. Go to a clinic for a blood test. Malaria needs prompt treatment; delay can be dangerous, especially for children and pregnant women.",
+      "paraphrasesPs": [
+        "ملاریا لرم که نه؟",
+        "د ملاریا ټیسټ کله وکړم؟",
+        "تبه او لړزه لرم، ملاریا به وي؟",
+        "په ملاریا سیمه کې تبه لرم، ټیسټ وکړم؟",
+        "لړزه او تبه لرم، ملاریا وي؟",
+        "د ملاریا ازموینه چیرته وکړم؟"
+      ],
+      "audioUrl": "/audio/faqs/fever-06-answer-ps.mp3",
+      "dangerLevel": "clinic",
+      "source": {
+        "title": "WHO fact sheet: Malaria",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/malaria"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "fever-07",
+      "category": "fever",
+      "questionPs": "له تبې سره کومې نښې بیړنۍ دي؟",
+      "questionEn": "Which signs with a fever need emergency care?",
+      "answerPs": "سمدستي روغتون ته ولاړ شئ که له تبې سره دا نښې وي: د غاړې شخوالی، سخت سر درد، بې هوښي یا ګډوډي، تشنج، د ساه اخیستلو ستونزه، په پوستکي سرې یا تورې داغې چې په فشار نه ورکیږي، یا دومره کمزوري چې ودرېدای نه شئ.",
+      "answerEn": "Go to hospital immediately if fever comes with: stiff neck, severe headache, confusion or unconsciousness, seizure, breathing difficulty, red or dark skin spots that do not fade when pressed, or weakness so severe you cannot stand.",
+      "paraphrasesPs": [
+        "د تبې سره کومې نښې خطرناکې دي؟",
+        "تبه او د غاړې شخوالی لرم، څه وکړم؟",
+        "کله د تبې لپاره روغتون ته ولاړ شم؟",
+        "تبه او بې هوښي لرم، څه وکړم؟",
+        "له تبې سره سخت سر درد لرم، خطر لري؟",
+        "تبه او ساه لنډي لرم، روغتون ته ولاړ شم؟"
+      ],
+      "audioUrl": "/audio/faqs/fever-07-answer-ps.mp3",
+      "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO Integrated Management of Childhood Illness (IMCI) chart booklet",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
       "id": "pregnancy-01",
       "category": "pregnancy",
       "questionPs": "د امیندوارۍ پر مهال څو ځله کلینیک ته ولاړه شم؟",
@@ -369,6 +585,54 @@
       ],
       "audioUrl": "/audio/faqs/pregnancy-02-answer-ps.mp3",
       "dangerLevel": "emergency",
+      "source": {
+        "title": "WHO fact sheet: Maternal mortality",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "pregnancy-03",
+      "category": "pregnancy",
+      "questionPs": "امیندواره ښځه څه وخوري؟",
+      "questionEn": "What should a pregnant woman eat?",
+      "answerPs": "ډول ډول خواړه وخورئ: سابه، میوه، دال، لوبیا، هګۍ، غوښه، شیدې او ماست. ډېرې پاکې اوبه وڅښئ. د کلینیک کارکوونکی به درته ووايي چې کومې ویټامین یا اوسپنې ګولۍ اړینې دي؛ پخپله یې مه اخلئ.",
+      "answerEn": "Eat a variety of foods: vegetables, fruit, lentils, beans, eggs, meat, milk, and yoghurt. Drink plenty of clean water. Clinic staff will tell you which vitamin or iron tablets you need — do not start them on your own.",
+      "paraphrasesPs": [
+        "په امیندوارۍ کې کوم خواړه ښه دي؟",
+        "د حمل پر وخت څه وخورم؟",
+        "امیندوارې میرمنې ته کوم خواړه ګټور دي؟",
+        "په امیندوارۍ کې اوسپنې خواړه وخورم؟",
+        "حمل کې شیدې او هګۍ ښه دي؟",
+        "امیندواره ښځه څومره اوبه وڅښي؟"
+      ],
+      "audioUrl": "/audio/faqs/pregnancy-03-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO recommendations on antenatal care for a positive pregnancy experience (2016)",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "pregnancy-04",
+      "category": "pregnancy",
+      "questionPs": "ولې باید زېږون په روغتون یا کلینیک کې وشي؟",
+      "questionEn": "Why should childbirth happen in a hospital or clinic?",
+      "answerPs": "د زېږون پر مهال ناڅاپي ستونزې لکه ډېره وینه بهېدل یا د ماشوم ساه نه اخیستل پېښېدای شي. په روغتون یا کلینیک کې روزل شوې قابله یا ډاکټر شته چې ژر مرسته کولی شي. له مخکې د ټرانسپورټ او پیسو پلان جوړ کړئ.",
+      "answerEn": "During birth, sudden problems can occur such as heavy bleeding or a baby who does not breathe. A hospital or clinic has a trained midwife or doctor who can help quickly. Plan transport and money in advance.",
+      "paraphrasesPs": [
+        "په کور کې زېږون خطر لري؟",
+        "زېږون چېرته وکړم؟",
+        "ولې روغتون ته د زېږون لپاره ولاړ شو؟",
+        "زېږون په کلینیک کې خوندي دی؟",
+        "په کور کې زېږون ولې خطرناکه دی؟",
+        "د زېږون لپاره روغتون ته مخکې ولاړ شو؟"
+      ],
+      "audioUrl": "/audio/faqs/pregnancy-04-answer-ps.mp3",
+      "dangerLevel": "info",
       "source": {
         "title": "WHO fact sheet: Maternal mortality",
         "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
@@ -425,6 +689,30 @@
       "reviewStatus": "draft"
     },
     {
+      "id": "pregnancy-07",
+      "category": "pregnancy",
+      "questionPs": "د امیندوارۍ پر مهال د ټیټانوس واکسین ولې اړین دی؟",
+      "questionEn": "Why is the tetanus vaccine needed during pregnancy?",
+      "answerPs": "د ټیټانوس واکسین مور او نوی زېږېدلی ماشوم له ټیټانوس (کزاز) څخه ساتي. دا واکسین د امیندوارۍ پر مهال په کلینیک کې ورکول کیږي. خپل د واکسین کارت وساتئ او روغتیايي کارکوونکي ته یې وښایاست.",
+      "answerEn": "The tetanus vaccine protects the mother and newborn from tetanus. It is given at the clinic during pregnancy. Keep your vaccination card and show it to the health worker.",
+      "paraphrasesPs": [
+        "امیندواره یم، کوم واکسین واخلم؟",
+        "د کزاز واکسین په حمل کې ولې ورکوي؟",
+        "د ټیټانوس پیچکاري په امیندوارۍ کې خوندي ده؟",
+        "د کزاز واکسین په امیندوارۍ کې څو ځله ورکول کیږي؟",
+        "امیندواره یم، د ټیټانوس نوبت مې پاتې دی، څه وکړم؟",
+        "د حمل پر وخت واکسین اخیستل سم دي؟"
+      ],
+      "audioUrl": "/audio/faqs/pregnancy-07-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Maternal mortality",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/maternal-mortality"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
       "id": "vaccines-01",
       "category": "vaccines",
       "questionPs": "واکسین څه کوي؟",
@@ -440,6 +728,102 @@
         "بې واکسینه ماشوم خطر کې دی؟"
       ],
       "audioUrl": "/audio/faqs/vaccines-01-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Immunization coverage",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "vaccines-02",
+      "category": "vaccines",
+      "questionPs": "ماشوم ته لومړی واکسین کله ورکول کیږي؟",
+      "questionEn": "When does a baby get the first vaccines?",
+      "answerPs": "د زېږون پر وخت یا لږ وروسته ماشوم ته د نري رنځ (BCG)، پولیو او هیپاټایټس B لومړني واکسینونه ورکول کیږي. بیا په ټاکلو میاشتو کې نور واکسینونه راځي. د واکسین مهالوېش او کارت له خپل کلینیک څخه واخلئ.",
+      "answerEn": "At birth or soon after, babies usually receive first vaccines such as BCG (tuberculosis), polio, and hepatitis B. Other vaccines follow at set months. Get the schedule and card from your clinic.",
+      "paraphrasesPs": [
+        "نوي زېږېدلي ماشوم ته کوم واکسین ورکوي؟",
+        "د ماشوم واکسین کله پیل کیږي؟",
+        "د واکسین مهالوېش چېرته پیدا کړم؟",
+        "د زیږون پر مهال کوم واکسین ورکول کیږي؟",
+        "د ماشوم واکسین کارت چېرته واخلم؟",
+        "لومړی واکسین نوبت کله دی؟"
+      ],
+      "audioUrl": "/audio/faqs/vaccines-02-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Immunization coverage",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "vaccines-03",
+      "category": "vaccines",
+      "questionPs": "که د ماشوم یو واکسین پاتې شو، څه وکړم؟",
+      "questionEn": "What should I do if my child missed a vaccine?",
+      "answerPs": "اندېښنه مه کوئ؛ اکثراً له سره پیل ته اړتیا نشته. هر څومره ژر چې کېدای شي ماشوم کلینیک ته یوسئ او د واکسین کارت ورسره واخلئ. روغتیايي کارکوونکی به پاتې واکسینونه ورکړي.",
+      "answerEn": "Do not worry — usually you do not need to start over. Take the child to the clinic as soon as you can and bring the vaccination card. The health worker will give the missed doses.",
+      "paraphrasesPs": [
+        "د ماشوم د واکسین نوبت تېر شو، څه وکړم؟",
+        "واکسین مو هېر شو، اوس یې ورکړو؟",
+        "ناوخته واکسین ګټه لري؟",
+        "پاتې واکسین وروسته هم ورکول کیږي؟",
+        "د واکسین مهالوېش مات شو، له سره پیل کړم؟",
+        "ناوخته واکسین کلینیک کې ورکوي؟"
+      ],
+      "audioUrl": "/audio/faqs/vaccines-03-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Immunization coverage",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "vaccines-04",
+      "category": "vaccines",
+      "questionPs": "له واکسین وروسته تبه یا درد عادي دی؟",
+      "questionEn": "Is fever or pain after a vaccine normal?",
+      "answerPs": "هو، لږه تبه، د پیچکارۍ پر ځای درد یا سوروالی، او لږه ژړا عادي دي او معمولاً په یوه یا دوو ورځو کې ښه کیږي. ماشوم ته شیدې او مایعات ورکړئ. که لوړه تبه، تشنج، د ساه ستونزه یا د مخ پړسوب پیدا شي، سمدستي کلینیک ته ولاړ شئ.",
+      "answerEn": "Yes — mild fever, pain or redness at the injection site, and a little crying are common and usually improve in one or two days. Give milk and fluids. For high fever, seizure, breathing trouble, or facial swelling, go to a clinic immediately.",
+      "paraphrasesPs": [
+        "له واکسین وروسته ماشوم تبه لري، څه وکړم؟",
+        "د واکسین اړخیزې اغېزې کومې دي؟",
+        "د پیچکارۍ ځای سور شوی، عادي دی؟",
+        "له واکسین وروسته لږه تبه عادي ده؟",
+        "د پیچکارۍ ځای پړسېدلی دی، څه وکړم؟",
+        "له واکسین وروسته ماشوم وژړېږي، عادي دی؟"
+      ],
+      "audioUrl": "/audio/faqs/vaccines-04-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Immunization coverage",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "vaccines-05",
+      "category": "vaccines",
+      "questionPs": "آیا واکسینونه خوندي دي؟",
+      "questionEn": "Are vaccines safe?",
+      "answerPs": "هو. واکسینونه له کارونې مخکې ډېر ازمویل کیږي او په ټوله نړۍ کې میلیونونو ماشومانو ته ورکول کیږي. جدي اړخیزې اغېزې ډېرې لږې دي. د ناروغۍ خطر د واکسین له خطر څخه ډېر لوی دی.",
+      "answerEn": "Yes. Vaccines are tested carefully before use and given to millions of children worldwide. Serious side effects are very rare. The risk from the disease is much greater than the risk from the vaccine.",
+      "paraphrasesPs": [
+        "واکسین ضرر لري؟",
+        "واکسین ماشوم ته زیان رسوي؟",
+        "واکسین باوري دي که نه؟",
+        "واکسین ماشوم ناروغ کوي که ساتي؟",
+        "دولتي واکسینونه باوري دي؟",
+        "واکسین اخیستل خطرناک دي؟"
+      ],
+      "audioUrl": "/audio/faqs/vaccines-05-answer-ps.mp3",
       "dangerLevel": "info",
       "source": {
         "title": "WHO fact sheet: Immunization coverage",
@@ -468,6 +852,30 @@
       "source": {
         "title": "WHO fact sheet: Measles",
         "url": "https://www.who.int/news-room/fact-sheets/detail/measles"
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
+    },
+    {
+      "id": "vaccines-07",
+      "category": "vaccines",
+      "questionPs": "پولیو قطرې ولې څو ځله ورکول کیږي؟",
+      "questionEn": "Why are polio drops given several times?",
+      "answerPs": "پولیو کولی شي د ماشوم لاسونه او پښې د تل لپاره شل کړي او درملنه نه لري؛ یوازې واکسین یې مخه نیسي. د بشپړ خوندیتوب لپاره ماشوم ته څو ځله پولیو قطرې اړینې دي، نو ماشوم هر کمپاین او د کلینیک هر نوبت ته ورسوئ.",
+      "answerEn": "Polio can permanently paralyse a child’s arms or legs and has no cure — only vaccine prevents it. Several rounds of polio drops are needed for full protection, so bring the child to every campaign and clinic appointment.",
+      "paraphrasesPs": [
+        "پولیو قطرې بیا بیا ولې ورکوي؟",
+        "ماشوم مې مخکې پولیو قطرې اخیستې، بیا یې ورکړم؟",
+        "پولیو څه ناروغي ده؟",
+        "پولیو قطرې ولې په کمپاین کې بیا ورکوي؟",
+        "پولیو واکسین څو ځله اړین دی؟",
+        "ماشوم پولیو قطرې نه وي اخیستې، څه وکړم؟"
+      ],
+      "audioUrl": "/audio/faqs/vaccines-07-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO fact sheet: Poliomyelitis",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/poliomyelitis"
       },
       "lastReviewed": "2026-10-07",
       "reviewStatus": "draft"
@@ -615,32 +1023,74 @@
       },
       "lastReviewed": "2026-10-07",
       "reviewStatus": "draft"
+    },
+    {
+      "id": "when-to-visit-clinic-07",
+      "category": "when-to-visit-clinic",
+      "questionPs": "کله په کور کې پاتې شم او کله کلینیک ته ولاړ شم؟",
+      "questionEn": "When can I rest at home and when should I go to a clinic?",
+      "answerPs": "لږ زکام، لږ ټوخی یا لږ سر درد اکثراً په استراحت او مایعاتو ښه کیږي. که نښې له څو ورځو وروسته ښې نه شي یا بدې شي، یا تاسو ماشوم، زوړ، امیندواره یا اوږدمهاله ناروغ یاست، کلینیک ته ولاړ شئ. که شک لرئ، له روغتیايي کارکوونکي وپوښتئ.",
+      "answerEn": "Mild cold, mild cough, or mild headache often improves with rest and fluids. If symptoms do not improve after a few days or get worse — or if you are a child, older adult, pregnant, or have a long-term illness — go to a clinic. If unsure, ask a health worker.",
+      "paraphrasesPs": [
+        "زکام لرم، ډاکټر ته ولاړ شم؟",
+        "کومې ناروغۍ په کور کې ښې کیږي؟",
+        "څه وخت کلینیک ته تګ اړین دی؟",
+        "لږ زکام په کور کې پاتې شم؟",
+        "کومې نښې کلینیک ته تګ غواړي؟",
+        "په کور کې پاملرنه کافي ده که ډاکټر وګورم؟"
+      ],
+      "audioUrl": "/audio/faqs/when-to-visit-clinic-07-answer-ps.mp3",
+      "dangerLevel": "info",
+      "source": {
+        "title": "WHO/ICRC Basic Emergency Care: approach to the acutely ill and injured",
+        "url": null
+      },
+      "lastReviewed": "2026-10-07",
+      "reviewStatus": "draft"
     }
   ],
   "audioUrls": [
     "/audio/faqs/child-care-01-answer-ps.mp3",
+    "/audio/faqs/child-care-02-answer-ps.mp3",
     "/audio/faqs/child-care-03-answer-ps.mp3",
     "/audio/faqs/child-care-04-answer-ps.mp3",
+    "/audio/faqs/child-care-05-answer-ps.mp3",
     "/audio/faqs/child-care-06-answer-ps.mp3",
+    "/audio/faqs/child-care-07-answer-ps.mp3",
     "/audio/faqs/diarrhea-ors-01-answer-ps.mp3",
+    "/audio/faqs/diarrhea-ors-02-answer-ps.mp3",
+    "/audio/faqs/diarrhea-ors-03-answer-ps.mp3",
     "/audio/faqs/diarrhea-ors-04-answer-ps.mp3",
     "/audio/faqs/diarrhea-ors-05-answer-ps.mp3",
+    "/audio/faqs/diarrhea-ors-06-answer-ps.mp3",
+    "/audio/faqs/diarrhea-ors-07-answer-ps.mp3",
     "/audio/faqs/fever-01-answer-ps.mp3",
+    "/audio/faqs/fever-02-answer-ps.mp3",
     "/audio/faqs/fever-03-answer-ps.mp3",
     "/audio/faqs/fever-04-answer-ps.mp3",
+    "/audio/faqs/fever-05-answer-ps.mp3",
     "/audio/faqs/fever-06-answer-ps.mp3",
     "/audio/faqs/fever-07-answer-ps.mp3",
     "/audio/faqs/pregnancy-01-answer-ps.mp3",
     "/audio/faqs/pregnancy-02-answer-ps.mp3",
+    "/audio/faqs/pregnancy-03-answer-ps.mp3",
+    "/audio/faqs/pregnancy-04-answer-ps.mp3",
     "/audio/faqs/pregnancy-05-answer-ps.mp3",
     "/audio/faqs/pregnancy-06-answer-ps.mp3",
+    "/audio/faqs/pregnancy-07-answer-ps.mp3",
     "/audio/faqs/vaccines-01-answer-ps.mp3",
+    "/audio/faqs/vaccines-02-answer-ps.mp3",
+    "/audio/faqs/vaccines-03-answer-ps.mp3",
+    "/audio/faqs/vaccines-04-answer-ps.mp3",
+    "/audio/faqs/vaccines-05-answer-ps.mp3",
     "/audio/faqs/vaccines-06-answer-ps.mp3",
+    "/audio/faqs/vaccines-07-answer-ps.mp3",
     "/audio/faqs/when-to-visit-clinic-01-answer-ps.mp3",
     "/audio/faqs/when-to-visit-clinic-02-answer-ps.mp3",
     "/audio/faqs/when-to-visit-clinic-03-answer-ps.mp3",
     "/audio/faqs/when-to-visit-clinic-04-answer-ps.mp3",
     "/audio/faqs/when-to-visit-clinic-05-answer-ps.mp3",
-    "/audio/faqs/when-to-visit-clinic-06-answer-ps.mp3"
+    "/audio/faqs/when-to-visit-clinic-06-answer-ps.mp3",
+    "/audio/faqs/when-to-visit-clinic-07-answer-ps.mp3"
   ]
 }

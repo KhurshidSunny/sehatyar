@@ -18,7 +18,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "cream",
+      "other"
+    ]
   },
   {
     "id": "med-clotrimazole",
@@ -39,7 +43,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "cream"
+    ]
   },
   {
     "id": "med-hydrocortisone-cream",
@@ -58,7 +65,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "cream"
+    ]
   },
   {
     "id": "med-tetracycline-eye-ointment",
@@ -77,7 +87,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "cream",
+      "drops"
+    ]
   },
   {
     "id": "med-hydrogen-peroxide",
@@ -98,6 +112,9 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "other"
+    ]
   }
 ]

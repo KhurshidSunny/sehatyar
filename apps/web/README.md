@@ -69,7 +69,7 @@ Unknown category or FAQ ids show a not-found empty state. When `audioUrl` is nul
 - `app/manifest.ts` serves the web app manifest (standalone display, theme `#0f766e`, 192/512 icons).
 - Icons live in `public/` (`icon-192.png`, `icon.png`, `apple-icon.png`).
 - `public/sw.js` registers via `components/ServiceWorkerRegister.tsx`.
-- Offline pack: `public/offline/top-faqs.json` (categories + top FAQs: emergency, clinic, and first item per category). Precached on install.
+- Offline pack: `public/offline/top-faqs.json` (all curated FAQ categories, questions, and audio URLs). Rebuild with `python scripts/build_offline_faq_pack.py` from the repo root. Precached on install.
 - Audio files go under `public/offline/audio/` and are listed in the pack’s `audioUrls` (none shipped yet). The client warms those URLs into the same cache when present.
 - FAQ helpers in `lib/api/faqs.ts` fall back to the offline pack when the API is unreachable. FAQs outside the pack still need the network.
 - `OfflineBanner` shows under the chrome bar when the device is offline.

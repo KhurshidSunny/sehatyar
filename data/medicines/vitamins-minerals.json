@@ -18,7 +18,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "drops"
+    ]
   },
   {
     "id": "med-ferrous-sulfate",
@@ -41,7 +46,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "drops"
+    ]
   },
   {
     "id": "med-folic-acid",
@@ -63,7 +73,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   },
   {
     "id": "med-vitamin-d",
@@ -84,7 +97,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "drops",
+      "tablet",
+      "capsule"
+    ]
   },
   {
     "id": "med-calcium",
@@ -105,6 +123,9 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   }
 ]

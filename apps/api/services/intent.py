@@ -11,10 +11,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 from threading import Lock
-
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
+from typing import Any
 
 from config import get_settings
 from services import faq_store
@@ -36,7 +33,7 @@ class IntentHit:
 
 @dataclass
 class IntentModel:
-    pipeline: Pipeline
+    pipeline: Any
     label_encoder: object | None
     model_name: str
     id_to_category: dict[str, str]
@@ -55,7 +52,12 @@ def _resolve_model_path() -> Path | None:
     return None
 
 
-def _build_classical_pipeline() -> Pipeline:
+def _build_classical_pipeline() -> Any:
+    # Import here so FAQ / medicine routes still start if sklearn is not installed.
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.pipeline import Pipeline
+
     return Pipeline(
         steps=[
             (

@@ -9,6 +9,7 @@ export type {
   FeedbackTargetType,
   Medicine,
   MedicineCategory,
+  MedicineForm,
   MedicineMatchConfidence,
   MedicineOcrCandidate,
   MedicineOcrResponse,

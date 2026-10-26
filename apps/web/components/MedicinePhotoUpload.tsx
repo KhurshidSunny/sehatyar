@@ -3,20 +3,25 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { LoadingState } from "@/components/AsyncState";
+import { MedicineFormIcon } from "@/components/CategoryIcons";
 import MedicineCameraCapture from "@/components/MedicineCameraCapture";
+import MedicineFormPicker, {
+  ANY_MEDICINE_FORM,
+} from "@/components/MedicineFormPicker";
 import MedicineNameSearch from "@/components/MedicineNameSearch";
 import MedicineResultView from "@/components/MedicineResultView";
 import { ApiError } from "@/lib/api/client";
-import { postMedicineOcr } from "@/lib/api/medicines";
+import { fetchMedicineForms, postMedicineOcr } from "@/lib/api/medicines";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
 import {
   MEDICINE_PHOTO_ACCEPT,
   validateMedicinePhoto,
   type MedicinePhotoError,
 } from "@/lib/medicines/photo";
-import type { MedicineOcrCandidate, MedicineSummary } from "@/lib/types";
+import type { MedicineForm, MedicineOcrCandidate, MedicineSummary } from "@/lib/types";
 
 type Phase =
+  | "form"
   | "pick"
   | "camera"
   | "preview"
@@ -31,7 +36,11 @@ function visibleCandidates(items: MedicineOcrCandidate[]): MedicineOcrCandidate[
   if (high.length > 0) {
     return high;
   }
-  return items.slice(0, 3);
+  const medium = items.filter((item) => item.confidence === "medium");
+  if (medium.length > 0) {
+    return medium.slice(0, 5);
+  }
+  return items.slice(0, 5);
 }
 
 export default function MedicinePhotoUpload() {
@@ -41,7 +50,9 @@ export default function MedicinePhotoUpload() {
   const cameraRef = useRef<HTMLInputElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
-  const [phase, setPhase] = useState<Phase>("pick");
+  const [phase, setPhase] = useState<Phase>("form");
+  const [selectedForm, setSelectedForm] = useState<string | null>(null);
+  const [formLabels, setFormLabels] = useState<MedicineForm[]>([]);
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [photoError, setPhotoError] = useState<MedicinePhotoError | null>(null);
@@ -62,6 +73,37 @@ export default function MedicinePhotoUpload() {
     };
   }, [previewUrl]);
 
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      try {
+        const forms = await fetchMedicineForms();
+        if (!cancelled) {
+          setFormLabels(forms);
+        }
+      } catch {
+        // Labels are optional; picker still works from its own fetch.
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const formFilter =
+    selectedForm && selectedForm !== ANY_MEDICINE_FORM ? selectedForm : null;
+
+  function formDisplayName(): string {
+    if (!selectedForm || selectedForm === ANY_MEDICINE_FORM) {
+      return t("anyMedicineForm");
+    }
+    const hit = formLabels.find((item) => item.id === selectedForm);
+    if (!hit) {
+      return selectedForm;
+    }
+    return locale === "ps" ? hit.namePs : hit.nameEn;
+  }
+
   function clearSelection() {
     if (previewUrl) {
       URL.revokeObjectURL(previewUrl);
@@ -74,9 +116,15 @@ export default function MedicinePhotoUpload() {
     setOcrText("");
     setOcrEmpty(false);
     setDetailReturn("results");
-    setPhase("pick");
+    setPhase(selectedForm ? "pick" : "form");
     if (cameraRef.current) cameraRef.current.value = "";
     if (fileRef.current) fileRef.current.value = "";
+  }
+
+  function resetToFormPicker() {
+    clearSelection();
+    setSelectedForm(null);
+    setPhase("form");
   }
 
   function applyFile(next: File | undefined) {
@@ -113,7 +161,7 @@ export default function MedicinePhotoUpload() {
     setPhase("loading");
     setPhotoError(null);
     try {
-      const result = await postMedicineOcr(file);
+      const result = await postMedicineOcr(file, { form: formFilter });
       const ranked = visibleCandidates(result.candidates);
       setCandidates(ranked);
       setSelected(null);
@@ -141,7 +189,40 @@ export default function MedicinePhotoUpload() {
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-center text-lg text-muted sm:text-xl">{t("medicineHint")}</p>
+      {phase === "form" ? (
+        <MedicineFormPicker
+          onSelect={(formId) => {
+            setSelectedForm(formId);
+            setPhase("pick");
+          }}
+        />
+      ) : (
+        <>
+          <div className="flex items-center justify-between gap-3 rounded-2xl border-2 border-border bg-surface px-4 py-3">
+            <div className="flex min-w-0 items-center gap-3">
+              <MedicineFormIcon
+                formId={selectedForm ?? "any"}
+                className="h-10 w-10 shrink-0"
+              />
+              <div className="min-w-0">
+                <p className="text-sm text-muted">{t("selectedMedicineForm")}</p>
+                <p className="truncate text-lg font-semibold text-foreground">
+                  {formDisplayName()}
+                </p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={resetToFormPicker}
+              className="shrink-0 rounded-xl border-2 border-border px-3 py-2 text-sm font-semibold text-muted transition hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            >
+              {t("changeMedicineForm")}
+            </button>
+          </div>
+
+          <p className="text-center text-lg text-muted sm:text-xl">{t("medicineHint")}</p>
+        </>
+      )}
 
       <input
         id={cameraInputId}
@@ -195,6 +276,7 @@ export default function MedicinePhotoUpload() {
       ) : null}
 
       {previewUrl &&
+      phase !== "form" &&
       phase !== "pick" &&
       phase !== "camera" &&
       phase !== "detail" &&
@@ -221,6 +303,7 @@ export default function MedicinePhotoUpload() {
 
       {phase === "type" ? (
         <MedicineNameSearch
+          form={formFilter}
           showCancel
           onCancel={() => {
             setSelected(null);
@@ -290,7 +373,7 @@ export default function MedicinePhotoUpload() {
               <p className="rounded-2xl border-2 border-border bg-surface px-5 py-5 text-center text-lg text-muted">
                 {t("ocrNoMatch")}
               </p>
-              {ocrText.length >= 8 && /[A-Za-z]{5,}/.test(ocrText) ? (
+              {ocrText.length >= 4 && /[A-Za-z]{3,}/.test(ocrText) ? (
                 <>
                   <p className="text-center text-base font-semibold text-foreground">
                     {t("ocrTextLabel")}
@@ -301,6 +384,7 @@ export default function MedicinePhotoUpload() {
                 </>
               ) : null}
               <MedicineNameSearch
+                form={formFilter}
                 onSelect={(medicine) => {
                   setDetailReturn("results");
                   selectTypedMedicine(medicine);

@@ -19,7 +19,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "capsule",
+      "tablet"
+    ]
   },
   {
     "id": "med-famotidine",
@@ -40,7 +44,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   },
   {
     "id": "med-antacid",
@@ -64,7 +71,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "other"
+    ]
   },
   {
     "id": "med-loperamide",
@@ -85,7 +97,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "capsule"
+    ]
   },
   {
     "id": "med-domperidone",
@@ -106,6 +122,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup"
+    ]
   }
 ]

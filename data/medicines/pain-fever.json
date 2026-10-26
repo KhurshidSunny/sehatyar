@@ -21,7 +21,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "drops"
+    ]
   },
   {
     "id": "med-ibuprofen",
@@ -43,7 +48,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "capsule"
+    ]
   },
   {
     "id": "med-aspirin",
@@ -65,7 +75,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   },
   {
     "id": "med-diclofenac",
@@ -86,7 +99,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "cream",
+      "injection"
+    ]
   },
   {
     "id": "med-mefenamic-acid",
@@ -107,7 +125,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "capsule"
+    ]
   },
   {
     "id": "med-naproxen",
@@ -128,6 +150,9 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   }
 ]

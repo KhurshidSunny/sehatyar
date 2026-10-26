@@ -18,7 +18,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "capsule",
+      "tablet",
+      "syrup"
+    ]
   },
   {
     "id": "med-azithromycin",
@@ -39,7 +44,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "capsule",
+      "syrup"
+    ]
   },
   {
     "id": "med-metronidazole",
@@ -60,7 +70,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "injection"
+    ]
   },
   {
     "id": "med-ciprofloxacin",
@@ -81,7 +96,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "drops",
+      "injection"
+    ]
   },
   {
     "id": "med-cotrimoxazole",
@@ -104,7 +124,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup"
+    ]
   },
   {
     "id": "med-doxycycline",
@@ -123,6 +147,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "capsule",
+      "tablet"
+    ]
   }
 ]

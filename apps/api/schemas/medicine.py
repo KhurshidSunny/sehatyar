@@ -14,6 +14,17 @@ class MedicineCategory(BaseModel):
     order: int = Field(ge=1)
 
 
+class MedicineForm(BaseModel):
+    """Dosage form for UI filters (tablet, syrup, …)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    id: str = Field(min_length=1)
+    namePs: str = Field(min_length=1)
+    nameEn: str = Field(min_length=1)
+    order: int = Field(ge=1)
+
+
 class Medicine(ReviewedContentBase):
     """Full medicine document as stored in seed JSON / MongoDB."""
 
@@ -24,6 +35,7 @@ class Medicine(ReviewedContentBase):
     usesEn: str = Field(min_length=1)
     warningsPs: str = Field(min_length=1)
     warningsEn: str = Field(min_length=1)
+    forms: list[str] = Field(default_factory=list)
 
     @field_validator("names")
     @classmethod
@@ -32,6 +44,20 @@ class Medicine(ReviewedContentBase):
         if not cleaned:
             raise ValueError("names must include at least one non-empty spelling")
         return cleaned
+
+    @field_validator("forms")
+    @classmethod
+    def _clean_forms(cls, values: list[str]) -> list[str]:
+        cleaned = [item.strip().casefold() for item in values if item and item.strip()]
+        # Keep order, drop duplicates.
+        seen: set[str] = set()
+        out: list[str] = []
+        for item in cleaned:
+            if item in seen:
+                continue
+            seen.add(item)
+            out.append(item)
+        return out
 
 
 class MedicineSummary(BaseModel):
@@ -47,6 +73,7 @@ class MedicineSummary(BaseModel):
     warningsPs: str
     warningsEn: str
     audioUrl: str | None = None
+    forms: list[str] = Field(default_factory=list)
 
 
 class MedicineOcrCandidate(MedicineSummary):

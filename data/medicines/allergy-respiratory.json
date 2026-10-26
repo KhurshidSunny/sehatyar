@@ -18,7 +18,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "drops"
+    ]
   },
   {
     "id": "med-loratadine",
@@ -39,7 +44,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup"
+    ]
   },
   {
     "id": "med-chlorpheniramine",
@@ -60,7 +69,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup"
+    ]
   },
   {
     "id": "med-salbutamol",
@@ -82,7 +95,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "inhaler",
+      "syrup",
+      "tablet"
+    ]
   },
   {
     "id": "med-dextromethorphan",
@@ -103,6 +121,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "syrup",
+      "tablet"
+    ]
   }
 ]

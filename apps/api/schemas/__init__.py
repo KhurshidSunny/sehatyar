@@ -7,6 +7,7 @@ from schemas.intent import IntentCandidate, IntentPredictRequest, IntentPredictR
 from schemas.medicine import (
     Medicine,
     MedicineCategory,
+    MedicineForm,
     MedicineOcrCandidate,
     MedicineOcrResponse,
     MedicineSummary,
@@ -21,6 +22,7 @@ __all__ = [
     "FaqSummary",
     "Medicine",
     "MedicineCategory",
+    "MedicineForm",
     "MedicineSummary",
     "MedicineOcrCandidate",
     "MedicineOcrResponse",

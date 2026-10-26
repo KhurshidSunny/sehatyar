@@ -1,20 +1,24 @@
-"""Load medicine catalog from curated JSON and search by name."""
+"""Load medicine catalog from curated JSON and search by name / OCR text."""
 
 from __future__ import annotations
 
 import json
+import re
 from functools import lru_cache
 from pathlib import Path
 
 from rapidfuzz import fuzz
 
 from config import get_settings
-from schemas.medicine import Medicine, MedicineCategory, MedicineSummary
+from schemas.medicine import Medicine, MedicineCategory, MedicineForm, MedicineSummary
 
 _API_ROOT = Path(__file__).resolve().parents[1]
 
 # Drop weak matches so typos still hit but unrelated tokens do not.
-_DEFAULT_MIN_SCORE = 75.0
+_DEFAULT_MIN_SCORE = 70.0
+_OCR_MIN_SCORE = 82.0
+
+_SKIP_MEDICINE_FILES = frozenset({"categories.json", "forms.json"})
 
 
 def _resolve_medicine_dir() -> Path:
@@ -31,7 +35,11 @@ def _load_json(path: Path) -> object:
 
 
 @lru_cache
-def _catalog() -> tuple[tuple[MedicineCategory, ...], tuple[Medicine, ...]]:
+def _catalog() -> tuple[
+    tuple[MedicineCategory, ...],
+    tuple[MedicineForm, ...],
+    tuple[Medicine, ...],
+]:
     medicine_dir = _resolve_medicine_dir()
     categories_path = medicine_dir / "categories.json"
     if not categories_path.is_file():
@@ -50,9 +58,23 @@ def _catalog() -> tuple[tuple[MedicineCategory, ...], tuple[Medicine, ...]]:
     )
     known_ids = {c.id for c in categories}
 
+    forms_path = medicine_dir / "forms.json"
+    forms: tuple[MedicineForm, ...] = ()
+    if forms_path.is_file():
+        forms = tuple(
+            sorted(
+                (
+                    MedicineForm.model_validate(item)
+                    for item in _load_json(forms_path)
+                ),
+                key=lambda f: f.order,
+            )
+        )
+    known_forms = {f.id for f in forms}
+
     medicines: list[Medicine] = []
     for path in sorted(medicine_dir.glob("*.json")):
-        if path.name == "categories.json":
+        if path.name in _SKIP_MEDICINE_FILES:
             continue
         payload = _load_json(path)
         if not isinstance(payload, list):
@@ -64,9 +86,16 @@ def _catalog() -> tuple[tuple[MedicineCategory, ...], tuple[Medicine, ...]]:
                     f"Medicine {medicine.id} references unknown category "
                     f"{medicine.category!r}"
                 )
+            if known_forms:
+                for form_id in medicine.forms:
+                    if form_id not in known_forms:
+                        raise ValueError(
+                            f"Medicine {medicine.id} references unknown form "
+                            f"{form_id!r}"
+                        )
             medicines.append(medicine)
 
-    return categories, tuple(medicines)
+    return categories, forms, tuple(medicines)
 
 
 def clear_cache() -> None:
@@ -74,17 +103,22 @@ def clear_cache() -> None:
 
 
 def list_categories() -> list[MedicineCategory]:
-    categories, _ = _catalog()
+    categories, _, _ = _catalog()
     return list(categories)
 
 
+def list_forms() -> list[MedicineForm]:
+    _, forms, _ = _catalog()
+    return list(forms)
+
+
 def list_medicines() -> list[Medicine]:
-    _, medicines = _catalog()
+    _, _, medicines = _catalog()
     return list(medicines)
 
 
 def get_medicine(medicine_id: str) -> Medicine:
-    _, medicines = _catalog()
+    _, _, medicines = _catalog()
     for medicine in medicines:
         if medicine.id == medicine_id:
             return medicine
@@ -101,6 +135,7 @@ def to_summary(medicine: Medicine) -> MedicineSummary:
         warningsPs=medicine.warningsPs,
         warningsEn=medicine.warningsEn,
         audioUrl=medicine.audioUrl,
+        forms=list(medicine.forms),
     )
 
 
@@ -111,7 +146,6 @@ def _best_name_score(query: str, names: list[str]) -> float:
     best = 0.0
     for name in names:
         name_cf = name.casefold()
-        # WRatio for typos/brand spellings; partial/token for OCR noise.
         score = max(
             float(fuzz.WRatio(query_norm, name_cf)),
             float(fuzz.partial_ratio(query_norm, name_cf)),
@@ -124,16 +158,30 @@ def _best_name_score(query: str, names: list[str]) -> float:
     return best
 
 
+def _filter_by_form(
+    medicines: tuple[Medicine, ...] | list[Medicine],
+    form: str | None,
+) -> list[Medicine]:
+    if not form:
+        return list(medicines)
+    form_cf = form.strip().casefold()
+    if not form_cf:
+        return list(medicines)
+    return [m for m in medicines if form_cf in {f.casefold() for f in m.forms}]
+
+
 def search_by_name(
     query: str,
     *,
     limit: int = 10,
     min_score: float = _DEFAULT_MIN_SCORE,
+    form: str | None = None,
 ) -> list[MedicineSummary]:
     """Return medicines whose names[] best fuzzy-match the query."""
-    _, medicines = _catalog()
+    _, _, medicines = _catalog()
+    pool = _filter_by_form(medicines, form)
     scored: list[tuple[float, Medicine]] = []
-    for medicine in medicines:
+    for medicine in pool:
         score = _best_name_score(query, medicine.names)
         if score >= min_score:
             scored.append((score, medicine))
@@ -145,12 +193,12 @@ def search_by_name(
 def confidence_for_score(score: float) -> str:
     if score >= 85:
         return "high"
-    if score >= 70:
+    if score >= 72:
         return "medium"
     return "low"
 
 
-# Pack boilerplate — never treat these as a medicine identity match.
+# Pack boilerplate — never treat these alone as a medicine identity match.
 _GENERIC_OCR_TOKENS = frozenset(
     {
         "tablet",
@@ -185,17 +233,35 @@ _GENERIC_OCR_TOKENS = frozenset(
         "free",
         "pack",
         "box",
+        "mg",
+        "ml",
+        "gmbh",
+        "limited",
+        "ltd",
+        "pharma",
+        "pharmaceutical",
+        "pharmaceuticals",
+        "company",
+        "manufacture",
+        "manufactured",
+        "keep",
+        "reach",
+        "children",
+        "store",
+        "cool",
+        "dry",
+        "place",
     }
 )
 
 
 def _ocr_tokens(ocr_text: str) -> list[str]:
-    """Distinctive Latin tokens (skip generic pack words)."""
+    """Latin word tokens from OCR (keep short brand-like words)."""
     cleaned = " ".join(ocr_text.split())
     tokens: list[str] = []
-    for token in cleaned.replace("/", " ").replace("-", " ").split():
+    for token in re.split(r"[^A-Za-z0-9]+", cleaned):
         letters = "".join(ch for ch in token if ch.isalpha()).casefold()
-        if len(letters) < 5 or letters in _GENERIC_OCR_TOKENS:
+        if len(letters) < 3 or letters in _GENERIC_OCR_TOKENS:
             continue
         tokens.append(letters)
     seen: set[str] = set()
@@ -208,25 +274,55 @@ def _ocr_tokens(ocr_text: str) -> list[str]:
     return unique
 
 
+def _ocr_phrases(ocr_text: str) -> list[str]:
+    """Single tokens plus adjacent bigrams for multi-word brand names."""
+    tokens = _ocr_tokens(ocr_text)
+    phrases = list(tokens)
+    for i in range(len(tokens) - 1):
+        phrases.append(f"{tokens[i]} {tokens[i + 1]}")
+    # Also try each non-empty OCR line as a phrase.
+    for line in ocr_text.splitlines():
+        cleaned = " ".join(line.split()).casefold()
+        letters = "".join(ch for ch in cleaned if ch.isalpha())
+        if len(letters) >= 4:
+            phrases.append(cleaned)
+    # Full OCR blob once.
+    full = " ".join(ocr_text.split()).casefold()
+    if len(full) >= 4:
+        phrases.append(full)
+    # Dedupe preserving order.
+    seen: set[str] = set()
+    out: list[str] = []
+    for phrase in phrases:
+        if phrase in seen:
+            continue
+        seen.add(phrase)
+        out.append(phrase)
+    return out
+
+
 def _distinctive_name_words(name_cf: str) -> list[str]:
-    words = [w for w in name_cf.replace("-", " ").split() if len(w) >= 5]
-    return [w for w in words if w not in _GENERIC_OCR_TOKENS]
+    words = [
+        "".join(ch for ch in w if ch.isalpha())
+        for w in name_cf.replace("-", " ").split()
+    ]
+    return [w for w in words if len(w) >= 3 and w not in _GENERIC_OCR_TOKENS]
 
 
 def _catalog_name_anchors() -> frozenset[str]:
-    """All distinctive Latin catalog name fragments (len >= 5)."""
-    _, medicines = _catalog()
+    """All distinctive Latin catalog name fragments."""
+    _, _, medicines = _catalog()
     anchors: set[str] = set()
     for medicine in medicines:
         for name in medicine.names:
             name_cf = name.casefold().strip()
             ascii_letters = sum(1 for ch in name_cf if ch.isascii() and ch.isalpha())
-            if ascii_letters < 5:
+            if ascii_letters < 3:
                 continue
             for word in _distinctive_name_words(name_cf):
                 anchors.add(word)
             compact = "".join(ch for ch in name_cf if ch.isalpha())
-            if len(compact) >= 5:
+            if len(compact) >= 4:
                 anchors.add(compact)
     return frozenset(anchors)
 
@@ -234,7 +330,7 @@ def _catalog_name_anchors() -> frozenset[str]:
 def ocr_has_medicine_anchor(ocr_text: str) -> bool:
     """
     True when OCR contains a near-exact catalog name fragment.
-    Blocks face / wall photos that invent random high-confidence words.
+    Used as a soft signal; matching no longer hard-requires this alone.
     """
     tokens = _ocr_tokens(ocr_text)
     if not tokens:
@@ -244,28 +340,32 @@ def ocr_has_medicine_anchor(ocr_text: str) -> bool:
         if token in anchors:
             return True
         for anchor in anchors:
-            if abs(len(token) - len(anchor)) > 1:
+            if abs(len(token) - len(anchor)) > 2:
                 continue
-            if float(fuzz.ratio(token, anchor)) >= 92:
+            if float(fuzz.ratio(token, anchor)) >= 85:
                 return True
     return False
 
 
-def _score_name_against_ocr(name: str, full: str, tokens: list[str]) -> float:
-    """
-    Strict score: only reward grounded evidence in the OCR text.
-    Short aliases (ASA, ORS, H2O2) are ignored — they false-hit on noise.
-    """
+def _score_name_against_ocr(name: str, full: str, phrases: list[str]) -> float:
+    """Score one catalog name against OCR phrases / full text."""
     name_cf = name.casefold().strip()
     ascii_letters = sum(1 for ch in name_cf if ch.isascii() and ch.isalpha())
-    # Need a real brand / INN fragment, not a 3–4 letter abbreviation.
-    if ascii_letters < 5:
+    if ascii_letters < 3:
         return 0.0
 
     if name_cf in full:
+        return 98.0
+
+    compact_name = "".join(ch for ch in name_cf if ch.isalpha())
+    compact_full = "".join(ch for ch in full if ch.isalpha())
+    if len(compact_name) >= 4 and compact_name in compact_full:
         return 96.0
 
-    distinctive = [w for w in _distinctive_name_words(name_cf) if len(w) >= 5]
+    distinctive = [w for w in _distinctive_name_words(name_cf) if len(w) >= 4]
+    if not distinctive and ascii_letters >= 3:
+        # Short names like ORS: keep compact form only.
+        distinctive = [compact_name] if len(compact_name) >= 3 else []
     if not distinctive:
         return 0.0
 
@@ -273,22 +373,39 @@ def _score_name_against_ocr(name: str, full: str, tokens: list[str]) -> float:
         return 94.0
 
     best = 0.0
-    for token in tokens:
-        if len(token) < 5:
+    # Only score single OCR tokens / short bigrams — not the whole noisy blob.
+    for phrase in phrases:
+        phrase_letters = "".join(ch for ch in phrase if ch.isalpha())
+        word_count = len(phrase.split())
+        if word_count > 2:
+            # Multi-word lines: only exact / substring hits (already handled above).
+            if name_cf in phrase or phrase in name_cf:
+                best = max(best, 93.0)
             continue
+        if len(phrase_letters) < 4 and len(compact_name) >= 5:
+            continue
+        if len(phrase_letters) < 3:
+            continue
+
+        if phrase == name_cf or phrase_letters == compact_name:
+            return 100.0
+        if name_cf in phrase or phrase in name_cf:
+            best = max(best, 93.0)
+            continue
+
         for target in distinctive:
-            if token == target:
+            if phrase_letters == target:
                 return 100.0
-            # Tiny OCR typos only (same length ±1, very high similarity).
-            if abs(len(token) - len(target)) > 1:
+            # Near-exact token match only (OCR typos).
+            if abs(len(phrase_letters) - len(target)) > 2:
                 continue
-            ratio = float(fuzz.ratio(token, target))
-            if ratio >= 92:
+            ratio = float(fuzz.ratio(phrase_letters, target))
+            if ratio >= 88:
                 best = max(best, ratio)
             elif (
                 len(target) >= 6
-                and token[:5] == target[:5]
-                and ratio >= 88
+                and phrase_letters[:4] == target[:4]
+                and ratio >= 82
             ):
                 best = max(best, ratio)
     return best
@@ -298,21 +415,25 @@ def match_ocr_text(
     ocr_text: str,
     *,
     limit: int = 5,
-    min_score: float = 92.0,
+    min_score: float = _OCR_MIN_SCORE,
+    form: str | None = None,
 ) -> list[tuple[float, Medicine]]:
-    """Rank catalog medicines only when OCR clearly supports a name."""
+    """
+    Rank catalog medicines by scanning every OCR token / phrase against names.
+    Optional form narrows the catalog (tablet, syrup, …).
+    """
     full = " ".join(ocr_text.split()).casefold()
-    tokens = _ocr_tokens(ocr_text)
-    # Need at least one distinctive token (not just pack boilerplate).
-    if not full or not tokens:
+    phrases = _ocr_phrases(ocr_text)
+    if not full or not phrases:
         return []
 
-    _, medicines = _catalog()
+    _, _, medicines = _catalog()
+    pool = _filter_by_form(medicines, form)
     scored: list[tuple[float, Medicine]] = []
-    for medicine in medicines:
+    for medicine in pool:
         best = 0.0
         for name in medicine.names:
-            best = max(best, _score_name_against_ocr(name, full, tokens))
+            best = max(best, _score_name_against_ocr(name, full, phrases))
         if best >= min_score:
             scored.append((best, medicine))
 

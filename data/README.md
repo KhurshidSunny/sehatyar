@@ -30,13 +30,14 @@ Seed data for SehatYar. All health and medicine text must stay non-prescribing a
 
 ## Medicine files
 
-`medicines/categories.json` lists medicine groups in display order. Each other file in `medicines/` holds catalog entries for one group, named after the category `id`.
+`medicines/categories.json` lists medicine groups in display order. `medicines/forms.json` lists dosage forms (tablet, syrup, drops, …) for the medicine picker. Each other file in `medicines/` holds catalog entries for one group, named after the category `id`.
 
 | Field | Meaning |
 |---|---|
 | `id` | Stable id, `med-{slug}` |
 | `category` | Category `id` from `medicines/categories.json` |
 | `names` | English and local name spellings used for search and OCR matching |
+| `forms` | Dosage forms this medicine commonly comes in (`tablet`, `syrup`, `drops`, `injection`, …) — used to narrow search/OCR |
 | `usesPs` | Short Pashto description of common uses (non-prescribing) |
 | `usesEn` | Short English description of common uses (non-prescribing) |
 | `warningsPs` | Short Pashto cautions; points users to clinic care when needed |

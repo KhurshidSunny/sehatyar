@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 
+import {
+  HealthQuestionsIcon,
+  MedicinePackIcon,
+} from "@/components/CategoryIcons";
 import Disclaimer from "@/components/Disclaimer";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
 
@@ -24,16 +28,18 @@ export default function Home() {
 
         <Link
           href="/faqs"
-          className="flex min-h-20 w-full items-center justify-center rounded-2xl bg-brand px-6 py-5 text-center text-xl font-semibold text-white shadow-sm transition hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
+          className="flex min-h-20 w-full items-center justify-center gap-4 rounded-2xl bg-brand px-6 py-5 text-center text-xl font-semibold text-white shadow-sm transition hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
         >
-          {t("healthQuestions")}
+          <HealthQuestionsIcon className="h-12 w-12 shrink-0" />
+          <span>{t("healthQuestions")}</span>
         </Link>
 
         <Link
           href="/medicines"
-          className="flex min-h-20 w-full items-center justify-center rounded-2xl border-2 border-brand bg-surface px-6 py-5 text-center text-xl font-semibold text-brand shadow-sm transition hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
+          className="flex min-h-20 w-full items-center justify-center gap-4 rounded-2xl border-2 border-brand bg-surface px-6 py-5 text-center text-xl font-semibold text-brand shadow-sm transition hover:bg-brand/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:text-2xl"
         >
-          {t("whatIsThisMedicine")}
+          <MedicinePackIcon className="h-12 w-12 shrink-0" />
+          <span>{t("whatIsThisMedicine")}</span>
         </Link>
       </main>
 

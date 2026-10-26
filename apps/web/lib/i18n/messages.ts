@@ -20,11 +20,16 @@ export type MessageKey =
   | "clinicBadge"
   | "emergencyBadge"
   | "audioUnavailable"
+  | "audioComingSoon"
   | "playAudio"
   | "pauseAudio"
   | "stopAudio"
   | "audioProgress"
   | "medicineHint"
+  | "chooseMedicineForm"
+  | "anyMedicineForm"
+  | "changeMedicineForm"
+  | "selectedMedicineForm"
   | "language"
   | "languagePs"
   | "languageEn"
@@ -84,11 +89,16 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     clinicBadge: "کلینیک ته لاړ شئ",
     emergencyBadge: "بیړنی حالت",
     audioUnavailable: "غږ لا نشته",
+    audioComingSoon: "د انګلیسي غږ ژر راځي",
     playAudio: "غږ واورئ",
     pauseAudio: "وځنډوئ",
     stopAudio: "ودروئ",
     audioProgress: "د غږ پرمختګ",
     medicineHint: "د درملو پیک عکس واخلئ یا نوم ولیکئ",
+    chooseMedicineForm: "دا درمل څه ډول دی؟ لومړی یوه بڼه وټاکئ",
+    anyMedicineForm: "نه پوهېږم / ټول ډولونه",
+    changeMedicineForm: "بله بڼه وټاکئ",
+    selectedMedicineForm: "ټاکل شوې بڼه",
     language: "ژبه",
     languagePs: "پښتو",
     languageEn: "English",
@@ -148,11 +158,16 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     clinicBadge: "Go to a clinic",
     emergencyBadge: "Emergency",
     audioUnavailable: "Audio not available yet",
+    audioComingSoon: "English audio coming soon",
     playAudio: "Play audio",
     pauseAudio: "Pause",
     stopAudio: "Stop",
     audioProgress: "Audio progress",
     medicineHint: "Photograph a medicine pack or type the name",
+    chooseMedicineForm: "What kind of medicine is it? Choose a form first",
+    anyMedicineForm: "Not sure / all forms",
+    changeMedicineForm: "Choose another form",
+    selectedMedicineForm: "Selected form",
     language: "Language",
     languagePs: "پښتو",
     languageEn: "English",

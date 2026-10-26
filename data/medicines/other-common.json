@@ -18,7 +18,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup"
+    ]
   },
   {
     "id": "med-mebendazole",
@@ -39,7 +43,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup"
+    ]
   },
   {
     "id": "med-metformin",
@@ -60,7 +68,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   },
   {
     "id": "med-amlodipine",
@@ -81,7 +92,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   },
   {
     "id": "med-atorvastatin",
@@ -102,7 +116,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   },
   {
     "id": "med-oral-contraceptive",
@@ -123,7 +140,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet"
+    ]
   },
   {
     "id": "med-insulin",
@@ -142,6 +162,9 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "injection"
+    ]
   }
 ]

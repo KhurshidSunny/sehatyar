@@ -47,6 +47,13 @@ export interface MedicineCategory {
   order: number;
 }
 
+export interface MedicineForm {
+  id: string;
+  namePs: string;
+  nameEn: string;
+  order: number;
+}
+
 export interface Medicine {
   id: string;
   category: string;
@@ -56,6 +63,7 @@ export interface Medicine {
   warningsPs: string;
   warningsEn: string;
   audioUrl: string | null;
+  forms?: string[];
   source: ContentSource;
   lastReviewed: string; // YYYY-MM-DD
   reviewStatus: ReviewStatus;
@@ -70,6 +78,7 @@ export interface MedicineSummary {
   warningsPs: string;
   warningsEn: string;
   audioUrl: string | null;
+  forms?: string[];
 }
 
 export type MedicineMatchConfidence = "high" | "medium" | "low";

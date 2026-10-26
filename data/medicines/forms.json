@@ -1,0 +1,11 @@
+[
+  { "id": "tablet", "namePs": "ګولۍ / ټابلیټ", "nameEn": "Tablet", "order": 1 },
+  { "id": "capsule", "namePs": "کپسول", "nameEn": "Capsule", "order": 2 },
+  { "id": "syrup", "namePs": "شربت", "nameEn": "Syrup", "order": 3 },
+  { "id": "drops", "namePs": "څاڅکي", "nameEn": "Drops", "order": 4 },
+  { "id": "injection", "namePs": "انجکشن", "nameEn": "Injection", "order": 5 },
+  { "id": "cream", "namePs": "کریم / مرهم", "nameEn": "Cream or ointment", "order": 6 },
+  { "id": "powder", "namePs": "پودر", "nameEn": "Powder", "order": 7 },
+  { "id": "inhaler", "namePs": "استنشاق", "nameEn": "Inhaler", "order": 8 },
+  { "id": "other", "namePs": "نور", "nameEn": "Other", "order": 9 }
+]

@@ -20,15 +20,20 @@ function formatTime(seconds: number): string {
 
 /**
  * FAQ / medicine answer audio: icon play/pause + scrubbable progress bar.
+ * Pashto recordings play only when locale is Pashto; English shows coming soon.
  * When audioUrl is null, shows a clear "no audio yet" state.
  */
 export default function FaqAudioButton({ audioUrl }: FaqAudioButtonProps) {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+
+  // Current recordings are Pashto-only; hide the player in English.
+  const playableUrl = locale === "ps" ? audioUrl : null;
+  const englishComingSoon = locale === "en";
 
   useEffect(() => {
     setPlaying(false);
@@ -36,13 +41,13 @@ export default function FaqAudioButton({ audioUrl }: FaqAudioButtonProps) {
     setCurrentTime(0);
     setDuration(0);
 
-    if (!audioUrl) {
+    if (!playableUrl) {
       audioRef.current?.pause();
       audioRef.current = null;
       return;
     }
 
-    const audio = new Audio(audioUrl);
+    const audio = new Audio(playableUrl);
     audio.preload = "metadata";
     audioRef.current = audio;
 
@@ -77,9 +82,22 @@ export default function FaqAudioButton({ audioUrl }: FaqAudioButtonProps) {
       audio.removeEventListener("error", onError);
       audioRef.current = null;
     };
-  }, [audioUrl]);
+  }, [playableUrl]);
 
-  if (!audioUrl || failed) {
+  if (englishComingSoon) {
+    return (
+      <div
+        className="flex min-h-16 w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface px-5 py-4 text-center"
+        role="status"
+      >
+        <span className="text-lg font-semibold text-muted sm:text-xl">
+          {t("audioComingSoon")}
+        </span>
+      </div>
+    );
+  }
+
+  if (!playableUrl || failed) {
     return (
       <div
         className="flex min-h-16 w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-surface px-5 py-4 text-center"

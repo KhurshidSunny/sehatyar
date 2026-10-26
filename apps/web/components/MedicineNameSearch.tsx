@@ -14,10 +14,12 @@ export default function MedicineNameSearch({
   onSelect,
   onCancel,
   showCancel = false,
+  form = null,
 }: {
   onSelect: (medicine: MedicineSummary) => void;
   onCancel?: () => void;
   showCancel?: boolean;
+  form?: string | null;
 }) {
   const { t } = useLocale();
   const inputId = useId();
@@ -38,7 +40,7 @@ export default function MedicineNameSearch({
     setLoading(true);
     setFailed(false);
     try {
-      const hits = await searchMedicines(q);
+      const hits = await searchMedicines(q, 10, { form });
       setResults(hits);
       setSearched(true);
     } catch (error) {

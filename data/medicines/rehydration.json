@@ -20,7 +20,11 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "powder",
+      "other"
+    ]
   },
   {
     "id": "med-zinc-sulfate",
@@ -41,7 +45,12 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "tablet",
+      "syrup",
+      "drops"
+    ]
   },
   {
     "id": "med-electrolyte-solution",
@@ -62,6 +71,10 @@
       "url": null
     },
     "lastReviewed": "2026-10-09",
-    "reviewStatus": "draft"
+    "reviewStatus": "draft",
+    "forms": [
+      "syrup",
+      "other"
+    ]
   }
 ]
