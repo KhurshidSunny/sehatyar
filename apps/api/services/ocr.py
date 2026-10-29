@@ -106,16 +106,26 @@ def _opencv_variants(gray: Image.Image) -> list[Image.Image]:
 
 
 def _preprocess_variants(image: Image.Image) -> list[Image.Image]:
-    """Build preprocessed views; pack photos vary a lot in lighting."""
+    """Build preprocessed views; pack photos vary a lot in lighting.
+
+    Keep the first passes cheap (local + free-tier hosts). Extra OpenCV views
+    are only used when the fast path cannot read enough letters.
+    """
     rgb = image.convert("RGB")
     gray = _resize_gray(ImageOps.autocontrast(ImageOps.grayscale(rgb)))
     sharp = gray.filter(ImageFilter.UnsharpMask(radius=1.5, percent=160, threshold=3))
     contrast = ImageEnhance.Contrast(sharp).enhance(1.75)
     bright = ImageEnhance.Brightness(contrast).enhance(1.05)
     binary = contrast.point(lambda p: 255 if p > 150 else 0)
-    variants = [bright, contrast, binary, sharp]
-    variants.extend(_opencv_variants(gray))
-    return variants
+    # Fast path first; OpenCV extras are appended by the caller when needed.
+    return [bright, contrast, binary, sharp]
+
+
+def _extra_variants(image: Image.Image) -> list[Image.Image]:
+    """Heavier OpenCV views for hard phone photos (only if fast path is weak)."""
+    rgb = image.convert("RGB")
+    gray = _resize_gray(ImageOps.autocontrast(ImageOps.grayscale(rgb)))
+    return _opencv_variants(gray)
 
 
 def _word_confidences(image: Image.Image, config: str) -> list[float]:
@@ -204,14 +214,19 @@ def extract_text_from_image_bytes(
     try:
         with Image.open(io.BytesIO(data)) as raw:
             oriented = ImageOps.exif_transpose(raw)
+            # Bound work on large phone photos before Tesseract.
+            oriented.thumbnail((_MAX_EDGE_PX, _MAX_EDGE_PX), Image.Resampling.LANCZOS)
             variants = _preprocess_variants(oriented)
+            oriented_for_extra = oriented
     except OSError as exc:
         raise OcrError("Could not read image file") from exc
 
-    # Prefer sparse page modes + a whitelist pass for printed pack Latin text.
-    configs = (
+    # Fast configs first; whitelist pass only if still weak.
+    fast_configs = (
         "--oem 3 --psm 6",
         "--oem 3 --psm 11",
+    )
+    slow_configs = (
         "--oem 3 --psm 4",
         "-c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-./% --oem 3 --psm 6",
     )
@@ -221,34 +236,72 @@ def extract_text_from_image_bytes(
     best_mean = 0.0
     best_max = 0.0
     best_score = -1.0
+    # Stop early once we have a confident pack-label reading (free-tier safe).
+    _EARLY_EXIT_SCORE = 180.0
+
+    def _consider(variant: Image.Image, config: str) -> bool:
+        """Run one OCR pass; return True when early-exit quality is reached."""
+        nonlocal best_text, best_letters, best_mean, best_max, best_score
+        text = _clean_text(
+            pytesseract.image_to_string(
+                variant,
+                lang="eng",
+                config=config,
+            )
+        )
+        letters = _letter_count(text)
+        if letters < 4:
+            return False
+        # Skip expensive image_to_data until text looks promising.
+        mean_conf = 0.0
+        max_conf = 0.0
+        if letters >= 6 and len(_vowel_rich_words(text)) >= 1:
+            confs = _word_confidences(variant, config)
+            mean_conf = sum(confs) / len(confs) if confs else 0.0
+            max_conf = max(confs) if confs else 0.0
+        vowel_words = len(_vowel_rich_words(text))
+        score = mean_conf * 2.0 + max_conf + vowel_words * 8.0 + min(letters, 40) * 0.5
+        if score > best_score or (score == best_score and letters > best_letters):
+            best_score = score
+            best_letters = letters
+            best_text = text
+            best_mean = mean_conf
+            best_max = max_conf
+        return best_score >= _EARLY_EXIT_SCORE and _looks_like_pack_text(
+            best_text, best_mean, best_max
+        )
 
     try:
+        done = False
         for variant in variants:
-            for config in configs:
-                text = _clean_text(
-                    pytesseract.image_to_string(
-                        variant,
-                        lang="eng",
-                        config=config,
-                    )
-                )
-                letters = _letter_count(text)
-                if letters < 4:
-                    continue
-                confs = _word_confidences(variant, config)
-                mean_conf = sum(confs) / len(confs) if confs else 0.0
-                max_conf = max(confs) if confs else 0.0
-                vowel_words = len(_vowel_rich_words(text))
-                # Prefer confident, pronounceable text over long gibberish.
-                score = mean_conf * 2.0 + max_conf + vowel_words * 8.0 + min(letters, 40) * 0.5
-                if score > best_score or (
-                    score == best_score and letters > best_letters
-                ):
-                    best_score = score
-                    best_letters = letters
-                    best_text = text
-                    best_mean = mean_conf
-                    best_max = max_conf
+            for config in fast_configs:
+                if _consider(variant, config):
+                    done = True
+                    break
+            if done:
+                break
+
+        # Harder photos: extra configs, then OpenCV variants if still weak.
+        if not done and (
+            best_letters < 8
+            or not _looks_like_pack_text(best_text, best_mean, best_max)
+        ):
+            for variant in variants[:2]:
+                for config in slow_configs:
+                    if _consider(variant, config):
+                        done = True
+                        break
+                if done:
+                    break
+
+        if not done and best_letters < 10:
+            for variant in _extra_variants(oriented_for_extra):
+                for config in fast_configs:
+                    if _consider(variant, config):
+                        done = True
+                        break
+                if done:
+                    break
     except TesseractNotFoundError as exc:
         raise OcrError(
             "Tesseract is not installed or TESSERACT_CMD is wrong"

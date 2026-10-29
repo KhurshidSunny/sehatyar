@@ -2,7 +2,8 @@ import { getApiBaseUrl } from "@/lib/api/config";
 
 /** Fail hung API calls so FAQ offline fallback / error UI can run. */
 const DEFAULT_TIMEOUT_MS = 10_000;
-const UPLOAD_TIMEOUT_MS = 60_000;
+/** OCR on free-tier hosts can take >60s; abort only after a long wait. */
+const UPLOAD_TIMEOUT_MS = 120_000;
 
 export class ApiError extends Error {
   status: number;
