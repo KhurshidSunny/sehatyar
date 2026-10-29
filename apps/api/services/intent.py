@@ -17,7 +17,10 @@ from config import get_settings
 from services import faq_store
 
 _API_ROOT = Path(__file__).resolve().parents[1]
-_REPO_ROOT = _API_ROOT.parents[1]
+# Local: apps/api → repo root. Docker image copies API to /app (no repo parent).
+_REPO_ROOT = (
+    _API_ROOT.parents[1] if len(_API_ROOT.parents) > 1 else _API_ROOT
+)
 _DEFAULT_ARTIFACT = (
     _REPO_ROOT / "experiments" / "artifacts" / "classical_tfidf_logreg.joblib"
 )

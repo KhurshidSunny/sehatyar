@@ -11,17 +11,17 @@ from routers.faqs import router as faqs_router
 from routers.feedback import router as feedback_router
 from routers.medicines import router as medicines_router
 
-# Intent is optional at import time (needs scikit-learn). FAQ/medicine still work.
+# Intent is optional at import time. FAQ/medicine must still start without it.
 try:
     from routers.intent import router as intent_router
     from services import intent as intent_service
 
     _INTENT_AVAILABLE = True
-except ModuleNotFoundError as exc:
+except Exception as exc:  # noqa: BLE001 — keep API up if intent import fails
     intent_router = None  # type: ignore[assignment]
     intent_service = None  # type: ignore[assignment]
     _INTENT_AVAILABLE = False
-    print(f"Intent routes disabled (missing dependency): {exc}", flush=True)
+    print(f"Intent routes disabled: {exc}", flush=True)
 
 
 @asynccontextmanager
