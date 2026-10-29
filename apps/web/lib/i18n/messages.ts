@@ -52,6 +52,7 @@ export type MessageKey =
   | "photoInvalidType"
   | "ocrFailed"
   | "ocrNoMatch"
+  | "ocrWrongForm"
   | "ocrMatches"
   | "ocrConfidence"
   | "confidenceHigh"
@@ -122,6 +123,8 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     ocrFailed: "عکس ونه لوستل شو. بیا هڅه وکړئ یا بل عکس وکاروئ.",
     ocrNoMatch:
       "د درمل نوم په عکس کې ونه موندل شو. د کڅوړې لیبل روښانه او نږدې عکس واخلئ.",
+    ocrWrongForm:
+      "په عکس کې {names} ښکاري، خو دا معمولاً {forms} دی — نه {selected}. مهرباني وکړئ {forms} وټاکئ او بیا هڅه وکړئ.",
     ocrMatches: "نږدې درمل",
     ocrConfidence: "باور",
     confidenceHigh: "لوړ",
@@ -191,6 +194,8 @@ const MESSAGES: Record<Locale, Record<MessageKey, string>> = {
     ocrFailed: "Could not read the photo. Try again or choose another image.",
     ocrNoMatch:
       "No medicine name found in this photo. Take a clear, close photo of the pack label.",
+    ocrWrongForm:
+      "This photo looks like {names}, which is usually a {forms} medicine — not {selected}. Please choose {forms} and try again.",
     ocrMatches: "Possible matches",
     ocrConfidence: "Confidence",
     confidenceHigh: "High",

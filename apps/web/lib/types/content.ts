@@ -88,9 +88,16 @@ export interface MedicineOcrCandidate extends MedicineSummary {
   confidence: MedicineMatchConfidence | string;
 }
 
+export interface MedicineOcrFormMismatch {
+  selectedForm: string;
+  suggestedForms: string[];
+  matchedNames: string[];
+}
+
 export interface MedicineOcrResponse {
   ocrText: string;
   candidates: MedicineOcrCandidate[];
+  formMismatch?: MedicineOcrFormMismatch | null;
 }
 
 export interface FeedbackCreate {

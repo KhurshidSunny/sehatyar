@@ -18,7 +18,12 @@ import {
   validateMedicinePhoto,
   type MedicinePhotoError,
 } from "@/lib/medicines/photo";
-import type { MedicineForm, MedicineOcrCandidate, MedicineSummary } from "@/lib/types";
+import type {
+  MedicineForm,
+  MedicineOcrCandidate,
+  MedicineOcrFormMismatch,
+  MedicineSummary,
+} from "@/lib/types";
 
 type Phase =
   | "form"
@@ -62,8 +67,34 @@ export default function MedicinePhotoUpload() {
   >(null);
   const [ocrText, setOcrText] = useState("");
   const [ocrEmpty, setOcrEmpty] = useState(false);
+  const [formMismatch, setFormMismatch] = useState<MedicineOcrFormMismatch | null>(
+    null,
+  );
   /** Where Back from typed-search detail should return. */
   const [detailReturn, setDetailReturn] = useState<Phase>("results");
+
+  function formatMessage(
+    template: string,
+    vars: Record<string, string>,
+  ): string {
+    return template.replace(/\{(\w+)\}/g, (_, key: string) => vars[key] ?? "");
+  }
+
+  function formLabel(formId: string): string {
+    const hit = formLabels.find((item) => item.id === formId);
+    if (!hit) {
+      return formId;
+    }
+    return locale === "ps" ? hit.namePs : hit.nameEn;
+  }
+
+  function wrongFormMessage(mismatch: MedicineOcrFormMismatch): string {
+    return formatMessage(t("ocrWrongForm"), {
+      names: mismatch.matchedNames.join(", "),
+      forms: mismatch.suggestedForms.map(formLabel).join(" / "),
+      selected: formLabel(mismatch.selectedForm),
+    });
+  }
 
   useEffect(() => {
     return () => {
@@ -115,6 +146,7 @@ export default function MedicinePhotoUpload() {
     setSelected(null);
     setOcrText("");
     setOcrEmpty(false);
+    setFormMismatch(null);
     setDetailReturn("results");
     setPhase(selectedForm ? "pick" : "form");
     if (cameraRef.current) cameraRef.current.value = "";
@@ -144,6 +176,7 @@ export default function MedicinePhotoUpload() {
     setSelected(null);
     setOcrText("");
     setOcrEmpty(false);
+    setFormMismatch(null);
     setFile(next);
     setPreviewUrl(URL.createObjectURL(next));
     setPhase("preview");
@@ -166,6 +199,7 @@ export default function MedicinePhotoUpload() {
       setCandidates(ranked);
       setSelected(null);
       setOcrText(result.ocrText.trim());
+      setFormMismatch(result.formMismatch ?? null);
       setOcrEmpty(ranked.length === 0);
       setPhase("results");
     } catch (error) {
@@ -371,8 +405,19 @@ export default function MedicinePhotoUpload() {
           {ocrEmpty ? (
             <div className="flex flex-col gap-3" role="status">
               <p className="rounded-2xl border-2 border-border bg-surface px-5 py-5 text-center text-lg text-muted">
-                {t("ocrNoMatch")}
+                {formMismatch
+                  ? wrongFormMessage(formMismatch)
+                  : t("ocrNoMatch")}
               </p>
+              {formMismatch ? (
+                <button
+                  type="button"
+                  onClick={resetToFormPicker}
+                  className="flex min-h-14 w-full items-center justify-center rounded-2xl bg-brand px-6 py-3 text-center text-lg font-semibold text-white shadow-sm transition hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                >
+                  {t("changeMedicineForm")}
+                </button>
+              ) : null}
               {ocrText.length >= 4 && /[A-Za-z]{3,}/.test(ocrText) ? (
                 <>
                   <p className="text-center text-base font-semibold text-foreground">
@@ -383,13 +428,15 @@ export default function MedicinePhotoUpload() {
                   </p>
                 </>
               ) : null}
-              <MedicineNameSearch
-                form={formFilter}
-                onSelect={(medicine) => {
-                  setDetailReturn("results");
-                  selectTypedMedicine(medicine);
-                }}
-              />
+              {!formMismatch ? (
+                <MedicineNameSearch
+                  form={formFilter}
+                  onSelect={(medicine) => {
+                    setDetailReturn("results");
+                    selectTypedMedicine(medicine);
+                  }}
+                />
+              ) : null}
             </div>
           ) : (
             <>

@@ -12,6 +12,7 @@ export type {
   MedicineForm,
   MedicineMatchConfidence,
   MedicineOcrCandidate,
+  MedicineOcrFormMismatch,
   MedicineOcrResponse,
   MedicineSummary,
   ReviewStatus,

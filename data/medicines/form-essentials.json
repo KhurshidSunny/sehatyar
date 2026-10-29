@@ -1,0 +1,414 @@
+[
+  {
+    "id": "med-fusidic-acid-cream",
+    "category": "topical",
+    "names": [
+      "Fusidic acid cream",
+      "Fucidin",
+      "فیوزیډیک اسید",
+      "فیوسیډین"
+    ],
+    "usesPs": "دا کریم معمولاً د پوستکي د ځینو باکتریايي عفونتونو لپاره د ډاکټر یا درملپلورونکي په سپارښتنه کارول کیږي.",
+    "usesEn": "This antibiotic cream is used for certain bacterial skin infections when advised. It does not treat every rash.",
+    "warningsPs": "که سیمه ډېره سور یا پړسوب شي، یا تبه راشي، کلینیک ته ولاړ شئ. سترګو ته مه یې اچوئ. کورس نیمګړی مه پرېږدئ پرته له مشورې.",
+    "warningsEn": "Ask first. Seek care if the area worsens, spreads, or fever appears. Do not put in the eyes.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO / essential topical antibacterials — fusidic acid (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["cream"]
+  },
+  {
+    "id": "med-betamethasone-cream",
+    "category": "topical",
+    "names": [
+      "Betamethasone cream",
+      "Betnovate",
+      "بیټامیټازون",
+      "بیټنوویټ"
+    ],
+    "usesPs": "دا قوي سټرایډ کریم معمولاً د سخت خارښ او التهاب د لنډمهاله کمولو لپاره د روغتیايي مشورې سره کارول کیږي.",
+    "usesEn": "This steroid cream is used for inflamed itchy skin when a clinician advises it. Use only as directed.",
+    "warningsPs": "په مخ او نازکو سیمو باندې پرته له لارښود مه یې اچوئ. اوږد مهال مه کاروئ. که عفونت شکمن وي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Avoid long use on the face without advice. Seek care for spreading infection or no improvement.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for topical betamethasone (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["cream"]
+  },
+  {
+    "id": "med-miconazole-cream",
+    "category": "topical",
+    "names": [
+      "Miconazole cream",
+      "Daktarin",
+      "میکونازول",
+      "ډاکټارین"
+    ],
+    "usesPs": "دا کریم معمولاً د پوستکي فنګس (لکه د پښو فنګس) لپاره کارول کیږي کله چې مشوره وشي.",
+    "usesEn": "This antifungal cream is commonly used for athlete’s foot and similar skin fungus when advised.",
+    "warningsPs": "که الرجي یا سخت سوروالی راشي، کار ولوځوئ. سترګو ته مه یې اچوئ. امیندواري کې مخکې وپوښتئ.",
+    "warningsEn": "Ask before use in pregnancy. Seek care if the rash worsens or looks infected.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — miconazole topical (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["cream"]
+  },
+  {
+    "id": "med-ceftriaxone-injection",
+    "category": "antibiotics",
+    "names": [
+      "Ceftriaxone",
+      "Rocephin",
+      "سیفټریاکسون",
+      "روسیفین"
+    ],
+    "usesPs": "دا انجکشن یوازې د روغتیايي کارکوونکي په سپارښتنه او نظارت کې د جدي باکتریايي عفونتونو لپاره کارول کیږي.",
+    "usesEn": "This injection antibiotic is used for serious bacterial infections only under clinician care. It is not for self-injection at home.",
+    "warningsPs": "په کور کې په خپله مه یې وهئ. که تنفسي ستونزه، سختې الرجي یا ډېره اسهال راشي، سمدستي کلینیک ته ولاړ شئ.",
+    "warningsEn": "Allergy to cephalosporins/penicillins needs urgent advice. Never self-inject without training and a prescription plan.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — ceftriaxone (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["injection"]
+  },
+  {
+    "id": "med-gentamicin-injection",
+    "category": "antibiotics",
+    "names": [
+      "Gentamicin injection",
+      "جینټامایسین انجکشن"
+    ],
+    "usesPs": "دا انجکشن د ځینو جدي عفونتونو لپاره یوازې په کلینیک کې د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "Gentamicin injection is reserved for certain serious infections under clinical supervision.",
+    "warningsPs": "دوز یې دقیق دی؛ په خپله مه یې کاروئ. د اورېدلو یا پښتورګي ستونزې کې مخکې ووایاست. الرجي کې سمدستي کلینیک ته ولاړ شئ.",
+    "warningsEn": "Can affect hearing and kidneys — only under medical supervision. Seek urgent care for allergy or breathing trouble.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List of Essential Medicines — gentamicin (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["injection"]
+  },
+  {
+    "id": "med-amoxicillin-powder",
+    "category": "antibiotics",
+    "names": [
+      "Amoxicillin powder for suspension",
+      "Amoxil syrup powder",
+      "اموکسی سیلین پودر",
+      "اموکسيل پودر"
+    ],
+    "usesPs": "دا پودر د شربت جوړولو لپاره دی او معمولاً د ماشومانو د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This powder is mixed into an oral suspension for certain infections when a clinician advises it, often for children.",
+    "warningsPs": "یوازې د کڅوړې یا بوتل د لارښود سره جوړ یې کړئ. پېنسلین الرجي کې مه یې کاروئ. کورس نیمګړی مه پرېږدئ پرته له مشورې.",
+    "warningsEn": "Mix only as labeled. Ask about penicillin allergy. Finish the course only as advised by a clinician.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — amoxicillin oral (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["powder", "syrup"]
+  },
+  {
+    "id": "med-co-amoxiclav-powder",
+    "category": "antibiotics",
+    "names": [
+      "Co-amoxiclav powder",
+      "Augmentin powder",
+      "کو-اموکسیکلاو پودر",
+      "اګمینټین پودر"
+    ],
+    "usesPs": "دا پودر د شربت جوړولو لپاره دی او د ځینو باکتریايي عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "Powder for oral suspension used for certain bacterial infections when prescribed. Not for viral colds alone.",
+    "warningsPs": "پېنسلین الرجي کې مه یې کاروئ. که سختې اسهال یا الرجي راشي، کلینیک ته ولاړ شئ. یوازې د لارښود سره یې جوړ کړئ.",
+    "warningsEn": "Ask about penicillin allergy. Seek care for severe diarrhea, rash, or breathing trouble.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO / essential antibiotic combinations — co-amoxiclav (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["powder", "syrup", "tablet"]
+  },
+  {
+    "id": "med-beclomethasone-inhaler",
+    "category": "allergy-respiratory",
+    "names": [
+      "Beclomethasone inhaler",
+      "Becotide",
+      "بیکلومیټازون",
+      "بیکوټایډ"
+    ],
+    "usesPs": "دا استنشاق معمولاً د ساه تنګۍ یا الرجي ساه د کنټرول لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This steroid inhaler is used for asthma or allergic airway control when advised. It is not a sudden-relief rescue inhaler for every attack.",
+    "warningsPs": "د برید پر مهال د ژغورنې استنشاق پر ځای یې مه حسابوئ که ډاکټر بل څه ویلي وي. خوله وروسته ومینځئ. که ساه ډېره تنګه شي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Ask which inhaler is for sudden attacks. Rinse the mouth after use. Seek urgent care for severe breathing trouble.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — beclometasone inhaler (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["inhaler"]
+  },
+  {
+    "id": "med-ipratropium-inhaler",
+    "category": "allergy-respiratory",
+    "names": [
+      "Ipratropium inhaler",
+      "Atrovent",
+      "ایپراټروپیم",
+      "اټروونټ"
+    ],
+    "usesPs": "دا استنشاق په ځینو ساه تنګۍ یا COPD حالتونو کې د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This inhaler helps open airways in some breathing conditions when a clinician advises it.",
+    "warningsPs": "ستروګو ته مه یې ورپرېږدئ. که ساه ډېره خرابه شي، سمدستي کلینیک ته ولاړ شئ. دوز په خپله مه زیاتوئ.",
+    "warningsEn": "Avoid spraying into the eyes. Seek urgent care for severe shortness of breath. Do not change the dose yourself.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — ipratropium (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["inhaler"]
+  },
+  {
+    "id": "med-chloramphenicol-eye-drops",
+    "category": "topical",
+    "names": [
+      "Chloramphenicol eye drops",
+      "کلورمفینیکول د سترګو څاڅکي"
+    ],
+    "usesPs": "دا څاڅکي د سترګو د ځینو عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "These eye drops are used for certain eye infections when advised. Do not self-treat severe eye pain or vision loss.",
+    "warningsPs": "که لید کم شي، سخت درد یا رڼا ته حساسیت وي، سمدستي کلینیک ته ولاړ شئ. بوتل له نورو سره مه شریکویئ.",
+    "warningsEn": "Seek urgent care for vision loss or severe pain. Do not share eye drops.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — chloramphenicol eye drops (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["drops"]
+  },
+  {
+    "id": "med-xylometazoline-drops",
+    "category": "allergy-respiratory",
+    "names": [
+      "Xylometazoline nasal drops",
+      "Otrivin",
+      "زایلو میټازولین",
+      "اوټریوین"
+    ],
+    "usesPs": "دا د پوزې څاڅکي معمولاً د بندې پوزې د لنډمهاله پرانیستلو لپاره کارول کیږي.",
+    "usesEn": "These nasal drops temporarily relieve a blocked nose. They do not cure infection.",
+    "warningsPs": "ډېرې ورځې پرله‌پسې مه یې کاروئ (بیا بندېدای شي). ماشومانو ته یوازې د مشورې سره. که وینه راشي یا درد زیات شي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Do not use for many days in a row without advice. Ask before use in young children. Seek care for nosebleeds or severe pain.",
+    "audioUrl": null,
+    "source": {
+      "title": "Package-insert style reference for xylometazoline nasal drops (general label information)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["drops"]
+  },
+  {
+    "id": "med-omeprazole-capsule",
+    "category": "stomach",
+    "names": [
+      "Omeprazole capsule",
+      "Losec capsule",
+      "اومپرازول کپسول",
+      "لوزیک کپسول"
+    ],
+    "usesPs": "دا کپسول معمولاً د معدې تیزابیت او سوځېدلو د کمولو لپاره د مشورې سره کارول کیږي.",
+    "usesEn": "This capsule reduces stomach acid for heartburn or ulcer-related symptoms when advised.",
+    "warningsPs": "اوږد مهال پرته له مشورې مه یې خورئ. که وینه په کانګو یا تورې فضله کې وي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Ask before long-term use. Seek care for vomiting blood or black stools.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — omeprazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["capsule"]
+  },
+  {
+    "id": "med-fluconazole-capsule",
+    "category": "other-common",
+    "names": [
+      "Fluconazole",
+      "Diflucan",
+      "فلوکونازول",
+      "ډیفلکان"
+    ],
+    "usesPs": "دا کپسول د ځینو فنګس عفونتونو لپاره د ډاکټر په سپارښتنه کارول کیږي.",
+    "usesEn": "This capsule is used for certain fungal infections when a clinician advises it.",
+    "warningsPs": "د ځیګر ناروغي یا نور درمل لرئ نو مخکې وپوښتئ. امیندواري کې پرته له مشورې مه یې خورئ. که ځیګر نښې راشي، کلینیک ته ولاړ شئ.",
+    "warningsEn": "Ask about liver disease and other medicines. Seek care for yellow skin, dark urine, or severe rash.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — fluconazole (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["capsule", "tablet"]
+  },
+  {
+    "id": "med-paracetamol-syrup",
+    "category": "pain-fever",
+    "names": [
+      "Paracetamol syrup",
+      "Panadol syrup",
+      "پیراسیټامول شربت",
+      "پینادول شربت"
+    ],
+    "usesPs": "دا شربت معمولاً د ماشومانو د تبې او درد د کمولو لپاره کارول کیږي. دوز یې په خپله مه ټاکئ.",
+    "usesEn": "This syrup is commonly used for fever and pain in children when advised. Use the dose on the label or from a clinician.",
+    "warningsPs": "له سپارښتنې زیات مه ورکوئ؛ ډېر مقدار ځیګر ته زیان رسوي. نور پیراسیټامول درمل مه ورسره ګډوئ پرته له مشورې.",
+    "warningsEn": "Do not exceed the labeled dose. Do not combine with other paracetamol products without advice.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — paracetamol oral liquid (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["syrup"]
+  },
+  {
+    "id": "med-iron-syrup",
+    "category": "vitamins-minerals",
+    "names": [
+      "Iron syrup",
+      "Ferrous sulfate syrup",
+      "د اوسپنې شربت",
+      "فیرس سلفيټ شربت"
+    ],
+    "usesPs": "دا شربت معمولاً د اوسپنې کمښت یا د وینې کمزورۍ د مخنیوي/درملنې لپاره د مشورې سره ورکول کیږي.",
+    "usesEn": "Iron syrup is used for iron deficiency when advised. Dose depends on age and lab advice.",
+    "warningsPs": "له ماشومانو څخه لرې وساتئ — ډېر مقدار خطرناک دی. که کانګې یا سختې قبضیت راشي، مشوره وکړئ.",
+    "warningsEn": "Keep away from children — overdose is dangerous. Ask about constipation or stomach upset.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — ferrous salt oral liquid (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["syrup"]
+  },
+  {
+    "id": "med-chlorhexidine",
+    "category": "topical",
+    "names": [
+      "Chlorhexidine",
+      "Savlon",
+      "کلورهیکسیډین",
+      "ساولون"
+    ],
+    "usesPs": "دا محلول معمولاً د پوستکي یا د خولې د پاکولو لپاره د لارښود سره کارول کیږي.",
+    "usesEn": "Chlorhexidine solutions are used to clean skin or mouth areas when the label or a clinician advises it.",
+    "warningsPs": "څښل یې مه کوئ که د خولې مینځلو لپاره نه وي. سترګو ته مه یې اچوئ. ژور زخم کلینیک ته وښایاست.",
+    "warningsEn": "Do not swallow antiseptic washes. Keep out of eyes. Deep wounds need clinic care.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — chlorhexidine (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["other"]
+  },
+  {
+    "id": "med-normal-saline",
+    "category": "rehydration",
+    "names": [
+      "Normal saline",
+      "Sodium chloride 0.9%",
+      "نورمل سیلین",
+      "مالګینې اوبه"
+    ],
+    "usesPs": "دا محلول په کلینیک کې د اوبو ورکولو، زخم پاکولو یا نورو روغتیايي کارونو لپاره کارول کیږي. په کور کې په خپله انجکشن مه وهئ.",
+    "usesEn": "Normal saline is used in clinics for IV fluids or wound cleaning when trained staff advise it. Do not self-inject at home.",
+    "warningsPs": "په کور کې IV مه جوړوئ. که وچه خوله، ګډوډي یا سخت کمزوري لرئ، کلینیک ته ولاړ شئ.",
+    "warningsEn": "IV fluids need trained care. Seek clinic help for severe dehydration.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — sodium chloride solutions (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["other", "injection"]
+  },
+  {
+    "id": "med-disprin",
+    "category": "pain-fever",
+    "names": [
+      "Disprin",
+      "Aspirin dispersible",
+      "ډیسپرین"
+    ],
+    "usesPs": "دا ګولۍ په ځینو حالتونو کې د درد لپاره کارول کیږي. ماشومانو ته د ویروسي ناروغۍ پر مهال معمولاً نه ورکول کیږي.",
+    "usesEn": "Disprin (dispersible aspirin) is sometimes used for pain when advised. Not for children with viral illness unless a clinician says so.",
+    "warningsPs": "که د معدې زخم یا اسپرین الرجي لرئ، مخکې مشوره وکړئ. ماشومانو ته پرته له لارښود مه ورکوئ.",
+    "warningsEn": "Ask first if you have bleeding risk, ulcers, or asthma. Do not give to children with viral illness without advice.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — acetylsalicylic acid (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["tablet"]
+  },
+  {
+    "id": "med-brufen-tablet",
+    "category": "pain-fever",
+    "names": [
+      "Brufen tablet",
+      "Ibuprofen tablet",
+      "بروفین ګولۍ"
+    ],
+    "usesPs": "دا ګولۍ معمولاً د درد، التهاب او تبې د کمولو لپاره کارول کیږي. دوز په خپله مه ټاکئ.",
+    "usesEn": "These tablets are commonly used for pain, inflammation, and fever when advised. Do not set your own dose.",
+    "warningsPs": "په خالي معده یې مه خورئ که معده مو حساسه وي. که د معدې زخم یا پښتورګي ستونزه لرئ، مخکې مشوره وکړئ.",
+    "warningsEn": "Avoid on an empty stomach if sensitive. Ask first about ulcers, kidney problems, or pregnancy.",
+    "audioUrl": null,
+    "source": {
+      "title": "WHO Model List — ibuprofen (general reference)",
+      "url": null
+    },
+    "lastReviewed": "2026-10-29",
+    "reviewStatus": "draft",
+    "forms": ["tablet"]
+  }
+]

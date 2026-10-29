@@ -3,8 +3,10 @@
 from fastapi import APIRouter, File, HTTPException, Query, UploadFile
 
 from schemas.medicine import (
+    Medicine,
     MedicineForm,
     MedicineOcrCandidate,
+    MedicineOcrFormMismatch,
     MedicineOcrResponse,
     MedicineSummary,
 )
@@ -14,6 +16,66 @@ from services.ocr import OcrError, extract_text_from_image_bytes
 router = APIRouter(tags=["medicines"])
 
 _MAX_UPLOAD_BYTES = 8 * 1024 * 1024
+
+
+def _to_ocr_candidates(
+    ranked: list[tuple[float, Medicine]],
+) -> list[MedicineOcrCandidate]:
+    return [
+        MedicineOcrCandidate(
+            **medicine_store.to_summary(medicine).model_dump(),
+            score=round(score, 1),
+            confidence=medicine_store.confidence_for_score(score),
+        )
+        for score, medicine in ranked
+    ]
+
+
+def _filter_weak_ocr_hits(
+    ranked: list[tuple[float, Medicine]],
+    *,
+    usable: bool,
+    ocr_text: str,
+) -> list[tuple[float, Medicine]]:
+    if ranked and (
+        not usable and not medicine_store.ocr_has_medicine_anchor(ocr_text)
+    ):
+        return [(score, med) for score, med in ranked if score >= 92]
+    return ranked
+
+
+def _form_mismatch_hint(
+    *,
+    selected_form: str,
+    ranked_any: list[tuple[float, Medicine]],
+) -> MedicineOcrFormMismatch | None:
+    """Build a hint when OCR matches exist only outside the selected form."""
+    if not ranked_any:
+        return None
+    suggested: list[str] = []
+    names: list[str] = []
+    seen_forms: set[str] = set()
+    selected = selected_form.strip().casefold()
+    for _score, medicine in ranked_any[:5]:
+        display = next(
+            (n for n in medicine.names if all(ord(c) < 128 for c in n)),
+            medicine.names[0],
+        )
+        if display not in names:
+            names.append(display)
+        for form_id in medicine.forms:
+            key = form_id.casefold()
+            if key == selected or key in seen_forms:
+                continue
+            seen_forms.add(key)
+            suggested.append(form_id)
+    if not suggested or not names:
+        return None
+    return MedicineOcrFormMismatch(
+        selectedForm=selected,
+        suggestedForms=suggested[:4],
+        matchedNames=names[:3],
+    )
 
 
 @router.get("/medicines/forms", response_model=list[MedicineForm])
@@ -87,28 +149,43 @@ async def ocr_medicine_pack(
             limit=limit,
             form=form,
         )
+        ranked_any: list[tuple[float, Medicine]] = []
+        if not ranked and form:
+            ranked_any = medicine_store.match_ocr_text(
+                ocr_text,
+                limit=limit,
+                form=None,
+            )
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
 
-    # Weak / non-pack photos: only keep hits that look like a real name anchor.
-    if ranked and (
-        not extracted.usable
-        and not medicine_store.ocr_has_medicine_anchor(ocr_text)
-    ):
-        ranked = [(score, med) for score, med in ranked if score >= 92]
+    ranked = _filter_weak_ocr_hits(
+        ranked,
+        usable=extracted.usable,
+        ocr_text=ocr_text,
+    )
+    ranked_any = _filter_weak_ocr_hits(
+        ranked_any,
+        usable=extracted.usable,
+        ocr_text=ocr_text,
+    )
 
-    if not ranked and not extracted.usable:
+    if not ranked and not ranked_any and not extracted.usable:
         return MedicineOcrResponse(ocrText="", candidates=[])
 
     if not ranked:
-        return MedicineOcrResponse(ocrText=ocr_text, candidates=[])
-
-    candidates = [
-        MedicineOcrCandidate(
-            **medicine_store.to_summary(medicine).model_dump(),
-            score=round(score, 1),
-            confidence=medicine_store.confidence_for_score(score),
+        mismatch = (
+            _form_mismatch_hint(selected_form=form, ranked_any=ranked_any)
+            if form and ranked_any
+            else None
         )
-        for score, medicine in ranked
-    ]
-    return MedicineOcrResponse(ocrText=ocr_text, candidates=candidates)
+        return MedicineOcrResponse(
+            ocrText=ocr_text,
+            candidates=[],
+            formMismatch=mismatch,
+        )
+
+    return MedicineOcrResponse(
+        ocrText=ocr_text,
+        candidates=_to_ocr_candidates(ranked),
+    )

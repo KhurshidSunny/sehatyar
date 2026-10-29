@@ -83,6 +83,16 @@ class MedicineOcrCandidate(MedicineSummary):
     confidence: str = Field(description="high | medium | low")
 
 
+class MedicineOcrFormMismatch(BaseModel):
+    """OCR found catalog hits, but not in the form the user selected."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    selectedForm: str
+    suggestedForms: list[str] = Field(min_length=1)
+    matchedNames: list[str] = Field(min_length=1)
+
+
 class MedicineOcrResponse(BaseModel):
     """POST /medicines/ocr result: raw text plus ranked catalog matches."""
 
@@ -90,3 +100,4 @@ class MedicineOcrResponse(BaseModel):
 
     ocrText: str
     candidates: list[MedicineOcrCandidate]
+    formMismatch: MedicineOcrFormMismatch | None = None
