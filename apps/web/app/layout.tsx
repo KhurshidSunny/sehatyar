@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Naskh_Arabic } from "next/font/google";
 
 import AppChrome from "@/components/AppChrome";
@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   description:
     "Pashto and English health literacy assistant — curated FAQs and medicine pack help. Information only, not a doctor.",
   applicationName: "SehatYar",
-  themeColor: "#0f766e",
   appleWebApp: {
     capable: true,
     title: "SehatYar",
@@ -31,6 +30,10 @@ export const metadata: Metadata = {
   other: {
     google: "notranslate",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0f766e",
 };
 
 export default function RootLayout({

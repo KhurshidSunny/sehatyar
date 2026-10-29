@@ -1,5 +1,9 @@
 import { getApiBaseUrl } from "@/lib/api/config";
 
+/** Fail hung API calls so FAQ offline fallback / error UI can run. */
+const DEFAULT_TIMEOUT_MS = 10_000;
+const UPLOAD_TIMEOUT_MS = 60_000;
+
 export class ApiError extends Error {
   status: number;
 
@@ -8,6 +12,10 @@ export class ApiError extends Error {
     this.name = "ApiError";
     this.status = status;
   }
+}
+
+function requestSignal(timeoutMs: number): AbortSignal {
+  return AbortSignal.timeout(timeoutMs);
 }
 
 async function parseError(response: Response): Promise<ApiError> {
@@ -30,6 +38,7 @@ export async function apiGet<T>(path: string): Promise<T> {
     response = await fetch(url, {
       headers: { Accept: "application/json" },
       cache: "no-store",
+      signal: requestSignal(DEFAULT_TIMEOUT_MS),
     });
   } catch {
     throw new ApiError(0, "Network error");
@@ -54,6 +63,7 @@ export async function apiPost<T>(path: string, body: unknown): Promise<T> {
       },
       body: JSON.stringify(body),
       cache: "no-store",
+      signal: requestSignal(DEFAULT_TIMEOUT_MS),
     });
   } catch {
     throw new ApiError(0, "Network error");
@@ -76,6 +86,7 @@ export async function apiPostForm<T>(path: string, form: FormData): Promise<T> {
       headers: { Accept: "application/json" },
       body: form,
       cache: "no-store",
+      signal: requestSignal(UPLOAD_TIMEOUT_MS),
     });
   } catch {
     throw new ApiError(0, "Network error");
