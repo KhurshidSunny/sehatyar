@@ -10,6 +10,8 @@ on:
     paths:
       - "apps/api/**"
       - "data/**"
+      - "Dockerfile"
+      - ".dockerignore"
       - ".github/workflows/deploy-api-render.yml"
   workflow_dispatch:
 

@@ -1,0 +1,12 @@
+.git
+.github
+**/.venv
+**/__pycache__
+**/*.pyc
+**/.env
+**/.env.local
+apps/web
+docs
+experiments
+*.md
+!apps/api/README.md

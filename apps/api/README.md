@@ -94,8 +94,25 @@ Matching TypeScript types live in `apps/web/lib/types/`.
 
 ## Deploy (Render + GitHub Actions)
 
-Live API: configure Root Directory `apps/api`, start with  
-`uvicorn main:app --host 0.0.0.0 --port $PORT`, health check `/health`.
+Medicine OCR needs the **Tesseract** system binary. Render’s native Python
+build cannot run `apt-get` (read-only filesystem), so the API deploys as
+**Docker** from the repo-root `Dockerfile` (installs `tesseract-ocr`, copies
+`apps/api` + `data/`).
+
+### Render Dashboard settings
+
+| Setting | Value |
+|---|---|
+| Language / Runtime | **Docker** (not Python) |
+| Root Directory | *(empty / repo root)* |
+| Dockerfile Path | `Dockerfile` |
+| Docker Command | *(leave empty — uses image `CMD`)* |
+| Health Check Path | `/health` |
+| Auto-Deploy | **Off** (hook-only) |
+
+Do **not** set `TESSERACT_CMD` to a Windows path on Render. Leave it unset
+(or `/usr/bin/tesseract`). Keep `MONGO_URI`, `CORS_ORIGINS`, etc. as before.
+`FAQ_DATA_DIR` / `MEDICINE_DATA_DIR` default to `/data/...` inside the image.
 
 ### One-time setup
 
@@ -110,7 +127,7 @@ Live API: configure Root Directory `apps/api`, start with
 
 ### What happens after that
 
-Push to `main` that changes `apps/api/**` or `data/**` runs  
+Push to `main` that changes `apps/api/**`, `data/**`, or `Dockerfile` runs  
 `.github/workflows/deploy-api-render.yml`, which POSTs the deploy hook.  
 You can also run the workflow manually: GitHub → Actions → **Deploy API to Render** → **Run workflow**.
 
